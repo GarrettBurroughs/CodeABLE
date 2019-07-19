@@ -1,7 +1,24 @@
 loadCheckpoints();
 
 $('.run-program').click(function () {
-    runit();
+    $("#output").innerHTML = "";
+    let code = editor.getValue();
+    let output, lastLog;
+    try {
+        // Overwrite console.log during eval() to return console output
+        console.oldLog = console.log;
+        console.log = function (value) {
+            lastLog = value;
+            console.oldLog(value);
+            $("#output").append("<p>[CONSOLE] " + value + "</p>");
+            return value;
+        };
+        output = eval(code);
+        console.log = console.oldLog;
+        programSuccess(output);
+    } catch (e) {
+        programFail(e);
+    }
 });
 
 // Keyboard shortcuts
@@ -24,7 +41,7 @@ function downloadFile(name) {
 }
 
 function openFile() {
-    
+
 }
 
 function feedbackDisplay(feedback) {
@@ -53,7 +70,7 @@ function commandDisplay(command) {
             $(this).val("");
             $(this).css("color", "white");
             next();
-    })
+        })
 }
 
 function commandEntered(e) {
@@ -66,15 +83,17 @@ function commandEntered(e) {
     }
 }
 
-function pythonSuccess() {
-    $("#output").css("color", "white")
-    $("#feedbackBar").css("color", "white")
-    giveFeedback("Program ran successfully.")
+function programSuccess(output) {
+    $("#output").css("color", "white");
+    $("#feedbackBar").css("color", "white");
+    $("#output").append("<p>" + output + "</p>");
+    giveFeedback("Program ran successfully.");
 }
 
-function pythonError(error) {
-    $("#output").css("color", "red")
-    $("#feedbackBar").css("color", "red")
+function programFail(error) {
+    $("#output").css("color", "red");
+    $("#feedbackBar").css("color", "red");
+    $("#output").innerHTML += error.message;
     prevError = error;
-    giveFeedback(checkError(error))
+    giveFeedback(checkError(error));
 }

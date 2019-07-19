@@ -17,7 +17,10 @@ const xmlbuilder = require('xmlbuilder');
 
 function textToSpeech(text) {
     var msg = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(msg);
+    setTimeout(() => {
+        debugger;
+        window.speechSynthesis.speak(msg);
+    }, 0);
     let options = {};
     // This function retrieve the access token and is passed as callback
     // to request below.

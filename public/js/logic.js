@@ -1,7 +1,8 @@
 var editor = ace.edit('editor');
 
 editor.setTheme('ace/theme/twilight');
-editor.session.setMode('ace/mode/python');
+editor.session.setMode('ace/mode/javascript');
+editor.setFontSize("16px");
 editor.getSession().setUseWrapMode(true);
 
 let session = editor.getSession();
@@ -9,21 +10,23 @@ let aceDoc = session.getDocument();
 
 let checkpointNames = [];
 
-editor.insert(`x = 5
-y = 2
+editor.insert(`let x = 5;
+let y = 2;
 
-# ~ checkpoint: "add5"
-for i in range(5):
-    y += 1
+// ~ checkpoint: "add5"
+for (let i = 0; i < 10; i++) {
+    y += 1;
+}
 
-def calculateMeaning(n1, n2):
-    n1 *= 8
-    n2 %= 5
-    meaning = n1 + n2
-    return meaning
+function calculateMeaning(n1, n2) {
+    n1 *= 8;
+    n2 %= 5;
+    let meaning = n1 + n2;
+    return meaning;
+}
 
-whatIsLife = str(calculateMeaning(x, y))
-print "The meaning of life is " + whatIsLife
+whatIsLife = calculateMeaning(x, y);
+console.log("The meaning of life is " + whatIsLife);
 `);
 
 function giveFeedback(text, exact) {
@@ -58,7 +61,7 @@ function giveFeedback(text, exact) {
         ' period '
     ];
 
-    //removes characters to make text-to-speech better
+    // Removes certain characters to make text-to-speech better
     for (let i = 0; i < text.length; i++) {
         for (let j = 0; j < text.length; j++) {
             for (let k = 0; k < characters.length; k++) {
@@ -83,11 +86,9 @@ function giveFeedback(text, exact) {
 }
 
 let prevError = '';
+
 function checkError(error) {
     prevError = error;
-    if (error.includes('on line')) {
-        error = 'Error ' + error.substr(error.indexOf('on line'), error.length);
-    }
     return error;
 }
 
@@ -98,7 +99,7 @@ function loadCheckpoints() {
     let symbol = ' ~ ';
 
     for (let i = 0; i < allLines.length; i++) {
-        if (allLines[i].includes('#' + symbol)) {
+        if (allLines[i].includes('//' + symbol)) {
             lineSplit = allLines[i].split(' ');
 
             for (let i = 0; i < lineSplit.length; i++) {
@@ -201,9 +202,9 @@ function getLineFromCommand(command) {
     if (lineNum > lastLine) {
         giveFeedback(
             'Line ' +
-                lineNum.toString() +
-                ' does not exist. Last line is ' +
-                lastLine.toString(),
+            lineNum.toString() +
+            ' does not exist. Last line is ' +
+            lastLine.toString(),
             false
         );
         return -1;
@@ -338,7 +339,7 @@ function makeCheckpoint(type, name, line) {
     goToLine(line, 1);
     let cursorPosition = editor.getCursorPosition();
     let symbol = ' ~ ';
-    let comment = '#' + symbol + type + ': "' + name + '"';
+    let comment = '//' + symbol + type + ': "' + name + '"';
 
     session.insert(cursorPosition, comment);
     checkpointNames.splice(0, 0, name);
@@ -348,7 +349,7 @@ function goToCheckpoint(type, name) {
     let allLines = [];
     allLines = aceDoc.getAllLines().slice();
     let symbol = ' ~ ';
-    let comment = '#' + symbol + type + ': "' + name + '"';
+    let comment = '//' + symbol + type + ': "' + name + '"';
 
     for (let i = 0; i < allLines.length; i++) {
         if (allLines[i].includes(comment)) {
