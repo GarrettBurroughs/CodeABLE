@@ -18,7 +18,6 @@ const xmlbuilder = require('xmlbuilder');
 function textToSpeech(text) {
     var msg = new SpeechSynthesisUtterance(text);
     setTimeout(() => {
-        debugger;
         window.speechSynthesis.speak(msg);
     }, 0);
     let options = {};

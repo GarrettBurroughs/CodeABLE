@@ -1,25 +1,26 @@
 loadCheckpoints();
 
 $('.run-program').click(function () {
-    $("#output").innerHTML = "";
-    let code = editor.getValue();
-    let output, lastLog;
+    $("#output").empty();
+    runProgram(editor.getValue());
+});
+
+function runProgram(code) {
+    let output;
+    let lastLog;
     try {
         // Overwrite console.log during eval() to return console output
         console.oldLog = console.log;
-        console.log = function (value) {
-            lastLog = value;
-            console.oldLog(value);
-            $("#output").append("<p>[CONSOLE] " + value + "</p>");
-            return value;
+        console.log = (value) => {
+            $("#output").append("</p>" + value + "</p>");
         };
         output = eval(code);
         console.log = console.oldLog;
-        programSuccess(output);
+        programSuccess();
     } catch (e) {
         programFail(e);
     }
-});
+}
 
 // Keyboard shortcuts
 $(document).keydown(function (e) {
@@ -34,7 +35,7 @@ $(document).keydown(function (e) {
 });
 
 function downloadFile(name) {
-    var file = new File([editor.getValue()], name + ".py", {
+    let file = new File([editor.getValue()], name + ".js", {
         type: "text/plain;charset=utf-8"
     });
     saveAs(file);
@@ -45,8 +46,10 @@ function openFile() {
 }
 
 function feedbackDisplay(feedback) {
-    $("#feedbackBar").text(feedback);
-    $("#feedbackBar").fadeIn(500).delay(feedback.length * 200).fadeOut(500);
+    if (feedback != undefined) {
+        $("#feedbackBar").text(feedback);
+        $("#feedbackBar").fadeIn(500).delay(feedback.length * 200).fadeOut(500);
+    }
 }
 
 function commandDisplay(command) {
@@ -86,7 +89,7 @@ function commandEntered(e) {
 function programSuccess(output) {
     $("#output").css("color", "white");
     $("#feedbackBar").css("color", "white");
-    $("#output").append("<p>" + output + "</p>");
+    giveFeedback(output);
     giveFeedback("Program ran successfully.");
 }
 

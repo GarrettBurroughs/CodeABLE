@@ -1,6 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	let installedModules = {};
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -10,7 +10,7 @@
 /******/ 			return installedModules[moduleId].exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
+/******/ 		let module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
@@ -46,7 +46,7 @@
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
+/******/ 		let getter = module && module.__esModule ?
 /******/ 			function getDefault() { return module['default']; } :
 /******/ 			function getModuleExports() { return module; };
 /******/ 		__webpack_require__.d(getter, 'a', getter);
@@ -72,79 +72,79 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var AudioConfig_1 = __webpack_require__(38);
+let AudioConfig_1 = __webpack_require__(38);
 exports.AudioConfig = AudioConfig_1.AudioConfig;
-var AudioStreamFormat_1 = __webpack_require__(7);
+let AudioStreamFormat_1 = __webpack_require__(7);
 exports.AudioStreamFormat = AudioStreamFormat_1.AudioStreamFormat;
-var AudioInputStream_1 = __webpack_require__(18);
+let AudioInputStream_1 = __webpack_require__(18);
 exports.AudioInputStream = AudioInputStream_1.AudioInputStream;
 exports.PullAudioInputStream = AudioInputStream_1.PullAudioInputStream;
 exports.PushAudioInputStream = AudioInputStream_1.PushAudioInputStream;
-var CancellationReason_1 = __webpack_require__(39);
+let CancellationReason_1 = __webpack_require__(39);
 exports.CancellationReason = CancellationReason_1.CancellationReason;
-var PullAudioInputStreamCallback_1 = __webpack_require__(40);
+let PullAudioInputStreamCallback_1 = __webpack_require__(40);
 exports.PullAudioInputStreamCallback = PullAudioInputStreamCallback_1.PullAudioInputStreamCallback;
-var KeywordRecognitionModel_1 = __webpack_require__(41);
+let KeywordRecognitionModel_1 = __webpack_require__(41);
 exports.KeywordRecognitionModel = KeywordRecognitionModel_1.KeywordRecognitionModel;
-var SessionEventArgs_1 = __webpack_require__(42);
+let SessionEventArgs_1 = __webpack_require__(42);
 exports.SessionEventArgs = SessionEventArgs_1.SessionEventArgs;
-var RecognitionEventArgs_1 = __webpack_require__(43);
+let RecognitionEventArgs_1 = __webpack_require__(43);
 exports.RecognitionEventArgs = RecognitionEventArgs_1.RecognitionEventArgs;
-var OutputFormat_1 = __webpack_require__(44);
+let OutputFormat_1 = __webpack_require__(44);
 exports.OutputFormat = OutputFormat_1.OutputFormat;
-var IntentRecognitionEventArgs_1 = __webpack_require__(45);
+let IntentRecognitionEventArgs_1 = __webpack_require__(45);
 exports.IntentRecognitionEventArgs = IntentRecognitionEventArgs_1.IntentRecognitionEventArgs;
-var RecognitionResult_1 = __webpack_require__(46);
+let RecognitionResult_1 = __webpack_require__(46);
 exports.RecognitionResult = RecognitionResult_1.RecognitionResult;
-var SpeechRecognitionResult_1 = __webpack_require__(47);
+let SpeechRecognitionResult_1 = __webpack_require__(47);
 exports.SpeechRecognitionResult = SpeechRecognitionResult_1.SpeechRecognitionResult;
-var IntentRecognitionResult_1 = __webpack_require__(48);
+let IntentRecognitionResult_1 = __webpack_require__(48);
 exports.IntentRecognitionResult = IntentRecognitionResult_1.IntentRecognitionResult;
-var LanguageUnderstandingModel_1 = __webpack_require__(49);
+let LanguageUnderstandingModel_1 = __webpack_require__(49);
 exports.LanguageUnderstandingModel = LanguageUnderstandingModel_1.LanguageUnderstandingModel;
-var SpeechRecognitionEventArgs_1 = __webpack_require__(50);
+let SpeechRecognitionEventArgs_1 = __webpack_require__(50);
 exports.SpeechRecognitionEventArgs = SpeechRecognitionEventArgs_1.SpeechRecognitionEventArgs;
-var SpeechRecognitionCanceledEventArgs_1 = __webpack_require__(51);
+let SpeechRecognitionCanceledEventArgs_1 = __webpack_require__(51);
 exports.SpeechRecognitionCanceledEventArgs = SpeechRecognitionCanceledEventArgs_1.SpeechRecognitionCanceledEventArgs;
-var TranslationRecognitionEventArgs_1 = __webpack_require__(52);
+let TranslationRecognitionEventArgs_1 = __webpack_require__(52);
 exports.TranslationRecognitionEventArgs = TranslationRecognitionEventArgs_1.TranslationRecognitionEventArgs;
-var TranslationSynthesisEventArgs_1 = __webpack_require__(53);
+let TranslationSynthesisEventArgs_1 = __webpack_require__(53);
 exports.TranslationSynthesisEventArgs = TranslationSynthesisEventArgs_1.TranslationSynthesisEventArgs;
-var TranslationRecognitionResult_1 = __webpack_require__(54);
+let TranslationRecognitionResult_1 = __webpack_require__(54);
 exports.TranslationRecognitionResult = TranslationRecognitionResult_1.TranslationRecognitionResult;
-var TranslationSynthesisResult_1 = __webpack_require__(55);
+let TranslationSynthesisResult_1 = __webpack_require__(55);
 exports.TranslationSynthesisResult = TranslationSynthesisResult_1.TranslationSynthesisResult;
-var ResultReason_1 = __webpack_require__(56);
+let ResultReason_1 = __webpack_require__(56);
 exports.ResultReason = ResultReason_1.ResultReason;
-var SpeechConfig_1 = __webpack_require__(57);
+let SpeechConfig_1 = __webpack_require__(57);
 exports.SpeechConfig = SpeechConfig_1.SpeechConfig;
-var SpeechTranslationConfig_1 = __webpack_require__(83);
+let SpeechTranslationConfig_1 = __webpack_require__(83);
 exports.SpeechTranslationConfig = SpeechTranslationConfig_1.SpeechTranslationConfig;
-var PropertyCollection_1 = __webpack_require__(84);
+let PropertyCollection_1 = __webpack_require__(84);
 exports.PropertyCollection = PropertyCollection_1.PropertyCollection;
-var PropertyId_1 = __webpack_require__(85);
+let PropertyId_1 = __webpack_require__(85);
 exports.PropertyId = PropertyId_1.PropertyId;
-var Recognizer_1 = __webpack_require__(86);
+let Recognizer_1 = __webpack_require__(86);
 exports.Recognizer = Recognizer_1.Recognizer;
-var SpeechRecognizer_1 = __webpack_require__(87);
+let SpeechRecognizer_1 = __webpack_require__(87);
 exports.SpeechRecognizer = SpeechRecognizer_1.SpeechRecognizer;
-var IntentRecognizer_1 = __webpack_require__(88);
+let IntentRecognizer_1 = __webpack_require__(88);
 exports.IntentRecognizer = IntentRecognizer_1.IntentRecognizer;
-var TranslationRecognizer_1 = __webpack_require__(89);
+let TranslationRecognizer_1 = __webpack_require__(89);
 exports.TranslationRecognizer = TranslationRecognizer_1.TranslationRecognizer;
-var Translations_1 = __webpack_require__(90);
+let Translations_1 = __webpack_require__(90);
 exports.Translations = Translations_1.Translations;
-var NoMatchReason_1 = __webpack_require__(91);
+let NoMatchReason_1 = __webpack_require__(91);
 exports.NoMatchReason = NoMatchReason_1.NoMatchReason;
-var NoMatchDetails_1 = __webpack_require__(92);
+let NoMatchDetails_1 = __webpack_require__(92);
 exports.NoMatchDetails = NoMatchDetails_1.NoMatchDetails;
-var TranslationRecognitionCanceledEventArgs_1 = __webpack_require__(93);
+let TranslationRecognitionCanceledEventArgs_1 = __webpack_require__(93);
 exports.TranslationRecognitionCanceledEventArgs = TranslationRecognitionCanceledEventArgs_1.TranslationRecognitionCanceledEventArgs;
-var IntentRecognitionCanceledEventArgs_1 = __webpack_require__(94);
+let IntentRecognitionCanceledEventArgs_1 = __webpack_require__(94);
 exports.IntentRecognitionCanceledEventArgs = IntentRecognitionCanceledEventArgs_1.IntentRecognitionCanceledEventArgs;
-var CancellationDetails_1 = __webpack_require__(95);
+let CancellationDetails_1 = __webpack_require__(95);
 exports.CancellationDetails = CancellationDetails_1.CancellationDetails;
-var CancellationErrorCodes_1 = __webpack_require__(96);
+let CancellationErrorCodes_1 = __webpack_require__(96);
 exports.CancellationErrorCode = CancellationErrorCodes_1.CancellationErrorCode;
 
 
@@ -158,7 +158,7 @@ exports.CancellationErrorCode = CancellationErrorCodes_1.CancellationErrorCode;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    for (let p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 // Make sure not to export internal modules.
@@ -202,7 +202,7 @@ exports.CancellationErrorCodePropertyName = "CancellationErrorCode";
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    for (let p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(23));
@@ -221,7 +221,7 @@ __export(__webpack_require__(16));
 __export(__webpack_require__(28));
 __export(__webpack_require__(29));
 __export(__webpack_require__(30));
-var TranslationStatus_1 = __webpack_require__(9);
+let TranslationStatus_1 = __webpack_require__(9);
 exports.TranslationStatus = TranslationStatus_1.TranslationStatus;
 
 
@@ -234,11 +234,11 @@ exports.TranslationStatus = TranslationStatus_1.TranslationStatus;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -255,7 +255,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @class ArgumentNullError
  * @extends {Error}
  */
-var ArgumentNullError = /** @class */ (function (_super) {
+let ArgumentNullError = /** @class */ (function (_super) {
     __extends(ArgumentNullError, _super);
     /**
      * Creates an instance of ArgumentNullError.
@@ -265,7 +265,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
      * @memberOf ArgumentNullError
      */
     function ArgumentNullError(argumentName) {
-        var _this = _super.call(this, argumentName) || this;
+        let _this = _super.call(this, argumentName) || this;
         _this.name = "ArgumentNull";
         _this.message = argumentName;
         return _this;
@@ -281,7 +281,7 @@ exports.ArgumentNullError = ArgumentNullError;
  * @extends {Error}
  */
 // tslint:disable-next-line:max-classes-per-file
-var InvalidOperationError = /** @class */ (function (_super) {
+let InvalidOperationError = /** @class */ (function (_super) {
     __extends(InvalidOperationError, _super);
     /**
      * Creates an instance of InvalidOperationError.
@@ -291,7 +291,7 @@ var InvalidOperationError = /** @class */ (function (_super) {
      * @memberOf InvalidOperationError
      */
     function InvalidOperationError(error) {
-        var _this = _super.call(this, error) || this;
+        let _this = _super.call(this, error) || this;
         _this.name = "InvalidOperation";
         _this.message = error;
         return _this;
@@ -307,7 +307,7 @@ exports.InvalidOperationError = InvalidOperationError;
  * @extends {Error}
  */
 // tslint:disable-next-line:max-classes-per-file
-var ObjectDisposedError = /** @class */ (function (_super) {
+let ObjectDisposedError = /** @class */ (function (_super) {
     __extends(ObjectDisposedError, _super);
     /**
      * Creates an instance of ObjectDisposedError.
@@ -318,7 +318,7 @@ var ObjectDisposedError = /** @class */ (function (_super) {
      * @memberOf ObjectDisposedError
      */
     function ObjectDisposedError(objectName, error) {
-        var _this = _super.call(this, error) || this;
+        let _this = _super.call(this, error) || this;
         _this.name = objectName + "ObjectDisposed";
         _this.message = error;
         return _this;
@@ -342,7 +342,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @class Contracts
  * @private
  */
-var Contracts = /** @class */ (function () {
+let Contracts = /** @class */ (function () {
     function Contracts() {
     }
     Contracts.throwIfNullOrUndefined = function (param, name) {
@@ -371,8 +371,8 @@ var Contracts = /** @class */ (function () {
         if (array.length === 0) {
             throw new Error("throwIfArrayEmptyOrWhitespace:" + name);
         }
-        for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
-            var item = array_1[_i];
+        for (let _i = 0, array_1 = array; _i < array_1.length; _i++) {
+            let item = array_1[_i];
             Contracts.throwIfNullOrWhitespace(item, name);
         }
     };
@@ -395,17 +395,17 @@ exports.Contracts = Contracts;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var createGuid = function () {
-    var d = new Date().getTime();
-    var guid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
-        var r = (d + Math.random() * 16) % 16 | 0;
+let createGuid = function () {
+    let d = new Date().getTime();
+    let guid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+        let r = (d + Math.random() * 16) % 16 | 0;
         d = Math.floor(d / 16);
         return (c === "x" ? r : (r & 0x3 | 0x8)).toString(16);
     });
     return guid;
 };
 exports.createGuid = createGuid;
-var createNoDashGuid = function () {
+let createNoDashGuid = function () {
     return createGuid().replace(new RegExp("-", "g"), "").toUpperCase();
 };
 exports.createNoDashGuid = createNoDashGuid;
@@ -421,7 +421,7 @@ exports.createNoDashGuid = createNoDashGuid;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    for (let p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(22));
@@ -443,11 +443,11 @@ __export(__webpack_require__(37));
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -461,7 +461,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Represents audio stream format used for custom audio input configurations.
  * @class AudioStreamFormat
  */
-var AudioStreamFormat = /** @class */ (function () {
+let AudioStreamFormat = /** @class */ (function () {
     function AudioStreamFormat() {
     }
     /**
@@ -497,7 +497,7 @@ exports.AudioStreamFormat = AudioStreamFormat;
  * @class AudioStreamFormatImpl
  */
 // tslint:disable-next-line:max-classes-per-file
-var AudioStreamFormatImpl = /** @class */ (function (_super) {
+let AudioStreamFormatImpl = /** @class */ (function (_super) {
     __extends(AudioStreamFormatImpl, _super);
     /**
      * Creates an instance with the given values.
@@ -510,7 +510,7 @@ var AudioStreamFormatImpl = /** @class */ (function (_super) {
         if (samplesPerSec === void 0) { samplesPerSec = 16000; }
         if (bitsPerSample === void 0) { bitsPerSample = 16; }
         if (channels === void 0) { channels = 1; }
-        var _this = _super.call(this) || this;
+        let _this = _super.call(this) || this;
         _this.formatTag = 1;
         _this.bitsPerSample = bitsPerSample;
         _this.samplesPerSec = samplesPerSec;
@@ -551,15 +551,15 @@ exports.AudioStreamFormatImpl = AudioStreamFormatImpl;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Guid_1 = __webpack_require__(5);
-var EventType;
+let Guid_1 = __webpack_require__(5);
+let EventType;
 (function (EventType) {
     EventType[EventType["Debug"] = 0] = "Debug";
     EventType[EventType["Info"] = 1] = "Info";
     EventType[EventType["Warning"] = 2] = "Warning";
     EventType[EventType["Error"] = 3] = "Error";
 })(EventType = exports.EventType || (exports.EventType = {}));
-var PlatformEvent = /** @class */ (function () {
+let PlatformEvent = /** @class */ (function () {
     function PlatformEvent(eventName, eventType) {
         this.privName = eventName;
         this.privEventId = Guid_1.createNoDashGuid();
@@ -621,7 +621,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Defines translation status.
  * @class TranslationStatus
  */
-var TranslationStatus;
+let TranslationStatus;
 (function (TranslationStatus) {
     /**
      * @member TranslationStatus.Success
@@ -644,7 +644,7 @@ var TranslationStatus;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var AuthInfo = /** @class */ (function () {
+let AuthInfo = /** @class */ (function () {
     function AuthInfo(headerName, token) {
         this.privHeaderName = headerName;
         this.privToken = token;
@@ -677,11 +677,11 @@ exports.AuthInfo = AuthInfo;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -691,12 +691,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var SpeechRecognitionEvent = /** @class */ (function (_super) {
+let Exports_1 = __webpack_require__(2);
+let SpeechRecognitionEvent = /** @class */ (function (_super) {
     __extends(SpeechRecognitionEvent, _super);
     function SpeechRecognitionEvent(eventName, requestId, sessionId, eventType) {
         if (eventType === void 0) { eventType = Exports_1.EventType.Info; }
-        var _this = _super.call(this, eventName, eventType) || this;
+        let _this = _super.call(this, eventName, eventType) || this;
         _this.privRequestId = requestId;
         _this.privSessionId = sessionId;
         return _this;
@@ -719,10 +719,10 @@ var SpeechRecognitionEvent = /** @class */ (function (_super) {
 }(Exports_1.PlatformEvent));
 exports.SpeechRecognitionEvent = SpeechRecognitionEvent;
 // tslint:disable-next-line:max-classes-per-file
-var RecognitionTriggeredEvent = /** @class */ (function (_super) {
+let RecognitionTriggeredEvent = /** @class */ (function (_super) {
     __extends(RecognitionTriggeredEvent, _super);
     function RecognitionTriggeredEvent(requestId, sessionId, audioSourceId, audioNodeId) {
-        var _this = _super.call(this, "RecognitionTriggeredEvent", requestId, sessionId) || this;
+        let _this = _super.call(this, "RecognitionTriggeredEvent", requestId, sessionId) || this;
         _this.privAudioSourceId = audioSourceId;
         _this.privAudioNodeId = audioNodeId;
         return _this;
@@ -745,10 +745,10 @@ var RecognitionTriggeredEvent = /** @class */ (function (_super) {
 }(SpeechRecognitionEvent));
 exports.RecognitionTriggeredEvent = RecognitionTriggeredEvent;
 // tslint:disable-next-line:max-classes-per-file
-var ListeningStartedEvent = /** @class */ (function (_super) {
+let ListeningStartedEvent = /** @class */ (function (_super) {
     __extends(ListeningStartedEvent, _super);
     function ListeningStartedEvent(requestId, sessionId, audioSourceId, audioNodeId) {
-        var _this = _super.call(this, "ListeningStartedEvent", requestId, sessionId) || this;
+        let _this = _super.call(this, "ListeningStartedEvent", requestId, sessionId) || this;
         _this.privAudioSourceId = audioSourceId;
         _this.privAudioNodeId = audioNodeId;
         return _this;
@@ -771,10 +771,10 @@ var ListeningStartedEvent = /** @class */ (function (_super) {
 }(SpeechRecognitionEvent));
 exports.ListeningStartedEvent = ListeningStartedEvent;
 // tslint:disable-next-line:max-classes-per-file
-var ConnectingToServiceEvent = /** @class */ (function (_super) {
+let ConnectingToServiceEvent = /** @class */ (function (_super) {
     __extends(ConnectingToServiceEvent, _super);
     function ConnectingToServiceEvent(requestId, authFetchEventid, sessionId) {
-        var _this = _super.call(this, "ConnectingToServiceEvent", requestId, sessionId) || this;
+        let _this = _super.call(this, "ConnectingToServiceEvent", requestId, sessionId) || this;
         _this.privAuthFetchEventid = authFetchEventid;
         return _this;
     }
@@ -789,10 +789,10 @@ var ConnectingToServiceEvent = /** @class */ (function (_super) {
 }(SpeechRecognitionEvent));
 exports.ConnectingToServiceEvent = ConnectingToServiceEvent;
 // tslint:disable-next-line:max-classes-per-file
-var RecognitionStartedEvent = /** @class */ (function (_super) {
+let RecognitionStartedEvent = /** @class */ (function (_super) {
     __extends(RecognitionStartedEvent, _super);
     function RecognitionStartedEvent(requestId, audioSourceId, audioNodeId, authFetchEventId, sessionId) {
-        var _this = _super.call(this, "RecognitionStartedEvent", requestId, sessionId) || this;
+        let _this = _super.call(this, "RecognitionStartedEvent", requestId, sessionId) || this;
         _this.privAudioSourceId = audioSourceId;
         _this.privAudioNodeId = audioNodeId;
         _this.privAuthFetchEventId = authFetchEventId;
@@ -822,7 +822,7 @@ var RecognitionStartedEvent = /** @class */ (function (_super) {
     return RecognitionStartedEvent;
 }(SpeechRecognitionEvent));
 exports.RecognitionStartedEvent = RecognitionStartedEvent;
-var RecognitionCompletionStatus;
+let RecognitionCompletionStatus;
 (function (RecognitionCompletionStatus) {
     RecognitionCompletionStatus[RecognitionCompletionStatus["Success"] = 0] = "Success";
     RecognitionCompletionStatus[RecognitionCompletionStatus["AudioSourceError"] = 1] = "AudioSourceError";
@@ -836,10 +836,10 @@ var RecognitionCompletionStatus;
     RecognitionCompletionStatus[RecognitionCompletionStatus["UnknownError"] = 9] = "UnknownError";
 })(RecognitionCompletionStatus = exports.RecognitionCompletionStatus || (exports.RecognitionCompletionStatus = {}));
 // tslint:disable-next-line:max-classes-per-file
-var RecognitionEndedEvent = /** @class */ (function (_super) {
+let RecognitionEndedEvent = /** @class */ (function (_super) {
     __extends(RecognitionEndedEvent, _super);
     function RecognitionEndedEvent(requestId, audioSourceId, audioNodeId, authFetchEventId, sessionId, serviceTag, status, error) {
-        var _this = _super.call(this, "RecognitionEndedEvent", requestId, sessionId, status === RecognitionCompletionStatus.Success ? Exports_1.EventType.Info : Exports_1.EventType.Error) || this;
+        let _this = _super.call(this, "RecognitionEndedEvent", requestId, sessionId, status === RecognitionCompletionStatus.Success ? Exports_1.EventType.Info : Exports_1.EventType.Error) || this;
         _this.privAudioSourceId = audioSourceId;
         _this.privAudioNodeId = audioNodeId;
         _this.privAuthFetchEventId = authFetchEventId;
@@ -905,14 +905,14 @@ exports.RecognitionEndedEvent = RecognitionEndedEvent;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Error_1 = __webpack_require__(3);
-var Guid_1 = __webpack_require__(5);
-var MessageType;
+let Error_1 = __webpack_require__(3);
+let Guid_1 = __webpack_require__(5);
+let MessageType;
 (function (MessageType) {
     MessageType[MessageType["Text"] = 0] = "Text";
     MessageType[MessageType["Binary"] = 1] = "Binary";
 })(MessageType = exports.MessageType || (exports.MessageType = {}));
-var ConnectionMessage = /** @class */ (function () {
+let ConnectionMessage = /** @class */ (function () {
     function ConnectionMessage(messageType, body, headers, id) {
         this.privBody = null;
         if (messageType === MessageType.Text && body && !(typeof (body) === "string")) {
@@ -989,11 +989,11 @@ exports.ConnectionMessage = ConnectionMessage;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Error_1 = __webpack_require__(3);
-var Guid_1 = __webpack_require__(5);
-var EventSource = /** @class */ (function () {
+let Error_1 = __webpack_require__(3);
+let Guid_1 = __webpack_require__(5);
+let EventSource = /** @class */ (function () {
     function EventSource(metadata) {
-        var _this = this;
+        let _this = this;
         this.privEventListeners = {};
         this.privIsDisposed = false;
         this.onEvent = function (event) {
@@ -1001,7 +1001,7 @@ var EventSource = /** @class */ (function () {
                 throw (new Error_1.ObjectDisposedError("EventSource"));
             }
             if (_this.metadata) {
-                for (var paramName in _this.metadata) {
+                for (let paramName in _this.metadata) {
                     if (paramName) {
                         if (event.metadata) {
                             if (!event.metadata[paramName]) {
@@ -1011,14 +1011,14 @@ var EventSource = /** @class */ (function () {
                     }
                 }
             }
-            for (var eventId in _this.privEventListeners) {
+            for (let eventId in _this.privEventListeners) {
                 if (eventId && _this.privEventListeners[eventId]) {
                     _this.privEventListeners[eventId](event);
                 }
             }
         };
         this.attach = function (onEventCallback) {
-            var id = Guid_1.createNoDashGuid();
+            let id = Guid_1.createNoDashGuid();
             _this.privEventListeners[id] = onEventCallback;
             return {
                 detach: function () {
@@ -1060,10 +1060,10 @@ exports.EventSource = EventSource;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Error_1 = __webpack_require__(3);
-var List = /** @class */ (function () {
+let Error_1 = __webpack_require__(3);
+let List = /** @class */ (function () {
     function List(list) {
-        var _this = this;
+        let _this = this;
         this.privSubscriptionIdCounter = 0;
         this.privAddSubscriptions = {};
         this.privRemoveSubscriptions = {};
@@ -1110,7 +1110,7 @@ var List = /** @class */ (function () {
         };
         this.remove = function (index, count) {
             _this.throwIfDisposed();
-            var removedElements = _this.privList.splice(index, count);
+            let removedElements = _this.privList.splice(index, count);
             _this.triggerSubscriptions(_this.privRemoveSubscriptions);
             return removedElements;
         };
@@ -1124,7 +1124,7 @@ var List = /** @class */ (function () {
         };
         this.onAdded = function (addedCallback) {
             _this.throwIfDisposed();
-            var subscriptionId = _this.privSubscriptionIdCounter++;
+            let subscriptionId = _this.privSubscriptionIdCounter++;
             _this.privAddSubscriptions[subscriptionId] = addedCallback;
             return {
                 detach: function () {
@@ -1134,7 +1134,7 @@ var List = /** @class */ (function () {
         };
         this.onRemoved = function (removedCallback) {
             _this.throwIfDisposed();
-            var subscriptionId = _this.privSubscriptionIdCounter++;
+            let subscriptionId = _this.privSubscriptionIdCounter++;
             _this.privRemoveSubscriptions[subscriptionId] = removedCallback;
             return {
                 detach: function () {
@@ -1144,7 +1144,7 @@ var List = /** @class */ (function () {
         };
         this.onDisposed = function (disposedCallback) {
             _this.throwIfDisposed();
-            var subscriptionId = _this.privSubscriptionIdCounter++;
+            let subscriptionId = _this.privSubscriptionIdCounter++;
             _this.privDisposedSubscriptions[subscriptionId] = disposedCallback;
             return {
                 detach: function () {
@@ -1157,7 +1157,7 @@ var List = /** @class */ (function () {
             return _this.privList.join(seperator);
         };
         this.toArray = function () {
-            var cloneCopy = Array();
+            let cloneCopy = Array();
             _this.privList.forEach(function (val) {
                 cloneCopy.push(val);
             });
@@ -1178,22 +1178,22 @@ var List = /** @class */ (function () {
         };
         this.forEach = function (callback) {
             _this.throwIfDisposed();
-            for (var i = 0; i < _this.length(); i++) {
+            for (let i = 0; i < _this.length(); i++) {
                 callback(_this.privList[i], i);
             }
         };
         this.select = function (callback) {
             _this.throwIfDisposed();
-            var selectList = [];
-            for (var i = 0; i < _this.privList.length; i++) {
+            let selectList = [];
+            for (let i = 0; i < _this.privList.length; i++) {
                 selectList.push(callback(_this.privList[i], i));
             }
             return new List(selectList);
         };
         this.where = function (callback) {
             _this.throwIfDisposed();
-            var filteredList = new List();
-            for (var i = 0; i < _this.privList.length; i++) {
+            let filteredList = new List();
+            for (let i = 0; i < _this.privList.length; i++) {
                 if (callback(_this.privList[i], i)) {
                     filteredList.add(_this.privList[i]);
                 }
@@ -1202,8 +1202,8 @@ var List = /** @class */ (function () {
         };
         this.orderBy = function (compareFn) {
             _this.throwIfDisposed();
-            var clonedArray = _this.toArray();
-            var orderedArray = clonedArray.sort(compareFn);
+            let clonedArray = _this.toArray();
+            let orderedArray = clonedArray.sort(compareFn);
             return new List(orderedArray);
         };
         this.orderByDesc = function (compareFn) {
@@ -1241,7 +1241,7 @@ var List = /** @class */ (function () {
         };
         this.triggerSubscriptions = function (subscriptions) {
             if (subscriptions) {
-                for (var subscriptionId in subscriptions) {
+                for (let subscriptionId in subscriptions) {
                     if (subscriptionId) {
                         subscriptions[subscriptionId]();
                     }
@@ -1251,8 +1251,8 @@ var List = /** @class */ (function () {
         this.privList = [];
         // copy the list rather than taking as is.
         if (list) {
-            for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
-                var item = list_1[_i];
+            for (let _i = 0, list_1 = list; _i < list_1.length; _i++) {
+                let item = list_1[_i];
                 this.privList.push(item);
             }
         }
@@ -1272,16 +1272,16 @@ exports.List = List;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Error_1 = __webpack_require__(3);
-var PromiseState;
+let Error_1 = __webpack_require__(3);
+let PromiseState;
 (function (PromiseState) {
     PromiseState[PromiseState["None"] = 0] = "None";
     PromiseState[PromiseState["Resolved"] = 1] = "Resolved";
     PromiseState[PromiseState["Rejected"] = 2] = "Rejected";
 })(PromiseState = exports.PromiseState || (exports.PromiseState = {}));
-var PromiseResult = /** @class */ (function () {
+let PromiseResult = /** @class */ (function () {
     function PromiseResult(promiseResultEventSource) {
-        var _this = this;
+        let _this = this;
         this.throwIfError = function () {
             if (_this.isError) {
                 throw _this.error;
@@ -1333,9 +1333,9 @@ var PromiseResult = /** @class */ (function () {
 }());
 exports.PromiseResult = PromiseResult;
 // tslint:disable-next-line:max-classes-per-file
-var PromiseResultEventSource = /** @class */ (function () {
+let PromiseResultEventSource = /** @class */ (function () {
     function PromiseResultEventSource() {
-        var _this = this;
+        let _this = this;
         this.setResult = function (result) {
             _this.privOnSetResult(result);
         };
@@ -1351,17 +1351,17 @@ var PromiseResultEventSource = /** @class */ (function () {
 }());
 exports.PromiseResultEventSource = PromiseResultEventSource;
 // tslint:disable-next-line:max-classes-per-file
-var PromiseHelper = /** @class */ (function () {
+let PromiseHelper = /** @class */ (function () {
     function PromiseHelper() {
     }
     PromiseHelper.whenAll = function (promises) {
         if (!promises || promises.length === 0) {
             throw new Error_1.ArgumentNullError("promises");
         }
-        var deferred = new Deferred();
-        var errors = [];
-        var completedPromises = 0;
-        var checkForCompletion = function () {
+        let deferred = new Deferred();
+        let errors = [];
+        let completedPromises = 0;
+        let checkForCompletion = function () {
             completedPromises++;
             if (completedPromises === promises.length) {
                 if (errors.length === 0) {
@@ -1372,8 +1372,8 @@ var PromiseHelper = /** @class */ (function () {
                 }
             }
         };
-        for (var _i = 0, promises_1 = promises; _i < promises_1.length; _i++) {
-            var promise = promises_1[_i];
+        for (let _i = 0, promises_1 = promises; _i < promises_1.length; _i++) {
+            let promise = promises_1[_i];
             promise.on(function (r) {
                 checkForCompletion();
             }, function (e) {
@@ -1384,12 +1384,12 @@ var PromiseHelper = /** @class */ (function () {
         return deferred.promise();
     };
     PromiseHelper.fromResult = function (result) {
-        var deferred = new Deferred();
+        let deferred = new Deferred();
         deferred.resolve(result);
         return deferred.promise();
     };
     PromiseHelper.fromError = function (error) {
-        var deferred = new Deferred();
+        let deferred = new Deferred();
         deferred.reject(error);
         return deferred.promise();
     };
@@ -1398,9 +1398,9 @@ var PromiseHelper = /** @class */ (function () {
 exports.PromiseHelper = PromiseHelper;
 // TODO: replace with ES6 promises
 // tslint:disable-next-line:max-classes-per-file
-var Promise = /** @class */ (function () {
+let Promise = /** @class */ (function () {
     function Promise(sink) {
-        var _this = this;
+        let _this = this;
         this.result = function () {
             return _this.privSink.result;
         };
@@ -1408,10 +1408,10 @@ var Promise = /** @class */ (function () {
             if (!continuationCallback) {
                 throw new Error_1.ArgumentNullError("continuationCallback");
             }
-            var continuationDeferral = new Deferred();
+            let continuationDeferral = new Deferred();
             _this.privSink.on(function (r) {
                 try {
-                    var continuationResult = continuationCallback(_this.privSink.result);
+                    let continuationResult = continuationCallback(_this.privSink.result);
                     continuationDeferral.resolve(continuationResult);
                 }
                 catch (e) {
@@ -1419,7 +1419,7 @@ var Promise = /** @class */ (function () {
                 }
             }, function (error) {
                 try {
-                    var continuationResult = continuationCallback(_this.privSink.result);
+                    let continuationResult = continuationCallback(_this.privSink.result);
                     continuationDeferral.resolve(continuationResult);
                 }
                 catch (e) {
@@ -1432,10 +1432,10 @@ var Promise = /** @class */ (function () {
             if (!continuationCallback) {
                 throw new Error_1.ArgumentNullError("continuationCallback");
             }
-            var continuationDeferral = new Deferred();
+            let continuationDeferral = new Deferred();
             _this.privSink.on(function (r) {
                 try {
-                    var continuationResult = continuationCallback(r);
+                    let continuationResult = continuationCallback(r);
                     continuationDeferral.resolve(continuationResult);
                 }
                 catch (e) {
@@ -1450,10 +1450,10 @@ var Promise = /** @class */ (function () {
             if (!continuationCallback) {
                 throw new Error_1.ArgumentNullError("continuationCallback");
             }
-            var continuationDeferral = new Deferred();
+            let continuationDeferral = new Deferred();
             _this.privSink.on(function (r) {
                 try {
-                    var continuationPromise = continuationCallback(_this.privSink.result);
+                    let continuationPromise = continuationCallback(_this.privSink.result);
                     if (!continuationPromise) {
                         throw new Error("'Continuation callback did not return promise'");
                     }
@@ -1468,7 +1468,7 @@ var Promise = /** @class */ (function () {
                 }
             }, function (error) {
                 try {
-                    var continuationPromise = continuationCallback(_this.privSink.result);
+                    let continuationPromise = continuationCallback(_this.privSink.result);
                     if (!continuationPromise) {
                         throw new Error("Continuation callback did not return promise");
                     }
@@ -1488,10 +1488,10 @@ var Promise = /** @class */ (function () {
             if (!continuationCallback) {
                 throw new Error_1.ArgumentNullError("continuationCallback");
             }
-            var continuationDeferral = new Deferred();
+            let continuationDeferral = new Deferred();
             _this.privSink.on(function (r) {
                 try {
-                    var continuationPromise = continuationCallback(r);
+                    let continuationPromise = continuationCallback(r);
                     if (!continuationPromise) {
                         throw new Error("Continuation callback did not return promise");
                     }
@@ -1523,7 +1523,7 @@ var Promise = /** @class */ (function () {
             if (!callback) {
                 throw new Error_1.ArgumentNullError("callback");
             }
-            var callbackWrapper = function (_) {
+            let callbackWrapper = function (_) {
                 callback();
             };
             return _this.on(callbackWrapper, callbackWrapper);
@@ -1534,9 +1534,9 @@ var Promise = /** @class */ (function () {
 }());
 exports.Promise = Promise;
 // tslint:disable-next-line:max-classes-per-file
-var Deferred = /** @class */ (function () {
+let Deferred = /** @class */ (function () {
     function Deferred() {
-        var _this = this;
+        let _this = this;
         this.state = function () {
             return _this.privSink.state;
         };
@@ -1558,9 +1558,9 @@ var Deferred = /** @class */ (function () {
 }());
 exports.Deferred = Deferred;
 // tslint:disable-next-line:max-classes-per-file
-var Sink = /** @class */ (function () {
+let Sink = /** @class */ (function () {
     function Sink() {
-        var _this = this;
+        let _this = this;
         this.privState = PromiseState.None;
         this.privPromiseResult = null;
         this.privPromiseResultEvents = null;
@@ -1572,7 +1572,7 @@ var Sink = /** @class */ (function () {
             }
             _this.privState = PromiseState.Resolved;
             _this.privPromiseResultEvents.setResult(result);
-            for (var i = 0; i < _this.privSuccessHandlers.length; i++) {
+            for (let i = 0; i < _this.privSuccessHandlers.length; i++) {
                 _this.executeSuccessCallback(result, _this.privSuccessHandlers[i], _this.privErrorHandlers[i]);
             }
             _this.detachHandlers();
@@ -1583,8 +1583,8 @@ var Sink = /** @class */ (function () {
             }
             _this.privState = PromiseState.Rejected;
             _this.privPromiseResultEvents.setError(error);
-            for (var _i = 0, _a = _this.privErrorHandlers; _i < _a.length; _i++) {
-                var errorHandler = _a[_i];
+            for (let _i = 0, _a = _this.privErrorHandlers; _i < _a.length; _i++) {
+                let errorHandler = _a[_i];
                 _this.executeErrorCallback(error, errorHandler);
             }
             _this.detachHandlers();
@@ -1664,17 +1664,17 @@ exports.Sink = Sink;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Error_1 = __webpack_require__(3);
-var List_1 = __webpack_require__(14);
-var Promise_1 = __webpack_require__(15);
-var SubscriberType;
+let Error_1 = __webpack_require__(3);
+let List_1 = __webpack_require__(14);
+let Promise_1 = __webpack_require__(15);
+let SubscriberType;
 (function (SubscriberType) {
     SubscriberType[SubscriberType["Dequeue"] = 0] = "Dequeue";
     SubscriberType[SubscriberType["Peek"] = 1] = "Peek";
 })(SubscriberType || (SubscriberType = {}));
-var Queue = /** @class */ (function () {
+let Queue = /** @class */ (function () {
     function Queue(list) {
-        var _this = this;
+        let _this = this;
         this.privPromiseStore = new List_1.List();
         this.privIsDrainInProgress = false;
         this.privIsDisposing = false;
@@ -1692,7 +1692,7 @@ var Queue = /** @class */ (function () {
                         break;
                     }
                     else {
-                        var p = _this.privPromiseStore.removeFirst();
+                        let p = _this.privPromiseStore.removeFirst();
                         if (!p.result().isError) {
                             _this.privList.add(p.result().result);
                         }
@@ -1705,7 +1705,7 @@ var Queue = /** @class */ (function () {
         };
         this.dequeue = function () {
             _this.throwIfDispose();
-            var deferredSubscriber = new Promise_1.Deferred();
+            let deferredSubscriber = new Promise_1.Deferred();
             if (_this.privSubscribers) {
                 _this.privSubscribers.add({ deferral: deferredSubscriber, type: SubscriberType.Dequeue });
                 _this.drain();
@@ -1714,8 +1714,8 @@ var Queue = /** @class */ (function () {
         };
         this.peek = function () {
             _this.throwIfDispose();
-            var deferredSubscriber = new Promise_1.Deferred();
-            var subs = _this.privSubscribers;
+            let deferredSubscriber = new Promise_1.Deferred();
+            let subs = _this.privSubscribers;
             if (subs) {
                 _this.privSubscribers.add({ deferral: deferredSubscriber, type: SubscriberType.Peek });
                 _this.drain();
@@ -1733,10 +1733,10 @@ var Queue = /** @class */ (function () {
             if (!_this.isDisposed() && !_this.privIsDisposing) {
                 _this.privDisposeReason = reason;
                 _this.privIsDisposing = true;
-                var subs = _this.privSubscribers;
+                let subs = _this.privSubscribers;
                 if (subs) {
                     while (subs.length() > 0) {
-                        var subscriber = subs.removeFirst();
+                        let subscriber = subs.removeFirst();
                         // TODO: this needs work (Resolve(null) instead?).
                         subscriber.deferral.resolve(undefined);
                         // subscriber.deferral.reject("Disposed");
@@ -1754,8 +1754,8 @@ var Queue = /** @class */ (function () {
                         _this.privSubscribers = subs;
                     }
                 }
-                for (var _i = 0, _a = _this.privDetachables; _i < _a.length; _i++) {
-                    var detachable = _a[_i];
+                for (let _i = 0, _a = _this.privDetachables; _i < _a.length; _i++) {
+                    let detachable = _a[_i];
                     detachable.detach();
                 }
                 if (_this.privPromiseStore.length() > 0 && pendingItemProcessor) {
@@ -1783,16 +1783,16 @@ var Queue = /** @class */ (function () {
         this.drain = function () {
             if (!_this.privIsDrainInProgress && !_this.privIsDisposing) {
                 _this.privIsDrainInProgress = true;
-                var subs = _this.privSubscribers;
-                var lists = _this.privList;
+                let subs = _this.privSubscribers;
+                let lists = _this.privList;
                 if (subs && lists) {
                     while (lists.length() > 0 && subs.length() > 0 && !_this.privIsDisposing) {
-                        var subscriber = subs.removeFirst();
+                        let subscriber = subs.removeFirst();
                         if (subscriber.type === SubscriberType.Peek) {
                             subscriber.deferral.resolve(lists.first());
                         }
                         else {
-                            var dequeuedItem = lists.removeFirst();
+                            let dequeuedItem = lists.removeFirst();
                             subscriber.deferral.resolve(dequeuedItem);
                         }
                     }
@@ -1855,11 +1855,11 @@ exports.Queue = Queue;
 Object.defineProperty(exports, "__esModule", { value: true });
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var Exports_1 = __webpack_require__(2);
-var ws = __webpack_require__(36);
-var WebsocketMessageAdapter = /** @class */ (function () {
+let Exports_1 = __webpack_require__(2);
+let ws = __webpack_require__(36);
+let WebsocketMessageAdapter = /** @class */ (function () {
     function WebsocketMessageAdapter(uri, connectionId, messageFormatter) {
-        var _this = this;
+        let _this = this;
         this.open = function () {
             if (_this.privConnectionState === Exports_1.ConnectionState.Disconnected) {
                 return Exports_1.PromiseHelper.fromError("Cannot open a connection that is in " + _this.privConnectionState + " state");
@@ -1911,13 +1911,13 @@ var WebsocketMessageAdapter = /** @class */ (function () {
                 _this.onClose(e.code, e.reason);
             };
             _this.privWebsocketClient.onmessage = function (e) {
-                var networkReceivedTime = new Date().toISOString();
+                let networkReceivedTime = new Date().toISOString();
                 if (_this.privConnectionState === Exports_1.ConnectionState.Connected) {
-                    var deferred_1 = new Exports_1.Deferred();
+                    let deferred_1 = new Exports_1.Deferred();
                     // let id = ++this.idCounter;
                     _this.privReceivingMessageQueue.enqueueFromPromise(deferred_1.promise());
                     if (e.data instanceof ArrayBuffer) {
-                        var rawMessage = new Exports_1.RawWebsocketMessage(Exports_1.MessageType.Binary, e.data);
+                        let rawMessage = new Exports_1.RawWebsocketMessage(Exports_1.MessageType.Binary, e.data);
                         _this.privMessageFormatter
                             .toConnectionMessage(rawMessage)
                             .on(function (connectionMessage) {
@@ -1929,7 +1929,7 @@ var WebsocketMessageAdapter = /** @class */ (function () {
                         });
                     }
                     else {
-                        var rawMessage = new Exports_1.RawWebsocketMessage(Exports_1.MessageType.Text, e.data);
+                        let rawMessage = new Exports_1.RawWebsocketMessage(Exports_1.MessageType.Text, e.data);
                         _this.privMessageFormatter
                             .toConnectionMessage(rawMessage)
                             .on(function (connectionMessage) {
@@ -1948,8 +1948,8 @@ var WebsocketMessageAdapter = /** @class */ (function () {
             if (_this.privConnectionState !== Exports_1.ConnectionState.Connected) {
                 return Exports_1.PromiseHelper.fromError("Cannot send on connection that is in " + _this.privConnectionState + " state");
             }
-            var messageSendStatusDeferral = new Exports_1.Deferred();
-            var messageSendDeferral = new Exports_1.Deferred();
+            let messageSendStatusDeferral = new Exports_1.Deferred();
+            let messageSendDeferral = new Exports_1.Deferred();
             _this.privSendMessageQueue.enqueueFromPromise(messageSendDeferral.promise());
             _this.privMessageFormatter
                 .fromConnectionMessage(message)
@@ -1977,7 +1977,7 @@ var WebsocketMessageAdapter = /** @class */ (function () {
                 }
             }
             else {
-                var deferral = new Exports_1.Deferred();
+                let deferral = new Exports_1.Deferred();
                 deferral.resolve(true);
                 return deferral.promise();
             }
@@ -1998,7 +1998,7 @@ var WebsocketMessageAdapter = /** @class */ (function () {
             }
         };
         this.onClose = function (code, reason) {
-            var closeReason = "Connection closed. " + code + ": " + reason;
+            let closeReason = "Connection closed. " + code + ": " + reason;
             _this.privConnectionState = Exports_1.ConnectionState.Disconnected;
             _this.privDisconnectDeferral.resolve(true);
             _this.privReceivingMessageQueue.dispose(reason);
@@ -2075,11 +2075,11 @@ exports.WebsocketMessageAdapter = WebsocketMessageAdapter;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -2089,16 +2089,16 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Guid_1 = __webpack_require__(5);
-var Exports_1 = __webpack_require__(2);
-var Exports_2 = __webpack_require__(0);
-var AudioStreamFormat_1 = __webpack_require__(7);
-var bufferSize = 4096;
+let Guid_1 = __webpack_require__(5);
+let Exports_1 = __webpack_require__(2);
+let Exports_2 = __webpack_require__(0);
+let AudioStreamFormat_1 = __webpack_require__(7);
+let bufferSize = 4096;
 /**
  * Represents audio input stream used for custom audio input configurations.
  * @class AudioInputStream
  */
-var AudioInputStream = /** @class */ (function () {
+let AudioInputStream = /** @class */ (function () {
     /**
      * Creates and initializes an instance.
      * @constructor
@@ -2141,7 +2141,7 @@ exports.AudioInputStream = AudioInputStream;
  * @class PushAudioInputStream
  */
 // tslint:disable-next-line:max-classes-per-file
-var PushAudioInputStream = /** @class */ (function (_super) {
+let PushAudioInputStream = /** @class */ (function (_super) {
     __extends(PushAudioInputStream, _super);
     function PushAudioInputStream() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -2167,7 +2167,7 @@ exports.PushAudioInputStream = PushAudioInputStream;
  * @class PushAudioInputStreamImpl
  */
 // tslint:disable-next-line:max-classes-per-file
-var PushAudioInputStreamImpl = /** @class */ (function (_super) {
+let PushAudioInputStreamImpl = /** @class */ (function (_super) {
     __extends(PushAudioInputStreamImpl, _super);
     /**
      * Creates and initalizes an instance with the given values.
@@ -2175,7 +2175,7 @@ var PushAudioInputStreamImpl = /** @class */ (function (_super) {
      * @param {AudioStreamFormat} format - The audio stream format.
      */
     function PushAudioInputStreamImpl(format) {
-        var _this = _super.call(this) || this;
+        let _this = _super.call(this) || this;
         _this.privStream = new Exports_1.Stream();
         _this.onEvent = function (event) {
             _this.privEvents.onEvent(event);
@@ -2210,7 +2210,7 @@ var PushAudioInputStreamImpl = /** @class */ (function (_super) {
      */
     PushAudioInputStreamImpl.prototype.write = function (dataBuffer) {
         // Break the data up into smaller chunks if needed.
-        var i;
+        let i;
         for (i = bufferSize - 1; i < dataBuffer.byteLength; i += bufferSize) {
             this.privStream.write(dataBuffer.slice(i - (bufferSize - 1), i + 1));
         }
@@ -2236,7 +2236,7 @@ var PushAudioInputStreamImpl = /** @class */ (function (_super) {
         return Exports_1.PromiseHelper.fromResult(true);
     };
     PushAudioInputStreamImpl.prototype.attach = function (audioNodeId) {
-        var _this = this;
+        let _this = this;
         this.onEvent(new Exports_1.AudioStreamNodeAttachingEvent(this.privId, audioNodeId));
         return this.turnOn()
             .onSuccessContinueWith(function (_) {
@@ -2282,7 +2282,7 @@ exports.PushAudioInputStreamImpl = PushAudioInputStreamImpl;
  * @class PullAudioInputStream
  */
 // tslint:disable-next-line:max-classes-per-file
-var PullAudioInputStream = /** @class */ (function (_super) {
+let PullAudioInputStream = /** @class */ (function (_super) {
     __extends(PullAudioInputStream, _super);
     /**
      * Creates and initializes and instance.
@@ -2315,7 +2315,7 @@ exports.PullAudioInputStream = PullAudioInputStream;
  * @class PullAudioInputStreamImpl
  */
 // tslint:disable-next-line:max-classes-per-file
-var PullAudioInputStreamImpl = /** @class */ (function (_super) {
+let PullAudioInputStreamImpl = /** @class */ (function (_super) {
     __extends(PullAudioInputStreamImpl, _super);
     /**
      * Creates a PullAudioInputStream that delegates to the specified callback interface for
@@ -2327,7 +2327,7 @@ var PullAudioInputStreamImpl = /** @class */ (function (_super) {
      *        returned from the callback's read() method (currently only support 16 kHz 16bit mono PCM).
      */
     function PullAudioInputStreamImpl(callback, format) {
-        var _this = _super.call(this) || this;
+        let _this = _super.call(this) || this;
         _this.onEvent = function (event) {
             _this.privEvents.onEvent(event);
             Exports_1.Events.instance.onEvent(event);
@@ -2373,7 +2373,7 @@ var PullAudioInputStreamImpl = /** @class */ (function (_super) {
         return Exports_1.PromiseHelper.fromResult(true);
     };
     PullAudioInputStreamImpl.prototype.attach = function (audioNodeId) {
-        var _this = this;
+        let _this = this;
         this.onEvent(new Exports_1.AudioStreamNodeAttachingEvent(this.privId, audioNodeId));
         return this.turnOn()
             .onSuccessContinueWith(function (result) {
@@ -2388,8 +2388,8 @@ var PullAudioInputStreamImpl = /** @class */ (function (_super) {
                     return audioNodeId;
                 },
                 read: function () {
-                    var readBuff = new ArrayBuffer(bufferSize);
-                    var pulledBytes = _this.privCallback.read(readBuff);
+                    let readBuff = new ArrayBuffer(bufferSize);
+                    let pulledBytes = _this.privCallback.read(readBuff);
                     return Exports_1.PromiseHelper.fromResult({
                         buffer: readBuff.slice(0, pulledBytes),
                         isEnd: _this.privIsClosed,
@@ -2426,22 +2426,22 @@ exports.PullAudioInputStreamImpl = PullAudioInputStreamImpl;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(6);
-var Exports_2 = __webpack_require__(1);
-var Exports_3 = __webpack_require__(0);
-var Exports_4 = __webpack_require__(1);
-var QueryParameterNames_1 = __webpack_require__(65);
-var SpeechConnectionFactory = /** @class */ (function () {
+let Exports_1 = __webpack_require__(6);
+let Exports_2 = __webpack_require__(1);
+let Exports_3 = __webpack_require__(0);
+let Exports_4 = __webpack_require__(1);
+let QueryParameterNames_1 = __webpack_require__(65);
+let SpeechConnectionFactory = /** @class */ (function () {
     function SpeechConnectionFactory() {
-        var _this = this;
+        let _this = this;
         this.interactiveRelativeUri = "/speech/recognition/interactive/cognitiveservices/v1";
         this.conversationRelativeUri = "/speech/recognition/conversation/cognitiveservices/v1";
         this.dictationRelativeUri = "/speech/recognition/dictation/cognitiveservices/v1";
         this.create = function (config, authInfo, connectionId) {
-            var endpoint = config.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_Endpoint, undefined);
-            var queryParams = {};
-            var endpointId = config.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_EndpointId, undefined);
-            var language = config.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_RecoLanguage, undefined);
+            let endpoint = config.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_Endpoint, undefined);
+            let queryParams = {};
+            let endpointId = config.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_EndpointId, undefined);
+            let language = config.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_RecoLanguage, undefined);
             if (endpointId) {
                 if (!endpoint || endpoint.search(QueryParameterNames_1.QueryParameterNames.DeploymentIdParamName) === -1) {
                     queryParams[QueryParameterNames_1.QueryParameterNames.DeploymentIdParamName] = endpointId;
@@ -2456,8 +2456,8 @@ var SpeechConnectionFactory = /** @class */ (function () {
                 queryParams[QueryParameterNames_1.QueryParameterNames.FormatParamName] = config.parameters.getProperty(Exports_2.OutputFormatPropertyName, Exports_3.OutputFormat[Exports_3.OutputFormat.Simple]).toLowerCase();
             }
             if (!endpoint) {
-                var region = config.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_Region, undefined);
-                var host = "wss://" + region + ".stt.speech.microsoft.com";
+                let region = config.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_Region, undefined);
+                let host = "wss://" + region + ".stt.speech.microsoft.com";
                 switch (config.recognitionMode) {
                     case Exports_4.RecognitionMode.Conversation:
                         endpoint = host + _this.conversationRelativeUri;
@@ -2470,7 +2470,7 @@ var SpeechConnectionFactory = /** @class */ (function () {
                         break;
                 }
             }
-            var headers = {};
+            let headers = {};
             headers[authInfo.headerName] = authInfo.token;
             headers[QueryParameterNames_1.QueryParameterNames.ConnectionIdHeader] = connectionId;
             return new Exports_1.WebsocketConnection(endpoint, queryParams, headers, new Exports_4.WebsocketMessageFormatter(), connectionId);
@@ -2500,13 +2500,13 @@ window.SpeechSDK = __webpack_require__(21);
 "use strict";
 
 function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    for (let p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var Exports_1 = __webpack_require__(6);
-var Exports_2 = __webpack_require__(2);
+let Exports_1 = __webpack_require__(6);
+let Exports_2 = __webpack_require__(2);
 // Common.Storage.SetLocalStorage(new Common.Browser.LocalStorage());
 // Common.Storage.SetSessionStorage(new Common.Browser.SessionStorage());
 Exports_2.Events.instance.attachListener(new Exports_1.ConsoleLoggingListener());
@@ -2524,14 +2524,14 @@ __export(__webpack_require__(0));
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var ConsoleLoggingListener = /** @class */ (function () {
+let Exports_1 = __webpack_require__(2);
+let ConsoleLoggingListener = /** @class */ (function () {
     function ConsoleLoggingListener(logLevelFilter) {
         if (logLevelFilter === void 0) { logLevelFilter = Exports_1.EventType.Warning; }
-        var _this = this;
+        let _this = this;
         this.onEvent = function (event) {
             if (event.eventType >= _this.privLogLevelFilter) {
-                var log = _this.toString(event);
+                let log = _this.toString(event);
                 switch (event.eventType) {
                     case Exports_1.EventType.Debug:
                         // tslint:disable-next-line:no-console
@@ -2557,17 +2557,17 @@ var ConsoleLoggingListener = /** @class */ (function () {
             }
         };
         this.toString = function (event) {
-            var logFragments = [
+            let logFragments = [
                 "" + event.EventTime,
                 "" + event.Name,
             ];
-            for (var prop in event) {
+            for (let prop in event) {
                 if (prop && event.hasOwnProperty(prop) &&
                     prop !== "eventTime" && prop !== "eventType" &&
                     prop !== "eventId" && prop !== "name" &&
                     prop !== "constructor") {
-                    var value = event[prop];
-                    var valueToLog = "<NULL>";
+                    let value = event[prop];
+                    let valueToLog = "<NULL>";
                     if (value !== undefined && value !== null) {
                         if (typeof (value) === "number" || typeof (value) === "string") {
                             valueToLog = value.toString();
@@ -2597,11 +2597,11 @@ exports.ConsoleLoggingListener = ConsoleLoggingListener;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -2611,12 +2611,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var PlatformEvent_1 = __webpack_require__(8);
-var AudioSourceEvent = /** @class */ (function (_super) {
+let PlatformEvent_1 = __webpack_require__(8);
+let AudioSourceEvent = /** @class */ (function (_super) {
     __extends(AudioSourceEvent, _super);
     function AudioSourceEvent(eventName, audioSourceId, eventType) {
         if (eventType === void 0) { eventType = PlatformEvent_1.EventType.Info; }
-        var _this = _super.call(this, eventName, eventType) || this;
+        let _this = _super.call(this, eventName, eventType) || this;
         _this.privAudioSourceId = audioSourceId;
         return _this;
     }
@@ -2631,7 +2631,7 @@ var AudioSourceEvent = /** @class */ (function (_super) {
 }(PlatformEvent_1.PlatformEvent));
 exports.AudioSourceEvent = AudioSourceEvent;
 // tslint:disable-next-line:max-classes-per-file
-var AudioSourceInitializingEvent = /** @class */ (function (_super) {
+let AudioSourceInitializingEvent = /** @class */ (function (_super) {
     __extends(AudioSourceInitializingEvent, _super);
     function AudioSourceInitializingEvent(audioSourceId) {
         return _super.call(this, "AudioSourceInitializingEvent", audioSourceId) || this;
@@ -2640,7 +2640,7 @@ var AudioSourceInitializingEvent = /** @class */ (function (_super) {
 }(AudioSourceEvent));
 exports.AudioSourceInitializingEvent = AudioSourceInitializingEvent;
 // tslint:disable-next-line:max-classes-per-file
-var AudioSourceReadyEvent = /** @class */ (function (_super) {
+let AudioSourceReadyEvent = /** @class */ (function (_super) {
     __extends(AudioSourceReadyEvent, _super);
     function AudioSourceReadyEvent(audioSourceId) {
         return _super.call(this, "AudioSourceReadyEvent", audioSourceId) || this;
@@ -2649,7 +2649,7 @@ var AudioSourceReadyEvent = /** @class */ (function (_super) {
 }(AudioSourceEvent));
 exports.AudioSourceReadyEvent = AudioSourceReadyEvent;
 // tslint:disable-next-line:max-classes-per-file
-var AudioSourceOffEvent = /** @class */ (function (_super) {
+let AudioSourceOffEvent = /** @class */ (function (_super) {
     __extends(AudioSourceOffEvent, _super);
     function AudioSourceOffEvent(audioSourceId) {
         return _super.call(this, "AudioSourceOffEvent", audioSourceId) || this;
@@ -2658,10 +2658,10 @@ var AudioSourceOffEvent = /** @class */ (function (_super) {
 }(AudioSourceEvent));
 exports.AudioSourceOffEvent = AudioSourceOffEvent;
 // tslint:disable-next-line:max-classes-per-file
-var AudioSourceErrorEvent = /** @class */ (function (_super) {
+let AudioSourceErrorEvent = /** @class */ (function (_super) {
     __extends(AudioSourceErrorEvent, _super);
     function AudioSourceErrorEvent(audioSourceId, error) {
-        var _this = _super.call(this, "AudioSourceErrorEvent", audioSourceId, PlatformEvent_1.EventType.Error) || this;
+        let _this = _super.call(this, "AudioSourceErrorEvent", audioSourceId, PlatformEvent_1.EventType.Error) || this;
         _this.privError = error;
         return _this;
     }
@@ -2676,10 +2676,10 @@ var AudioSourceErrorEvent = /** @class */ (function (_super) {
 }(AudioSourceEvent));
 exports.AudioSourceErrorEvent = AudioSourceErrorEvent;
 // tslint:disable-next-line:max-classes-per-file
-var AudioStreamNodeEvent = /** @class */ (function (_super) {
+let AudioStreamNodeEvent = /** @class */ (function (_super) {
     __extends(AudioStreamNodeEvent, _super);
     function AudioStreamNodeEvent(eventName, audioSourceId, audioNodeId) {
-        var _this = _super.call(this, eventName, audioSourceId) || this;
+        let _this = _super.call(this, eventName, audioSourceId) || this;
         _this.privAudioNodeId = audioNodeId;
         return _this;
     }
@@ -2694,7 +2694,7 @@ var AudioStreamNodeEvent = /** @class */ (function (_super) {
 }(AudioSourceEvent));
 exports.AudioStreamNodeEvent = AudioStreamNodeEvent;
 // tslint:disable-next-line:max-classes-per-file
-var AudioStreamNodeAttachingEvent = /** @class */ (function (_super) {
+let AudioStreamNodeAttachingEvent = /** @class */ (function (_super) {
     __extends(AudioStreamNodeAttachingEvent, _super);
     function AudioStreamNodeAttachingEvent(audioSourceId, audioNodeId) {
         return _super.call(this, "AudioStreamNodeAttachingEvent", audioSourceId, audioNodeId) || this;
@@ -2703,7 +2703,7 @@ var AudioStreamNodeAttachingEvent = /** @class */ (function (_super) {
 }(AudioStreamNodeEvent));
 exports.AudioStreamNodeAttachingEvent = AudioStreamNodeAttachingEvent;
 // tslint:disable-next-line:max-classes-per-file
-var AudioStreamNodeAttachedEvent = /** @class */ (function (_super) {
+let AudioStreamNodeAttachedEvent = /** @class */ (function (_super) {
     __extends(AudioStreamNodeAttachedEvent, _super);
     function AudioStreamNodeAttachedEvent(audioSourceId, audioNodeId) {
         return _super.call(this, "AudioStreamNodeAttachedEvent", audioSourceId, audioNodeId) || this;
@@ -2712,7 +2712,7 @@ var AudioStreamNodeAttachedEvent = /** @class */ (function (_super) {
 }(AudioStreamNodeEvent));
 exports.AudioStreamNodeAttachedEvent = AudioStreamNodeAttachedEvent;
 // tslint:disable-next-line:max-classes-per-file
-var AudioStreamNodeDetachedEvent = /** @class */ (function (_super) {
+let AudioStreamNodeDetachedEvent = /** @class */ (function (_super) {
     __extends(AudioStreamNodeDetachedEvent, _super);
     function AudioStreamNodeDetachedEvent(audioSourceId, audioNodeId) {
         return _super.call(this, "AudioStreamNodeDetachedEvent", audioSourceId, audioNodeId) || this;
@@ -2721,10 +2721,10 @@ var AudioStreamNodeDetachedEvent = /** @class */ (function (_super) {
 }(AudioStreamNodeEvent));
 exports.AudioStreamNodeDetachedEvent = AudioStreamNodeDetachedEvent;
 // tslint:disable-next-line:max-classes-per-file
-var AudioStreamNodeErrorEvent = /** @class */ (function (_super) {
+let AudioStreamNodeErrorEvent = /** @class */ (function (_super) {
     __extends(AudioStreamNodeErrorEvent, _super);
     function AudioStreamNodeErrorEvent(audioSourceId, audioNodeId, error) {
-        var _this = _super.call(this, "AudioStreamNodeErrorEvent", audioSourceId, audioNodeId) || this;
+        let _this = _super.call(this, "AudioStreamNodeErrorEvent", audioSourceId, audioNodeId) || this;
         _this.privError = error;
         return _this;
     }
@@ -2749,11 +2749,11 @@ exports.AudioStreamNodeErrorEvent = AudioStreamNodeErrorEvent;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -2763,12 +2763,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var PlatformEvent_1 = __webpack_require__(8);
-var ConnectionEvent = /** @class */ (function (_super) {
+let PlatformEvent_1 = __webpack_require__(8);
+let ConnectionEvent = /** @class */ (function (_super) {
     __extends(ConnectionEvent, _super);
     function ConnectionEvent(eventName, connectionId, eventType) {
         if (eventType === void 0) { eventType = PlatformEvent_1.EventType.Info; }
-        var _this = _super.call(this, eventName, eventType) || this;
+        let _this = _super.call(this, eventName, eventType) || this;
         _this.privConnectionId = connectionId;
         return _this;
     }
@@ -2783,10 +2783,10 @@ var ConnectionEvent = /** @class */ (function (_super) {
 }(PlatformEvent_1.PlatformEvent));
 exports.ConnectionEvent = ConnectionEvent;
 // tslint:disable-next-line:max-classes-per-file
-var ConnectionStartEvent = /** @class */ (function (_super) {
+let ConnectionStartEvent = /** @class */ (function (_super) {
     __extends(ConnectionStartEvent, _super);
     function ConnectionStartEvent(connectionId, uri, headers) {
-        var _this = _super.call(this, "ConnectionStartEvent", connectionId) || this;
+        let _this = _super.call(this, "ConnectionStartEvent", connectionId) || this;
         _this.privUri = uri;
         _this.privHeaders = headers;
         return _this;
@@ -2809,7 +2809,7 @@ var ConnectionStartEvent = /** @class */ (function (_super) {
 }(ConnectionEvent));
 exports.ConnectionStartEvent = ConnectionStartEvent;
 // tslint:disable-next-line:max-classes-per-file
-var ConnectionEstablishedEvent = /** @class */ (function (_super) {
+let ConnectionEstablishedEvent = /** @class */ (function (_super) {
     __extends(ConnectionEstablishedEvent, _super);
     function ConnectionEstablishedEvent(connectionId, metadata) {
         return _super.call(this, "ConnectionEstablishedEvent", connectionId) || this;
@@ -2818,10 +2818,10 @@ var ConnectionEstablishedEvent = /** @class */ (function (_super) {
 }(ConnectionEvent));
 exports.ConnectionEstablishedEvent = ConnectionEstablishedEvent;
 // tslint:disable-next-line:max-classes-per-file
-var ConnectionClosedEvent = /** @class */ (function (_super) {
+let ConnectionClosedEvent = /** @class */ (function (_super) {
     __extends(ConnectionClosedEvent, _super);
     function ConnectionClosedEvent(connectionId, statusCode, reason) {
-        var _this = _super.call(this, "ConnectionClosedEvent", connectionId, PlatformEvent_1.EventType.Debug) || this;
+        let _this = _super.call(this, "ConnectionClosedEvent", connectionId, PlatformEvent_1.EventType.Debug) || this;
         _this.privRreason = reason;
         _this.privStatusCode = statusCode;
         return _this;
@@ -2844,10 +2844,10 @@ var ConnectionClosedEvent = /** @class */ (function (_super) {
 }(ConnectionEvent));
 exports.ConnectionClosedEvent = ConnectionClosedEvent;
 // tslint:disable-next-line:max-classes-per-file
-var ConnectionEstablishErrorEvent = /** @class */ (function (_super) {
+let ConnectionEstablishErrorEvent = /** @class */ (function (_super) {
     __extends(ConnectionEstablishErrorEvent, _super);
     function ConnectionEstablishErrorEvent(connectionId, statuscode, reason) {
-        var _this = _super.call(this, "ConnectionEstablishErrorEvent", connectionId, PlatformEvent_1.EventType.Error) || this;
+        let _this = _super.call(this, "ConnectionEstablishErrorEvent", connectionId, PlatformEvent_1.EventType.Error) || this;
         _this.privStatusCode = statuscode;
         _this.privReason = reason;
         return _this;
@@ -2870,10 +2870,10 @@ var ConnectionEstablishErrorEvent = /** @class */ (function (_super) {
 }(ConnectionEvent));
 exports.ConnectionEstablishErrorEvent = ConnectionEstablishErrorEvent;
 // tslint:disable-next-line:max-classes-per-file
-var ConnectionMessageReceivedEvent = /** @class */ (function (_super) {
+let ConnectionMessageReceivedEvent = /** @class */ (function (_super) {
     __extends(ConnectionMessageReceivedEvent, _super);
     function ConnectionMessageReceivedEvent(connectionId, networkReceivedTimeISO, message) {
-        var _this = _super.call(this, "ConnectionMessageReceivedEvent", connectionId) || this;
+        let _this = _super.call(this, "ConnectionMessageReceivedEvent", connectionId) || this;
         _this.privNetworkReceivedTime = networkReceivedTimeISO;
         _this.privMessage = message;
         return _this;
@@ -2896,10 +2896,10 @@ var ConnectionMessageReceivedEvent = /** @class */ (function (_super) {
 }(ConnectionEvent));
 exports.ConnectionMessageReceivedEvent = ConnectionMessageReceivedEvent;
 // tslint:disable-next-line:max-classes-per-file
-var ConnectionMessageSentEvent = /** @class */ (function (_super) {
+let ConnectionMessageSentEvent = /** @class */ (function (_super) {
     __extends(ConnectionMessageSentEvent, _super);
     function ConnectionMessageSentEvent(connectionId, networkSentTimeISO, message) {
-        var _this = _super.call(this, "ConnectionMessageSentEvent", connectionId) || this;
+        let _this = _super.call(this, "ConnectionMessageSentEvent", connectionId) || this;
         _this.privNetworkSentTime = networkSentTimeISO;
         _this.privMessage = message;
         return _this;
@@ -2933,7 +2933,7 @@ exports.ConnectionMessageSentEvent = ConnectionMessageSentEvent;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var ConnectionOpenResponse = /** @class */ (function () {
+let ConnectionOpenResponse = /** @class */ (function () {
     function ConnectionOpenResponse(statusCode, reason) {
         this.privStatusCode = statusCode;
         this.privReason = reason;
@@ -2967,9 +2967,9 @@ exports.ConnectionOpenResponse = ConnectionOpenResponse;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Error_1 = __webpack_require__(3);
-var EventSource_1 = __webpack_require__(13);
-var Events = /** @class */ (function () {
+let Error_1 = __webpack_require__(3);
+let EventSource_1 = __webpack_require__(13);
+let Events = /** @class */ (function () {
     function Events() {
     }
     Object.defineProperty(Events, "instance", {
@@ -3001,7 +3001,7 @@ exports.Events = Events;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var ConnectionState;
+let ConnectionState;
 (function (ConnectionState) {
     ConnectionState[ConnectionState["None"] = 0] = "None";
     ConnectionState[ConnectionState["Connected"] = 1] = "Connected";
@@ -3020,10 +3020,10 @@ var ConnectionState;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var ConnectionMessage_1 = __webpack_require__(12);
-var Error_1 = __webpack_require__(3);
-var Guid_1 = __webpack_require__(5);
-var RawWebsocketMessage = /** @class */ (function () {
+let ConnectionMessage_1 = __webpack_require__(12);
+let Error_1 = __webpack_require__(3);
+let Guid_1 = __webpack_require__(5);
+let RawWebsocketMessage = /** @class */ (function () {
     function RawWebsocketMessage(messageType, payload, id) {
         this.privPayload = null;
         if (!payload) {
@@ -3095,29 +3095,29 @@ exports.RawWebsocketMessage = RawWebsocketMessage;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var RiffPcmEncoder = /** @class */ (function () {
+let RiffPcmEncoder = /** @class */ (function () {
     function RiffPcmEncoder(actualSampleRate, desiredSampleRate) {
-        var _this = this;
+        let _this = this;
         this.privChannelCount = 1;
         this.encode = function (needHeader, actualAudioFrame) {
-            var audioFrame = _this.downSampleAudioFrame(actualAudioFrame, _this.privActualSampleRate, _this.privDesiredSampleRate);
+            let audioFrame = _this.downSampleAudioFrame(actualAudioFrame, _this.privActualSampleRate, _this.privDesiredSampleRate);
             if (!audioFrame) {
                 return null;
             }
-            var audioLength = audioFrame.length * 2;
+            let audioLength = audioFrame.length * 2;
             if (!needHeader) {
-                var buffer_1 = new ArrayBuffer(audioLength);
-                var view_1 = new DataView(buffer_1);
+                let buffer_1 = new ArrayBuffer(audioLength);
+                let view_1 = new DataView(buffer_1);
                 _this.floatTo16BitPCM(view_1, 0, audioFrame);
                 return buffer_1;
             }
-            var buffer = new ArrayBuffer(44 + audioLength);
-            var bitsPerSample = 16;
-            var bytesPerSample = bitsPerSample / 8;
+            let buffer = new ArrayBuffer(44 + audioLength);
+            let bitsPerSample = 16;
+            let bytesPerSample = bitsPerSample / 8;
             // We dont know ahead of time about the length of audio to stream. So set to 0.
-            var fileLength = 0;
+            let fileLength = 0;
             // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
-            var view = new DataView(buffer);
+            let view = new DataView(buffer);
             /* RIFF identifier */
             _this.setString(view, 0, "RIFF");
             /* file length */
@@ -3146,13 +3146,13 @@ var RiffPcmEncoder = /** @class */ (function () {
             return buffer;
         };
         this.setString = function (view, offset, str) {
-            for (var i = 0; i < str.length; i++) {
+            for (let i = 0; i < str.length; i++) {
                 view.setUint8(offset + i, str.charCodeAt(i));
             }
         };
         this.floatTo16BitPCM = function (view, offset, input) {
-            for (var i = 0; i < input.length; i++, offset += 2) {
-                var s = Math.max(-1, Math.min(1, input[i]));
+            for (let i = 0; i < input.length; i++, offset += 2) {
+                let s = Math.max(-1, Math.min(1, input[i]));
                 view.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
             }
         };
@@ -3160,15 +3160,15 @@ var RiffPcmEncoder = /** @class */ (function () {
             if (dstRate === srcRate || dstRate > srcRate) {
                 return srcFrame;
             }
-            var ratio = srcRate / dstRate;
-            var dstLength = Math.round(srcFrame.length / ratio);
-            var dstFrame = new Float32Array(dstLength);
-            var srcOffset = 0;
-            var dstOffset = 0;
+            let ratio = srcRate / dstRate;
+            let dstLength = Math.round(srcFrame.length / ratio);
+            let dstFrame = new Float32Array(dstLength);
+            let srcOffset = 0;
+            let dstOffset = 0;
             while (dstOffset < dstLength) {
-                var nextSrcOffset = Math.round((dstOffset + 1) * ratio);
-                var accum = 0;
-                var count = 0;
+                let nextSrcOffset = Math.round((dstOffset + 1) * ratio);
+                let accum = 0;
+                let count = 0;
                 while (srcOffset < nextSrcOffset && srcOffset < srcFrame.length) {
                     accum += srcFrame[srcOffset++];
                     count++;
@@ -3195,12 +3195,12 @@ exports.RiffPcmEncoder = RiffPcmEncoder;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Error_1 = __webpack_require__(3);
-var Guid_1 = __webpack_require__(5);
-var Queue_1 = __webpack_require__(16);
-var Stream = /** @class */ (function () {
+let Error_1 = __webpack_require__(3);
+let Guid_1 = __webpack_require__(5);
+let Queue_1 = __webpack_require__(16);
+let Stream = /** @class */ (function () {
     function Stream(streamId) {
-        var _this = this;
+        let _this = this;
         this.privReaderIdCounter = 1;
         this.privIsEnded = false;
         this.write = function (buffer2) {
@@ -3211,12 +3211,12 @@ var Stream = /** @class */ (function () {
             });
         };
         this.getReader = function () {
-            var readerId = _this.privReaderIdCounter;
+            let readerId = _this.privReaderIdCounter;
             _this.privReaderIdCounter++;
-            var readerQueue = new Queue_1.Queue();
-            var currentLength = _this.privStreambuffer.length;
+            let readerQueue = new Queue_1.Queue();
+            let currentLength = _this.privStreambuffer.length;
             _this.privReaderQueues[readerId] = readerQueue;
-            for (var i = 0; i < currentLength; i++) {
+            for (let i = 0; i < currentLength; i++) {
                 readerQueue.enqueue(_this.privStreambuffer[i]);
             }
             return new StreamReader(_this.privId, readerQueue, function () {
@@ -3235,7 +3235,7 @@ var Stream = /** @class */ (function () {
         this.writeStreamChunk = function (streamChunk) {
             _this.throwIfClosed();
             _this.privStreambuffer.push(streamChunk);
-            for (var readerId in _this.privReaderQueues) {
+            for (let readerId in _this.privReaderQueues) {
                 if (!_this.privReaderQueues[readerId].isDisposed()) {
                     try {
                         _this.privReaderQueues[readerId].enqueue(streamChunk);
@@ -3273,9 +3273,9 @@ var Stream = /** @class */ (function () {
 }());
 exports.Stream = Stream;
 // tslint:disable-next-line:max-classes-per-file
-var StreamReader = /** @class */ (function () {
+let StreamReader = /** @class */ (function () {
     function StreamReader(streamId, readerQueue, onClose) {
-        var _this = this;
+        let _this = this;
         this.privIsClosed = false;
         this.read = function () {
             if (_this.isClosed) {
@@ -3330,11 +3330,11 @@ exports.StreamReader = StreamReader;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var AudioStreamFormat_1 = __webpack_require__(7);
-var Exports_1 = __webpack_require__(2);
-var MicAudioSource = /** @class */ (function () {
+let AudioStreamFormat_1 = __webpack_require__(7);
+let Exports_1 = __webpack_require__(2);
+let MicAudioSource = /** @class */ (function () {
     function MicAudioSource(recorder, audioSourceId) {
-        var _this = this;
+        let _this = this;
         this.privStreams = {};
         this.turnOn = function () {
             if (_this.privInitializeDeferral) {
@@ -3342,8 +3342,8 @@ var MicAudioSource = /** @class */ (function () {
             }
             _this.privInitializeDeferral = new Exports_1.Deferred();
             _this.createAudioContext();
-            var nav = window.navigator;
-            var getUserMedia = (nav.getUserMedia ||
+            let nav = window.navigator;
+            let getUserMedia = (nav.getUserMedia ||
                 nav.webkitGetUserMedia ||
                 nav.mozGetUserMedia ||
                 nav.msGetUserMedia);
@@ -3356,20 +3356,20 @@ var MicAudioSource = /** @class */ (function () {
                 };
             }
             if (!getUserMedia) {
-                var errorMsg = "Browser does not support getUserMedia.";
+                let errorMsg = "Browser does not support getUserMedia.";
                 _this.privInitializeDeferral.reject(errorMsg);
                 _this.onEvent(new Exports_1.AudioSourceErrorEvent(errorMsg, "")); // mic initialized error - no streamid at this point
             }
             else {
-                var next = function () {
+                let next = function () {
                     _this.onEvent(new Exports_1.AudioSourceInitializingEvent(_this.privId)); // no stream id
                     getUserMedia({ audio: true, video: false }, function (mediaStream) {
                         _this.privMediaStream = mediaStream;
                         _this.onEvent(new Exports_1.AudioSourceReadyEvent(_this.privId));
                         _this.privInitializeDeferral.resolve(true);
                     }, function (error) {
-                        var errorMsg = "Error occurred during microphone initialization: " + error;
-                        var tmp = _this.privInitializeDeferral;
+                        let errorMsg = "Error occurred during microphone initialization: " + error;
+                        let tmp = _this.privInitializeDeferral;
                         // HACK: this should be handled through onError callbacks of all promises up the stack.
                         // Unfortunately, the current implementation does not provide an easy way to reject promises
                         // without a lot of code replication.
@@ -3425,9 +3425,9 @@ var MicAudioSource = /** @class */ (function () {
             }
         };
         this.turnOff = function () {
-            for (var streamId in _this.privStreams) {
+            for (let streamId in _this.privStreams) {
                 if (streamId) {
-                    var stream = _this.privStreams[streamId];
+                    let stream = _this.privStreams[streamId];
                     if (stream) {
                         stream.close();
                     }
@@ -3441,7 +3441,7 @@ var MicAudioSource = /** @class */ (function () {
         this.listen = function (audioNodeId) {
             return _this.turnOn()
                 .onSuccessContinueWith(function (_) {
-                var stream = new Exports_1.Stream(audioNodeId);
+                let stream = new Exports_1.Stream(audioNodeId);
                 _this.privStreams[audioNodeId] = stream;
                 try {
                     _this.privRecorder.record(_this.privContext, _this.privMediaStream, stream);
@@ -3462,7 +3462,7 @@ var MicAudioSource = /** @class */ (function () {
                 return;
             }
             // https://developer.mozilla.org/en-US/docs/Web/API/AudioContext
-            var AudioContext = (window.AudioContext)
+            let AudioContext = (window.AudioContext)
                 || (window.webkitAudioContext)
                 || false;
             if (!AudioContext) {
@@ -3478,7 +3478,7 @@ var MicAudioSource = /** @class */ (function () {
             // This pattern brought to you by a bug in the TypeScript compiler where it
             // confuses the ("close" in this.privContext) with this.privContext always being null as the alternate.
             // https://github.com/Microsoft/TypeScript/issues/11498
-            var hasClose = false;
+            let hasClose = false;
             if ("close" in _this.privContext) {
                 hasClose = true;
             }
@@ -3530,25 +3530,25 @@ exports.MicAudioSource = MicAudioSource;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var AudioStreamFormat_1 = __webpack_require__(7);
-var Exports_1 = __webpack_require__(2);
-var FileAudioSource = /** @class */ (function () {
+let AudioStreamFormat_1 = __webpack_require__(7);
+let Exports_1 = __webpack_require__(2);
+let FileAudioSource = /** @class */ (function () {
     function FileAudioSource(file, audioSourceId) {
-        var _this = this;
+        let _this = this;
         this.privStreams = {};
         this.turnOn = function () {
             if (typeof FileReader === "undefined") {
-                var errorMsg = "Browser does not support FileReader.";
+                let errorMsg = "Browser does not support FileReader.";
                 _this.onEvent(new Exports_1.AudioSourceErrorEvent(errorMsg, "")); // initialization error - no streamid at this point
                 return Exports_1.PromiseHelper.fromError(errorMsg);
             }
             else if (_this.privFile.name.lastIndexOf(".wav") !== _this.privFile.name.length - 4) {
-                var errorMsg = _this.privFile.name + " is not supported. Only WAVE files are allowed at the moment.";
+                let errorMsg = _this.privFile.name + " is not supported. Only WAVE files are allowed at the moment.";
                 _this.onEvent(new Exports_1.AudioSourceErrorEvent(errorMsg, ""));
                 return Exports_1.PromiseHelper.fromError(errorMsg);
             }
             else if (_this.privFile.size > FileAudioSource.MAX_SIZE) {
-                var errorMsg = _this.privFile.name + " exceeds the maximum allowed file size (" + FileAudioSource.MAX_SIZE + ").";
+                let errorMsg = _this.privFile.name + " exceeds the maximum allowed file size (" + FileAudioSource.MAX_SIZE + ").";
                 _this.onEvent(new Exports_1.AudioSourceErrorEvent(errorMsg, ""));
                 return Exports_1.PromiseHelper.fromError(errorMsg);
             }
@@ -3587,9 +3587,9 @@ var FileAudioSource = /** @class */ (function () {
             }
         };
         this.turnOff = function () {
-            for (var streamId in _this.privStreams) {
+            for (let streamId in _this.privStreams) {
                 if (streamId) {
-                    var stream = _this.privStreams[streamId];
+                    let stream = _this.privStreams[streamId];
                     if (stream && !stream.isClosed) {
                         stream.close();
                     }
@@ -3601,12 +3601,12 @@ var FileAudioSource = /** @class */ (function () {
         this.upload = function (audioNodeId) {
             return _this.turnOn()
                 .onSuccessContinueWith(function (_) {
-                var stream = new Exports_1.Stream(audioNodeId);
+                let stream = new Exports_1.Stream(audioNodeId);
                 _this.privStreams[audioNodeId] = stream;
-                var reader = new FileReader();
-                var startOffset = 0;
-                var endOffset = FileAudioSource.CHUNK_SIZE;
-                var processNextChunk = function (event) {
+                let reader = new FileReader();
+                let startOffset = 0;
+                let endOffset = FileAudioSource.CHUNK_SIZE;
+                let processNextChunk = function (event) {
                     if (stream.isClosed) {
                         return; // output stream was closed (somebody called TurnOff). We're done here.
                     }
@@ -3614,7 +3614,7 @@ var FileAudioSource = /** @class */ (function () {
                     if (endOffset < _this.privFile.size) {
                         startOffset = endOffset;
                         endOffset = Math.min(endOffset + FileAudioSource.CHUNK_SIZE, _this.privFile.size);
-                        var chunk_1 = _this.privFile.slice(startOffset, endOffset);
+                        let chunk_1 = _this.privFile.slice(startOffset, endOffset);
                         reader.readAsArrayBuffer(chunk_1);
                     }
                     else {
@@ -3624,11 +3624,11 @@ var FileAudioSource = /** @class */ (function () {
                 };
                 reader.onload = processNextChunk;
                 reader.onerror = function (event) {
-                    var errorMsg = "Error occurred while processing '" + _this.privFile.name + "'. " + event;
+                    let errorMsg = "Error occurred while processing '" + _this.privFile.name + "'. " + event;
                     _this.onEvent(new Exports_1.AudioStreamNodeErrorEvent(_this.privId, audioNodeId, errorMsg));
                     throw new Error(errorMsg);
                 };
-                var chunk = _this.privFile.slice(startOffset, endOffset);
+                let chunk = _this.privFile.slice(startOffset, endOffset);
                 reader.readAsArrayBuffer(chunk);
                 return stream.getReader();
             });
@@ -3680,15 +3680,15 @@ exports.FileAudioSource = FileAudioSource;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var OpusRecorder = /** @class */ (function () {
+let OpusRecorder = /** @class */ (function () {
     function OpusRecorder(options) {
-        var _this = this;
+        let _this = this;
         this.record = function (context, mediaStream, outputStream) {
-            var mediaRecorder = new MediaRecorder(mediaStream, _this.privMediaRecorderOptions);
-            var timeslice = 100; // this is in ms - 100 ensures that the chunk doesn't exceed the max size of chunk allowed in WS connection
+            let mediaRecorder = new MediaRecorder(mediaStream, _this.privMediaRecorderOptions);
+            let timeslice = 100; // this is in ms - 100 ensures that the chunk doesn't exceed the max size of chunk allowed in WS connection
             mediaRecorder.ondataavailable = function (dataAvailableEvent) {
                 if (outputStream) {
-                    var reader_1 = new FileReader();
+                    let reader_1 = new FileReader();
                     reader_1.readAsArrayBuffer(dataAvailableEvent.data);
                     reader_1.onloadend = function (event) {
                         outputStream.write(reader_1.result);
@@ -3733,21 +3733,21 @@ declare class MediaRecorder {
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var PcmRecorder = /** @class */ (function () {
+let Exports_1 = __webpack_require__(2);
+let PcmRecorder = /** @class */ (function () {
     function PcmRecorder() {
-        var _this = this;
+        let _this = this;
         this.record = function (context, mediaStream, outputStream) {
-            var desiredSampleRate = 16000;
-            var scriptNode = (function () {
-                var bufferSize = 0;
+            let desiredSampleRate = 16000;
+            let scriptNode = (function () {
+                let bufferSize = 0;
                 try {
                     return context.createScriptProcessor(bufferSize, 1, 1);
                 }
                 catch (error) {
                     // Webkit (<= version 31) requires a valid bufferSize.
                     bufferSize = 2048;
-                    var audioSampleRate = context.sampleRate;
+                    let audioSampleRate = context.sampleRate;
                     while (bufferSize < 16384 && audioSampleRate >= (2 * desiredSampleRate)) {
                         bufferSize <<= 1;
                         audioSampleRate >>= 1;
@@ -3755,20 +3755,20 @@ var PcmRecorder = /** @class */ (function () {
                     return context.createScriptProcessor(bufferSize, 1, 1);
                 }
             })();
-            var waveStreamEncoder = new Exports_1.RiffPcmEncoder(context.sampleRate, desiredSampleRate);
-            var needHeader = true;
-            var that = _this;
+            let waveStreamEncoder = new Exports_1.RiffPcmEncoder(context.sampleRate, desiredSampleRate);
+            let needHeader = true;
+            let that = _this;
             scriptNode.onaudioprocess = function (event) {
-                var inputFrame = event.inputBuffer.getChannelData(0);
+                let inputFrame = event.inputBuffer.getChannelData(0);
                 if (outputStream && !outputStream.isClosed) {
-                    var waveFrame = waveStreamEncoder.encode(needHeader, inputFrame);
+                    let waveFrame = waveStreamEncoder.encode(needHeader, inputFrame);
                     if (!!waveFrame) {
                         outputStream.write(waveFrame);
                         needHeader = false;
                     }
                 }
             };
-            var micInput = context.createMediaStreamSource(mediaStream);
+            let micInput = context.createMediaStreamSource(mediaStream);
             _this.privMediaResources = {
                 scriptProcessorNode: scriptNode,
                 source: micInput,
@@ -3806,11 +3806,11 @@ exports.PcmRecorder = PcmRecorder;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var WebsocketMessageAdapter_1 = __webpack_require__(17);
-var WebsocketConnection = /** @class */ (function () {
+let Exports_1 = __webpack_require__(2);
+let WebsocketMessageAdapter_1 = __webpack_require__(17);
+let WebsocketConnection = /** @class */ (function () {
     function WebsocketConnection(uri, queryParameters, headers, messageFormatter, connectionId) {
-        var _this = this;
+        let _this = this;
         this.privIsDisposed = false;
         this.dispose = function () {
             _this.privIsDisposed = true;
@@ -3840,23 +3840,23 @@ var WebsocketConnection = /** @class */ (function () {
             throw new Exports_1.ArgumentNullError("messageFormatter");
         }
         this.privMessageFormatter = messageFormatter;
-        var queryParams = "";
-        var i = 0;
+        let queryParams = "";
+        let i = 0;
         if (queryParameters) {
-            for (var paramName in queryParameters) {
+            for (let paramName in queryParameters) {
                 if (paramName) {
                     queryParams += ((i === 0) && (uri.indexOf("?") === -1)) ? "?" : "&";
-                    var val = encodeURIComponent(queryParameters[paramName]);
+                    let val = encodeURIComponent(queryParameters[paramName]);
                     queryParams += paramName + "=" + val;
                     i++;
                 }
             }
         }
         if (headers) {
-            for (var headerName in headers) {
+            for (let headerName in headers) {
                 if (headerName) {
                     queryParams += i === 0 ? "?" : "&";
-                    var val = encodeURIComponent(headers[headerName]);
+                    let val = encodeURIComponent(headers[headerName]);
                     queryParams += headerName + "=" + val;
                     i++;
                 }
@@ -3910,10 +3910,10 @@ module.exports = function() {
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var ReplayableAudioNode = /** @class */ (function () {
+let Exports_1 = __webpack_require__(2);
+let ReplayableAudioNode = /** @class */ (function () {
     function ReplayableAudioNode(audioSource, format) {
-        var _this = this;
+        let _this = this;
         this.privBuffers = [];
         this.privReplayOffset = 0;
         this.privLastShrinkOffset = 0;
@@ -3932,22 +3932,22 @@ var ReplayableAudioNode = /** @class */ (function () {
     // existing content, and upoin completion it will read new content from the underlying
     // audio node, saving that content into the replayable buffers.
     ReplayableAudioNode.prototype.read = function () {
-        var _this = this;
+        let _this = this;
         // if there is a replay request to honor.
         if (!!this.privReplay && this.privBuffers.length !== 0) {
             // Find the start point in the buffers.
             // Offsets are in 100ns increments.
             // So how many bytes do we need to seek to get the right offset?
-            var offsetToSeek = this.privReplayOffset - this.privBufferStartOffset;
-            var bytesToSeek = Math.round(offsetToSeek * this.privFormat.avgBytesPerSec * 1e-7);
+            let offsetToSeek = this.privReplayOffset - this.privBufferStartOffset;
+            let bytesToSeek = Math.round(offsetToSeek * this.privFormat.avgBytesPerSec * 1e-7);
             if (0 !== (bytesToSeek % 2)) {
                 bytesToSeek++;
             }
-            var i = 0;
+            let i = 0;
             while (i < this.privBuffers.length && bytesToSeek >= this.privBuffers[i].buffer.byteLength) {
                 bytesToSeek -= this.privBuffers[i++].buffer.byteLength;
             }
-            var retVal = this.privBuffers[i].buffer.slice(bytesToSeek);
+            let retVal = this.privBuffers[i].buffer.slice(bytesToSeek);
             this.privReplayOffset += (retVal.byteLength / this.privFormat.avgBytesPerSec) * 1e+7;
             // If we've reached the end of the buffers, stop replaying.
             if (i === this.privBuffers.length - 1) {
@@ -3985,9 +3985,9 @@ var ReplayableAudioNode = /** @class */ (function () {
         // Find the start point in the buffers.
         // Offsets are in 100ns increments.
         // So how many bytes do we need to seek to get the right offset?
-        var offsetToSeek = offset - this.privBufferStartOffset;
-        var bytesToSeek = Math.round(offsetToSeek * this.privFormat.avgBytesPerSec * 1e-7);
-        var i = 0;
+        let offsetToSeek = offset - this.privBufferStartOffset;
+        let bytesToSeek = Math.round(offsetToSeek * this.privFormat.avgBytesPerSec * 1e-7);
+        let i = 0;
         while (i < this.privBuffers.length && bytesToSeek >= this.privBuffers[i].buffer.byteLength) {
             bytesToSeek -= this.privBuffers[i++].buffer.byteLength;
         }
@@ -4001,7 +4001,7 @@ exports.ReplayableAudioNode = ReplayableAudioNode;
 // code. If the memory cost of alloc / dealloc gets too much, drop it and just use
 // the ArrayBuffer directly.
 // tslint:disable-next-line:max-classes-per-file
-var BufferEntry = /** @class */ (function () {
+let BufferEntry = /** @class */ (function () {
     function BufferEntry(buffer, serial, byteOffset) {
         this.buffer = buffer;
         this.serial = serial;
@@ -4020,11 +4020,11 @@ var BufferEntry = /** @class */ (function () {
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -4034,14 +4034,14 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(6);
-var Exports_2 = __webpack_require__(0);
-var AudioInputStream_1 = __webpack_require__(18);
+let Exports_1 = __webpack_require__(6);
+let Exports_2 = __webpack_require__(0);
+let AudioInputStream_1 = __webpack_require__(18);
 /**
  * Represents audio input configuration used for specifying what type of input to use (microphone, file, stream).
  * @class AudioConfig
  */
-var AudioConfig = /** @class */ (function () {
+let AudioConfig = /** @class */ (function () {
     function AudioConfig() {
     }
     /**
@@ -4052,7 +4052,7 @@ var AudioConfig = /** @class */ (function () {
      * @returns {AudioConfig} The audio input configuration being created.
      */
     AudioConfig.fromDefaultMicrophoneInput = function () {
-        var pcmRecorder = new Exports_1.PcmRecorder();
+        let pcmRecorder = new Exports_1.PcmRecorder();
         return new AudioConfigImpl(new Exports_1.MicAudioSource(pcmRecorder));
     };
     /**
@@ -4095,7 +4095,7 @@ exports.AudioConfig = AudioConfig;
  * @class AudioConfigImpl
  */
 // tslint:disable-next-line:max-classes-per-file
-var AudioConfigImpl = /** @class */ (function (_super) {
+let AudioConfigImpl = /** @class */ (function (_super) {
     __extends(AudioConfigImpl, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -4103,7 +4103,7 @@ var AudioConfigImpl = /** @class */ (function (_super) {
      * @param {IAudioSource} source - An audio source.
      */
     function AudioConfigImpl(source) {
-        var _this = _super.call(this) || this;
+        let _this = _super.call(this) || this;
         _this.privSource = source;
         return _this;
     }
@@ -4202,7 +4202,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Defines the possible reasons a recognition result might be canceled.
  * @class CancellationReason
  */
-var CancellationReason;
+let CancellationReason;
 (function (CancellationReason) {
     /**
      * Indicates that an error occurred during speech recognition.
@@ -4232,7 +4232,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * custom audio input streams).
  * @class PullAudioInputStreamCallback
  */
-var PullAudioInputStreamCallback = /** @class */ (function () {
+let PullAudioInputStreamCallback = /** @class */ (function () {
     function PullAudioInputStreamCallback() {
     }
     return PullAudioInputStreamCallback;
@@ -4250,13 +4250,13 @@ exports.PullAudioInputStreamCallback = PullAudioInputStreamCallback;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Contracts_1 = __webpack_require__(4);
+let Contracts_1 = __webpack_require__(4);
 /**
  * Represents a keyword recognition model for recognizing when
  * the user says a keyword to initiate further speech recognition.
  * @class KeywordRecognitionModel
  */
-var KeywordRecognitionModel = /** @class */ (function () {
+let KeywordRecognitionModel = /** @class */ (function () {
     /**
      * Create and initializes a new instance.
      * @constructor
@@ -4322,7 +4322,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Defines content for session events like SessionStarted/Stopped, SoundStarted/Stopped.
  * @class SessionEventArgs
  */
-var SessionEventArgs = /** @class */ (function () {
+let SessionEventArgs = /** @class */ (function () {
     /**
      * Creates and initializes an instance of this class.
      * @constructor
@@ -4359,11 +4359,11 @@ exports.SessionEventArgs = SessionEventArgs;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -4373,12 +4373,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Defines payload for session events like Speech Start/End Detected
  * @class
  */
-var RecognitionEventArgs = /** @class */ (function (_super) {
+let RecognitionEventArgs = /** @class */ (function (_super) {
     __extends(RecognitionEventArgs, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -4387,7 +4387,7 @@ var RecognitionEventArgs = /** @class */ (function (_super) {
      * @param {string} sessionId - The session id.
      */
     function RecognitionEventArgs(offset, sessionId) {
-        var _this = _super.call(this, sessionId) || this;
+        let _this = _super.call(this, sessionId) || this;
         _this.privOffset = offset;
         return _this;
     }
@@ -4423,7 +4423,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Define Speech Recognizer output formats.
  * @class OutputFormat
  */
-var OutputFormat;
+let OutputFormat;
 (function (OutputFormat) {
     /**
      * @member OutputFormat.Simple
@@ -4445,11 +4445,11 @@ var OutputFormat;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -4459,12 +4459,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Intent recognition result event arguments.
  * @class
  */
-var IntentRecognitionEventArgs = /** @class */ (function (_super) {
+let IntentRecognitionEventArgs = /** @class */ (function (_super) {
     __extends(IntentRecognitionEventArgs, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -4474,7 +4474,7 @@ var IntentRecognitionEventArgs = /** @class */ (function (_super) {
      * @param sessionId - The session id.
      */
     function IntentRecognitionEventArgs(result, offset, sessionId) {
-        var _this = _super.call(this, offset, sessionId) || this;
+        let _this = _super.call(this, offset, sessionId) || this;
         _this.privResult = result;
         return _this;
     }
@@ -4511,7 +4511,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Defines result of speech recognition.
  * @class RecognitionResult
  */
-var RecognitionResult = /** @class */ (function () {
+let RecognitionResult = /** @class */ (function () {
     /**
      * Creates and initializes an instance of this class.
      * @constructor
@@ -4660,11 +4660,11 @@ exports.RecognitionResult = RecognitionResult;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -4674,12 +4674,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Defines result of speech recognition.
  * @class SpeechRecognitionResult
  */
-var SpeechRecognitionResult = /** @class */ (function (_super) {
+let SpeechRecognitionResult = /** @class */ (function (_super) {
     __extends(SpeechRecognitionResult, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -4711,11 +4711,11 @@ exports.SpeechRecognitionResult = SpeechRecognitionResult;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -4725,12 +4725,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Intent recognition result.
  * @class
  */
-var IntentRecognitionResult = /** @class */ (function (_super) {
+let IntentRecognitionResult = /** @class */ (function (_super) {
     __extends(IntentRecognitionResult, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -4746,7 +4746,7 @@ var IntentRecognitionResult = /** @class */ (function (_super) {
      * @param properties - Additional properties, if provided.
      */
     function IntentRecognitionResult(intentId, resultId, reason, text, duration, offset, errorDetails, json, properties) {
-        var _this = _super.call(this, resultId, reason, text, duration, offset, errorDetails, json, properties) || this;
+        let _this = _super.call(this, resultId, reason, text, duration, offset, errorDetails, json, properties) || this;
         _this.privIntentId = intentId;
         return _this;
     }
@@ -4778,11 +4778,11 @@ exports.IntentRecognitionResult = IntentRecognitionResult;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -4792,12 +4792,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Contracts_1 = __webpack_require__(4);
+let Contracts_1 = __webpack_require__(4);
 /**
  * Language understanding model
  * @class LanguageUnderstandingModel
  */
-var LanguageUnderstandingModel = /** @class */ (function () {
+let LanguageUnderstandingModel = /** @class */ (function () {
     /**
      * Creates and initializes a new instance
      * @constructor
@@ -4815,18 +4815,18 @@ var LanguageUnderstandingModel = /** @class */ (function () {
     LanguageUnderstandingModel.fromEndpoint = function (uri) {
         Contracts_1.Contracts.throwIfNull(uri, "uri");
         Contracts_1.Contracts.throwIfNullOrWhitespace(uri.hostname, "uri");
-        var langModelImp = new LanguageUnderstandingModelImpl();
+        let langModelImp = new LanguageUnderstandingModelImpl();
         // Need to extract the app ID from the URL.
         // URL is in the format: https://<region>.api.cognitive.microsoft.com/luis/v2.0/apps/<Guid>?subscription-key=<key>&timezoneOffset=-360
         // Start tearing the string apart.
         // region can be extracted from the host name.
-        var firstDot = uri.host.indexOf(".");
+        let firstDot = uri.host.indexOf(".");
         if (-1 === firstDot) {
             throw new Error("Could not determine region from endpoint");
         }
         langModelImp.region = uri.host.substr(0, firstDot);
         // Now the app ID.
-        var lastSegment = uri.pathname.lastIndexOf("/") + 1;
+        let lastSegment = uri.pathname.lastIndexOf("/") + 1;
         if (-1 === lastSegment) {
             throw new Error("Could not determine appId from endpoint");
         }
@@ -4848,7 +4848,7 @@ var LanguageUnderstandingModel = /** @class */ (function () {
      */
     LanguageUnderstandingModel.fromAppId = function (appId) {
         Contracts_1.Contracts.throwIfNullOrWhitespace(appId, "appId");
-        var langModelImp = new LanguageUnderstandingModelImpl();
+        let langModelImp = new LanguageUnderstandingModelImpl();
         langModelImp.appId = appId;
         return langModelImp;
     };
@@ -4870,7 +4870,7 @@ var LanguageUnderstandingModel = /** @class */ (function () {
         Contracts_1.Contracts.throwIfNullOrWhitespace(subscriptionKey, "subscriptionKey");
         Contracts_1.Contracts.throwIfNullOrWhitespace(appId, "appId");
         Contracts_1.Contracts.throwIfNullOrWhitespace(region, "region");
-        var langModelImp = new LanguageUnderstandingModelImpl();
+        let langModelImp = new LanguageUnderstandingModelImpl();
         langModelImp.appId = appId;
         langModelImp.region = region;
         langModelImp.subscriptionKey = subscriptionKey;
@@ -4884,7 +4884,7 @@ exports.LanguageUnderstandingModel = LanguageUnderstandingModel;
  * @class LanguageUnderstandingModelImpl
  */
 // tslint:disable-next-line:max-classes-per-file
-var LanguageUnderstandingModelImpl = /** @class */ (function (_super) {
+let LanguageUnderstandingModelImpl = /** @class */ (function (_super) {
     __extends(LanguageUnderstandingModelImpl, _super);
     function LanguageUnderstandingModelImpl() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -4903,11 +4903,11 @@ exports.LanguageUnderstandingModelImpl = LanguageUnderstandingModelImpl;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -4917,12 +4917,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Defines contents of speech recognizing/recognized event.
  * @class SpeechRecognitionEventArgs
  */
-var SpeechRecognitionEventArgs = /** @class */ (function (_super) {
+let SpeechRecognitionEventArgs = /** @class */ (function (_super) {
     __extends(SpeechRecognitionEventArgs, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -4932,7 +4932,7 @@ var SpeechRecognitionEventArgs = /** @class */ (function (_super) {
      * @param {string} sessionId - The session id.
      */
     function SpeechRecognitionEventArgs(result, offset, sessionId) {
-        var _this = _super.call(this, offset, sessionId) || this;
+        let _this = _super.call(this, offset, sessionId) || this;
         _this.privResult = result;
         return _this;
     }
@@ -4964,11 +4964,11 @@ exports.SpeechRecognitionEventArgs = SpeechRecognitionEventArgs;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -4978,12 +4978,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Defines content of a RecognitionErrorEvent.
  * @class SpeechRecognitionCanceledEventArgs
  */
-var SpeechRecognitionCanceledEventArgs = /** @class */ (function (_super) {
+let SpeechRecognitionCanceledEventArgs = /** @class */ (function (_super) {
     __extends(SpeechRecognitionCanceledEventArgs, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -4994,7 +4994,7 @@ var SpeechRecognitionCanceledEventArgs = /** @class */ (function (_super) {
      * @param {string} sessionId - The session id.
      */
     function SpeechRecognitionCanceledEventArgs(reason, errorDetails, errorCode, offset, sessionId) {
-        var _this = _super.call(this, offset, sessionId) || this;
+        let _this = _super.call(this, offset, sessionId) || this;
         _this.privReason = reason;
         _this.privErrorDetails = errorDetails;
         _this.privErrorCode = errorCode;
@@ -5054,11 +5054,11 @@ exports.SpeechRecognitionCanceledEventArgs = SpeechRecognitionCanceledEventArgs;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -5068,12 +5068,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Translation text result event arguments.
  * @class TranslationRecognitionEventArgs
  */
-var TranslationRecognitionEventArgs = /** @class */ (function (_super) {
+let TranslationRecognitionEventArgs = /** @class */ (function (_super) {
     __extends(TranslationRecognitionEventArgs, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -5083,7 +5083,7 @@ var TranslationRecognitionEventArgs = /** @class */ (function (_super) {
      * @param {string} sessionId - The session id.
      */
     function TranslationRecognitionEventArgs(result, offset, sessionId) {
-        var _this = _super.call(this, offset, sessionId) || this;
+        let _this = _super.call(this, offset, sessionId) || this;
         _this.privResult = result;
         return _this;
     }
@@ -5115,11 +5115,11 @@ exports.TranslationRecognitionEventArgs = TranslationRecognitionEventArgs;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -5129,12 +5129,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Translation Synthesis event arguments
  * @class TranslationSynthesisEventArgs
  */
-var TranslationSynthesisEventArgs = /** @class */ (function (_super) {
+let TranslationSynthesisEventArgs = /** @class */ (function (_super) {
     __extends(TranslationSynthesisEventArgs, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -5143,7 +5143,7 @@ var TranslationSynthesisEventArgs = /** @class */ (function (_super) {
      * @param {string} sessionId - The session id.
      */
     function TranslationSynthesisEventArgs(result, sessionId) {
-        var _this = _super.call(this, sessionId) || this;
+        let _this = _super.call(this, sessionId) || this;
         _this.privResult = result;
         return _this;
     }
@@ -5175,11 +5175,11 @@ exports.TranslationSynthesisEventArgs = TranslationSynthesisEventArgs;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -5189,12 +5189,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Translation text result.
  * @class TranslationRecognitionResult
  */
-var TranslationRecognitionResult = /** @class */ (function (_super) {
+let TranslationRecognitionResult = /** @class */ (function (_super) {
     __extends(TranslationRecognitionResult, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -5210,7 +5210,7 @@ var TranslationRecognitionResult = /** @class */ (function (_super) {
      * @param {PropertyCollection} properties - Additional properties, if provided.
      */
     function TranslationRecognitionResult(translations, resultId, reason, text, duration, offset, errorDetails, json, properties) {
-        var _this = _super.call(this, resultId, reason, text, duration, offset, errorDetails, json, properties) || this;
+        let _this = _super.call(this, resultId, reason, text, duration, offset, errorDetails, json, properties) || this;
         _this.privTranslations = translations;
         return _this;
     }
@@ -5251,7 +5251,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * text in the target language.
  * @class TranslationSynthesisResult
  */
-var TranslationSynthesisResult = /** @class */ (function () {
+let TranslationSynthesisResult = /** @class */ (function () {
     /**
      * Creates and initializes an instance of this class.
      * @constructor
@@ -5309,7 +5309,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Defines the possible reasons a recognition result might be generated.
  * @class ResultReason
  */
-var ResultReason;
+let ResultReason;
 (function (ResultReason) {
     /**
      * Indicates speech could not be recognized. More details
@@ -5378,11 +5378,11 @@ var ResultReason;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -5392,14 +5392,14 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var Contracts_1 = __webpack_require__(4);
-var Exports_2 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(1);
+let Contracts_1 = __webpack_require__(4);
+let Exports_2 = __webpack_require__(0);
 /**
  * Speech configuration.
  * @class SpeechConfig
  */
-var SpeechConfig = /** @class */ (function () {
+let SpeechConfig = /** @class */ (function () {
     /**
      * Creates and initializes an instance.
      * @constructor
@@ -5419,7 +5419,7 @@ var SpeechConfig = /** @class */ (function () {
     SpeechConfig.fromSubscription = function (subscriptionKey, region) {
         Contracts_1.Contracts.throwIfNullOrWhitespace(subscriptionKey, "subscriptionKey");
         Contracts_1.Contracts.throwIfNullOrWhitespace(region, "region");
-        var speechImpl = new SpeechConfigImpl();
+        let speechImpl = new SpeechConfigImpl();
         speechImpl.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Region, region);
         speechImpl.setProperty(Exports_2.PropertyId.SpeechServiceConnection_IntentRegion, region);
         speechImpl.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Key, subscriptionKey);
@@ -5440,7 +5440,7 @@ var SpeechConfig = /** @class */ (function () {
     SpeechConfig.fromEndpoint = function (endpoint, subscriptionKey) {
         Contracts_1.Contracts.throwIfNull(endpoint, "endpoint");
         Contracts_1.Contracts.throwIfNullOrWhitespace(subscriptionKey, "subscriptionKey");
-        var speechImpl = new SpeechConfigImpl();
+        let speechImpl = new SpeechConfigImpl();
         speechImpl.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Endpoint, endpoint.href);
         speechImpl.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Key, subscriptionKey);
         return speechImpl;
@@ -5458,7 +5458,7 @@ var SpeechConfig = /** @class */ (function () {
     SpeechConfig.fromAuthorizationToken = function (authorizationToken, region) {
         Contracts_1.Contracts.throwIfNull(authorizationToken, "authorizationToken");
         Contracts_1.Contracts.throwIfNullOrWhitespace(region, "region");
-        var speechImpl = new SpeechConfigImpl();
+        let speechImpl = new SpeechConfigImpl();
         speechImpl.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Region, region);
         speechImpl.setProperty(Exports_2.PropertyId.SpeechServiceConnection_IntentRegion, region);
         speechImpl.authorizationToken = authorizationToken;
@@ -5480,10 +5480,10 @@ exports.SpeechConfig = SpeechConfig;
  * @class SpeechConfigImpl
  */
 // tslint:disable-next-line:max-classes-per-file
-var SpeechConfigImpl = /** @class */ (function (_super) {
+let SpeechConfigImpl = /** @class */ (function (_super) {
     __extends(SpeechConfigImpl, _super);
     function SpeechConfigImpl() {
-        var _this = _super.call(this) || this;
+        let _this = _super.call(this) || this;
         _this.privProperties = new Exports_2.PropertyCollection();
         _this.speechRecognitionLanguage = "en-US"; // Should we have a default?
         _this.outputFormat = Exports_2.OutputFormat.Simple;
@@ -5565,7 +5565,7 @@ var SpeechConfigImpl = /** @class */ (function (_super) {
         return this.privProperties.getProperty(name, def);
     };
     SpeechConfigImpl.prototype.clone = function () {
-        var ret = new SpeechConfigImpl();
+        let ret = new SpeechConfigImpl();
         ret.privProperties = this.privProperties.clone();
         return ret;
     };
@@ -5584,20 +5584,20 @@ exports.SpeechConfigImpl = SpeechConfigImpl;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var IAuthentication_1 = __webpack_require__(10);
-var AuthHeader = "Ocp-Apim-Subscription-Key";
+let Exports_1 = __webpack_require__(2);
+let IAuthentication_1 = __webpack_require__(10);
+let AuthHeader = "Ocp-Apim-Subscription-Key";
 /**
  * @class
  */
-var CognitiveSubscriptionKeyAuthentication = /** @class */ (function () {
+let CognitiveSubscriptionKeyAuthentication = /** @class */ (function () {
     /**
      * Creates and initializes an instance of the CognitiveSubscriptionKeyAuthentication class.
      * @constructor
      * @param {string} subscriptionKey - The subscription key
      */
     function CognitiveSubscriptionKeyAuthentication(subscriptionKey) {
-        var _this = this;
+        let _this = this;
         /**
          * Fetches the subscription key.
          * @member
@@ -5638,12 +5638,12 @@ exports.CognitiveSubscriptionKeyAuthentication = CognitiveSubscriptionKeyAuthent
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var IAuthentication_1 = __webpack_require__(10);
-var AuthHeader = "Authorization";
-var CognitiveTokenAuthentication = /** @class */ (function () {
+let Exports_1 = __webpack_require__(2);
+let IAuthentication_1 = __webpack_require__(10);
+let AuthHeader = "Authorization";
+let CognitiveTokenAuthentication = /** @class */ (function () {
     function CognitiveTokenAuthentication(fetchCallback, fetchOnExpiryCallback) {
-        var _this = this;
+        let _this = this;
         this.fetch = function (authFetchEventId) {
             return _this.privFetchCallback(authFetchEventId).onSuccessContinueWith(function (token) { return new IAuthentication_1.AuthInfo(AuthHeader, token); });
         };
@@ -5674,25 +5674,25 @@ exports.CognitiveTokenAuthentication = CognitiveTokenAuthentication;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(6);
-var Exports_2 = __webpack_require__(0);
-var Exports_3 = __webpack_require__(1);
-var TestHooksParamName = "testhooks";
-var ConnectionIdHeader = "X-ConnectionId";
-var IntentConnectionFactory = /** @class */ (function () {
+let Exports_1 = __webpack_require__(6);
+let Exports_2 = __webpack_require__(0);
+let Exports_3 = __webpack_require__(1);
+let TestHooksParamName = "testhooks";
+let ConnectionIdHeader = "X-ConnectionId";
+let IntentConnectionFactory = /** @class */ (function () {
     function IntentConnectionFactory() {
-        var _this = this;
+        let _this = this;
         this.create = function (config, authInfo, connectionId) {
-            var endpoint = config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_Endpoint);
+            let endpoint = config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_Endpoint);
             if (!endpoint) {
-                var region = config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_IntentRegion);
+                let region = config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_IntentRegion);
                 endpoint = "wss://speech.platform.bing.com/speech/" + _this.getSpeechRegionFromIntentRegion(region) + "/recognition/interactive/cognitiveservices/v1";
             }
-            var queryParams = {
+            let queryParams = {
                 format: "simple",
                 language: config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_RecoLanguage),
             };
-            var headers = {};
+            let headers = {};
             headers[authInfo.headerName] = authInfo.token;
             headers[ConnectionIdHeader] = connectionId;
             return new Exports_1.WebsocketConnection(endpoint, queryParams, headers, new Exports_3.WebsocketMessageFormatter(), connectionId);
@@ -5767,14 +5767,14 @@ exports.IntentConnectionFactory = IntentConnectionFactory;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(6);
-var Exports_2 = __webpack_require__(2);
-var Exports_3 = __webpack_require__(0);
-var Exports_4 = __webpack_require__(1);
-var SpeechConnectionMessage_Internal_1 = __webpack_require__(62);
-var ServiceRecognizerBase = /** @class */ (function () {
+let Exports_1 = __webpack_require__(6);
+let Exports_2 = __webpack_require__(2);
+let Exports_3 = __webpack_require__(0);
+let Exports_4 = __webpack_require__(1);
+let SpeechConnectionMessage_Internal_1 = __webpack_require__(62);
+let ServiceRecognizerBase = /** @class */ (function () {
     function ServiceRecognizerBase(authentication, connectionFactory, audioSource, recognizerConfig, recognizer) {
-        var _this = this;
+        let _this = this;
         this.sendTelemetryData = function (requestSession, telemetryData) {
             if (ServiceRecognizerBase.telemetryDataEnabled !== true ||
                 _this.privIsDisposed) {
@@ -5812,7 +5812,7 @@ var ServiceRecognizerBase = /** @class */ (function () {
             _this.privAuthFetchEventId = Exports_2.createNoDashGuid();
             _this.privConnectionId = Exports_2.createNoDashGuid();
             requestSession.onPreConnectionStart(_this.privAuthFetchEventId, _this.privConnectionId);
-            var authPromise = isUnAuthorized ? _this.privAuthentication.fetchOnExpiry(_this.privAuthFetchEventId) : _this.privAuthentication.fetch(_this.privAuthFetchEventId);
+            let authPromise = isUnAuthorized ? _this.privAuthentication.fetchOnExpiry(_this.privAuthFetchEventId) : _this.privAuthentication.fetch(_this.privAuthFetchEventId);
             _this.privConnectionConfigurationPromise = authPromise
                 .continueWithPromise(function (result) {
                 if (result.isError) {
@@ -5822,7 +5822,7 @@ var ServiceRecognizerBase = /** @class */ (function () {
                 else {
                     requestSession.onAuthCompleted(false);
                 }
-                var connection = _this.privConnectionFactory.create(_this.privRecognizerConfig, result.result, _this.privConnectionId);
+                let connection = _this.privConnectionFactory.create(_this.privRecognizerConfig, result.result, _this.privConnectionId);
                 requestSession.listenForServiceTelemetry(connection.events);
                 return connection.open().onSuccessContinueWithPromise(function (response) {
                     if (response.statusCode === 200) {
@@ -5864,21 +5864,21 @@ var ServiceRecognizerBase = /** @class */ (function () {
                             return _this.receiveMessage(requestSession, successCallback, errorCallBack);
                         }
                     }
-                    var connectionMessage = SpeechConnectionMessage_Internal_1.SpeechConnectionMessage.fromConnectionMessage(message);
+                    let connectionMessage = SpeechConnectionMessage_Internal_1.SpeechConnectionMessage.fromConnectionMessage(message);
                     if (connectionMessage.requestId.toLowerCase() === requestSession.requestId.toLowerCase()) {
                         switch (connectionMessage.path.toLowerCase()) {
                             case "turn.start":
                                 _this.privMustReportEndOfStream = true;
                                 break;
                             case "speech.startdetected":
-                                var speechStartDetected = Exports_4.SpeechDetected.fromJSON(connectionMessage.textBody);
-                                var speechStartEventArgs = new Exports_3.RecognitionEventArgs(speechStartDetected.Offset, requestSession.sessionId);
+                                let speechStartDetected = Exports_4.SpeechDetected.fromJSON(connectionMessage.textBody);
+                                let speechStartEventArgs = new Exports_3.RecognitionEventArgs(speechStartDetected.Offset, requestSession.sessionId);
                                 if (!!_this.privRecognizer.speechStartDetected) {
                                     _this.privRecognizer.speechStartDetected(_this.privRecognizer, speechStartEventArgs);
                                 }
                                 break;
                             case "speech.enddetected":
-                                var json = void 0;
+                                let json = void 0;
                                 if (connectionMessage.textBody.length > 0) {
                                     json = connectionMessage.textBody;
                                 }
@@ -5886,9 +5886,9 @@ var ServiceRecognizerBase = /** @class */ (function () {
                                     // If the request was empty, the JSON returned is empty.
                                     json = "{ Offset: 0 }";
                                 }
-                                var speechStopDetected = Exports_4.SpeechDetected.fromJSON(json);
+                                let speechStopDetected = Exports_4.SpeechDetected.fromJSON(json);
                                 requestSession.onServiceRecognized(speechStopDetected.Offset + requestSession.currentTurnAudioOffset);
-                                var speechStopEventArgs = new Exports_3.RecognitionEventArgs(speechStopDetected.Offset + requestSession.currentTurnAudioOffset, requestSession.sessionId);
+                                let speechStopEventArgs = new Exports_3.RecognitionEventArgs(speechStopDetected.Offset + requestSession.currentTurnAudioOffset, requestSession.sessionId);
                                 if (!!_this.privRecognizer.speechEndDetected) {
                                     _this.privRecognizer.speechEndDetected(_this.privRecognizer, speechStopEventArgs);
                                 }
@@ -5898,7 +5898,7 @@ var ServiceRecognizerBase = /** @class */ (function () {
                                     _this.privMustReportEndOfStream = false;
                                     _this.cancelRecognitionLocal(requestSession, Exports_3.CancellationReason.EndOfStream, Exports_3.CancellationErrorCode.NoError, undefined, successCallback);
                                 }
-                                var sessionStopEventArgs = new Exports_3.SessionEventArgs(requestSession.sessionId);
+                                let sessionStopEventArgs = new Exports_3.SessionEventArgs(requestSession.sessionId);
                                 requestSession.onServiceTurnEndResponse(_this.privRecognizerConfig.isContinuousRecognition);
                                 if (!_this.privRecognizerConfig.isContinuousRecognition || requestSession.isSpeechEnded) {
                                     if (!!_this.privRecognizer.sessionStopped) {
@@ -5923,8 +5923,8 @@ var ServiceRecognizerBase = /** @class */ (function () {
         this.sendSpeechConfig = function (connection, requestSession, speechConfigJson) {
             // filter out anything that is not required for the service to work.
             if (ServiceRecognizerBase.telemetryDataEnabled !== true) {
-                var withTelemetry = JSON.parse(speechConfigJson);
-                var replacement = {
+                let withTelemetry = JSON.parse(speechConfigJson);
+                let replacement = {
                     context: {
                         system: withTelemetry.context.system,
                     },
@@ -5949,11 +5949,11 @@ var ServiceRecognizerBase = /** @class */ (function () {
             // it blows up the stack). The following construct is a stop-gap that does not
             // bubble the error up the callback chain and hence circumvents this problem.
             // TODO: rewrite with ES6 promises.
-            var deferred = new Exports_2.Deferred();
+            let deferred = new Exports_2.Deferred();
             // The time we last sent data to the service.
-            var lastSendTime = Date.now();
-            var audioFormat = _this.privAudioSource.format;
-            var readAndUploadCycle = function () {
+            let lastSendTime = Date.now();
+            let audioFormat = _this.privAudioSource.format;
+            let readAndUploadCycle = function () {
                 // If speech is done, stop sending audio.
                 if (!_this.privIsDisposed && !requestSession.isSpeechEnded && !requestSession.isCompleted) {
                     _this.fetchConnection(requestSession).on(function (connection) {
@@ -5964,12 +5964,12 @@ var ServiceRecognizerBase = /** @class */ (function () {
                                 deferred.resolve(true);
                                 return;
                             }
-                            var payload = (audioStreamChunk.isEnd) ? null : audioStreamChunk.buffer;
-                            var uploaded = connection.send(new SpeechConnectionMessage_Internal_1.SpeechConnectionMessage(Exports_2.MessageType.Binary, "audio", requestSession.requestId, null, payload));
+                            let payload = (audioStreamChunk.isEnd) ? null : audioStreamChunk.buffer;
+                            let uploaded = connection.send(new SpeechConnectionMessage_Internal_1.SpeechConnectionMessage(Exports_2.MessageType.Binary, "audio", requestSession.requestId, null, payload));
                             if (!audioStreamChunk.isEnd) {
                                 // Caculate any delay to the audio stream needed. /2 to allow 2x real time transmit rate max.
-                                var minSendTime = ((payload.byteLength / audioFormat.avgBytesPerSec) / 2) * 1000;
-                                var delay_1 = Math.max(0, (lastSendTime - Date.now() + minSendTime));
+                                let minSendTime = ((payload.byteLength / audioFormat.avgBytesPerSec) / 2) * 1000;
+                                let delay_1 = Math.max(0, (lastSendTime - Date.now() + minSendTime));
                                 uploaded.continueWith(function (_) {
                                     // Regardless of success or failure, schedule the next upload.
                                     // If the underlying connection was broken, the next cycle will
@@ -6046,13 +6046,13 @@ var ServiceRecognizerBase = /** @class */ (function () {
         }
     };
     ServiceRecognizerBase.prototype.recognize = function (speechContextJson, successCallback, errorCallBack) {
-        var _this = this;
-        var requestSession = new Exports_4.RequestSession(this.privAudioSource.id(), speechContextJson);
+        let _this = this;
+        let requestSession = new Exports_4.RequestSession(this.privAudioSource.id(), speechContextJson);
         requestSession.listenForServiceTelemetry(this.privAudioSource.events);
         return this.audioSource
             .attach(requestSession.audioNodeId)
             .continueWithPromise(function (result) {
-            var audioNode;
+            let audioNode;
             if (result.isError) {
                 _this.cancelRecognitionLocal(requestSession, Exports_3.CancellationReason.Error, Exports_3.CancellationErrorCode.ConnectionFailure, result.error, successCallback);
                 return Exports_2.PromiseHelper.fromError(result.error);
@@ -6063,17 +6063,17 @@ var ServiceRecognizerBase = /** @class */ (function () {
             }
             return _this.configureConnection(requestSession)
                 .on(function (_) {
-                var sessionStartEventArgs = new Exports_3.SessionEventArgs(requestSession.sessionId);
+                let sessionStartEventArgs = new Exports_3.SessionEventArgs(requestSession.sessionId);
                 if (!!_this.privRecognizer.sessionStarted) {
                     _this.privRecognizer.sessionStarted(_this.privRecognizer, sessionStartEventArgs);
                 }
-                var messageRetrievalPromise = _this.receiveMessage(requestSession, successCallback, errorCallBack);
-                var audioSendPromise = _this.sendAudio(audioNode, requestSession);
+                let messageRetrievalPromise = _this.receiveMessage(requestSession, successCallback, errorCallBack);
+                let audioSendPromise = _this.sendAudio(audioNode, requestSession);
                 /* tslint:disable:no-empty */
                 audioSendPromise.on(function (_) { }, function (error) {
                     _this.cancelRecognitionLocal(requestSession, Exports_3.CancellationReason.Error, Exports_3.CancellationErrorCode.RuntimeError, error, successCallback);
                 });
-                var completionPromise = Exports_2.PromiseHelper.whenAll([messageRetrievalPromise, audioSendPromise]);
+                let completionPromise = Exports_2.PromiseHelper.whenAll([messageRetrievalPromise, audioSendPromise]);
                 return completionPromise.on(function (r) {
                     requestSession.dispose();
                     _this.sendTelemetryData(requestSession, requestSession.getTelemetry());
@@ -6115,11 +6115,11 @@ exports.ServiceRecognizerBase = ServiceRecognizerBase;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -6129,22 +6129,22 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var PathHeaderName = "path";
-var ContentTypeHeaderName = "content-type";
-var RequestIdHeaderName = "x-requestid";
-var RequestTimestampHeaderName = "x-timestamp";
-var SpeechConnectionMessage = /** @class */ (function (_super) {
+let Exports_1 = __webpack_require__(2);
+let PathHeaderName = "path";
+let ContentTypeHeaderName = "content-type";
+let RequestIdHeaderName = "x-requestid";
+let RequestTimestampHeaderName = "x-timestamp";
+let SpeechConnectionMessage = /** @class */ (function (_super) {
     __extends(SpeechConnectionMessage, _super);
     function SpeechConnectionMessage(messageType, path, requestId, contentType, body, additionalHeaders, id) {
-        var _this = this;
+        let _this = this;
         if (!path) {
             throw new Exports_1.ArgumentNullError("path");
         }
         if (!requestId) {
             throw new Exports_1.ArgumentNullError("requestId");
         }
-        var headers = {};
+        let headers = {};
         headers[PathHeaderName] = path;
         headers[RequestIdHeaderName] = requestId;
         headers[RequestTimestampHeaderName] = new Date().toISOString();
@@ -6152,7 +6152,7 @@ var SpeechConnectionMessage = /** @class */ (function (_super) {
             headers[ContentTypeHeaderName] = contentType;
         }
         if (additionalHeaders) {
-            for (var headerName in additionalHeaders) {
+            for (let headerName in additionalHeaders) {
                 if (headerName) {
                     headers[headerName] = additionalHeaders[headerName];
                 }
@@ -6199,13 +6199,13 @@ var SpeechConnectionMessage = /** @class */ (function (_super) {
         configurable: true
     });
     SpeechConnectionMessage.fromConnectionMessage = function (message) {
-        var path = null;
-        var requestId = null;
-        var contentType = null;
-        var requestTimestamp = null;
-        var additionalHeaders = {};
+        let path = null;
+        let requestId = null;
+        let contentType = null;
+        let requestTimestamp = null;
+        let additionalHeaders = {};
         if (message.headers) {
-            for (var headerName in message.headers) {
+            for (let headerName in message.headers) {
                 if (headerName) {
                     if (headerName.toLowerCase() === PathHeaderName.toLowerCase()) {
                         path = message.headers[headerName];
@@ -6242,18 +6242,18 @@ exports.SpeechConnectionMessage = SpeechConnectionMessage;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var RecognitionMode;
+let RecognitionMode;
 (function (RecognitionMode) {
     RecognitionMode[RecognitionMode["Interactive"] = 0] = "Interactive";
     RecognitionMode[RecognitionMode["Conversation"] = 1] = "Conversation";
     RecognitionMode[RecognitionMode["Dictation"] = 2] = "Dictation";
 })(RecognitionMode = exports.RecognitionMode || (exports.RecognitionMode = {}));
-var SpeechResultFormat;
+let SpeechResultFormat;
 (function (SpeechResultFormat) {
     SpeechResultFormat[SpeechResultFormat["Simple"] = 0] = "Simple";
     SpeechResultFormat[SpeechResultFormat["Detailed"] = 1] = "Detailed";
 })(SpeechResultFormat = exports.SpeechResultFormat || (exports.SpeechResultFormat = {}));
-var RecognizerConfig = /** @class */ (function () {
+let RecognizerConfig = /** @class */ (function () {
     function RecognizerConfig(platformConfig, recognitionMode, speechConfig) {
         if (recognitionMode === void 0) { recognitionMode = RecognitionMode.Interactive; }
         this.privRecognitionMode = RecognitionMode.Interactive;
@@ -6301,14 +6301,14 @@ var RecognizerConfig = /** @class */ (function () {
 }());
 exports.RecognizerConfig = RecognizerConfig;
 // tslint:disable-next-line:max-classes-per-file
-var PlatformConfig = /** @class */ (function () {
+let PlatformConfig = /** @class */ (function () {
     function PlatformConfig(context) {
-        var _this = this;
+        let _this = this;
         this.serialize = function () {
             return JSON.stringify(_this, function (key, value) {
                 if (value && typeof value === "object") {
-                    var replacement = {};
-                    for (var k in value) {
+                    let replacement = {};
+                    for (let k in value) {
                         if (Object.hasOwnProperty.call(value, k)) {
                             replacement[k && k.charAt(0).toLowerCase() + k.substring(1)] = value[k];
                         }
@@ -6331,7 +6331,7 @@ var PlatformConfig = /** @class */ (function () {
 }());
 exports.PlatformConfig = PlatformConfig;
 // tslint:disable-next-line:max-classes-per-file
-var Context = /** @class */ (function () {
+let Context = /** @class */ (function () {
     function Context(os) {
         this.system = new System();
         this.os = os;
@@ -6340,10 +6340,10 @@ var Context = /** @class */ (function () {
 }());
 exports.Context = Context;
 // tslint:disable-next-line:max-classes-per-file
-var System = /** @class */ (function () {
+let System = /** @class */ (function () {
     function System() {
         // Note: below will be patched for official builds.
-        var SPEECHSDK_CLIENTSDK_VERSION = "1.2.1";
+        let SPEECHSDK_CLIENTSDK_VERSION = "1.2.1";
         this.name = "SpeechSDK";
         this.version = SPEECHSDK_CLIENTSDK_VERSION;
         this.build = "JavaScript";
@@ -6353,7 +6353,7 @@ var System = /** @class */ (function () {
 }());
 exports.System = System;
 // tslint:disable-next-line:max-classes-per-file
-var OS = /** @class */ (function () {
+let OS = /** @class */ (function () {
     function OS(platform, name, version) {
         this.platform = platform;
         this.name = name;
@@ -6363,7 +6363,7 @@ var OS = /** @class */ (function () {
 }());
 exports.OS = OS;
 // tslint:disable-next-line:max-classes-per-file
-var Device = /** @class */ (function () {
+let Device = /** @class */ (function () {
     function Device(manufacturer, model, version) {
         this.manufacturer = manufacturer;
         this.model = model;
@@ -6384,20 +6384,20 @@ exports.Device = Device;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var CRLF = "\r\n";
-var WebsocketMessageFormatter = /** @class */ (function () {
+let Exports_1 = __webpack_require__(2);
+let CRLF = "\r\n";
+let WebsocketMessageFormatter = /** @class */ (function () {
     function WebsocketMessageFormatter() {
-        var _this = this;
+        let _this = this;
         this.toConnectionMessage = function (message) {
-            var deferral = new Exports_1.Deferred();
+            let deferral = new Exports_1.Deferred();
             try {
                 if (message.messageType === Exports_1.MessageType.Text) {
-                    var textMessage = message.textContent;
-                    var headers = {};
-                    var body = null;
+                    let textMessage = message.textContent;
+                    let headers = {};
+                    let body = null;
                     if (textMessage) {
-                        var headerBodySplit = textMessage.split("\r\n\r\n");
+                        let headerBodySplit = textMessage.split("\r\n\r\n");
                         if (headerBodySplit && headerBodySplit.length > 0) {
                             headers = _this.parseHeaders(headerBodySplit[0]);
                             if (headerBodySplit.length > 1) {
@@ -6408,19 +6408,19 @@ var WebsocketMessageFormatter = /** @class */ (function () {
                     deferral.resolve(new Exports_1.ConnectionMessage(message.messageType, body, headers, message.id));
                 }
                 else if (message.messageType === Exports_1.MessageType.Binary) {
-                    var binaryMessage = message.binaryContent;
-                    var headers = {};
-                    var body = null;
+                    let binaryMessage = message.binaryContent;
+                    let headers = {};
+                    let body = null;
                     if (!binaryMessage || binaryMessage.byteLength < 2) {
                         throw new Error("Invalid binary message format. Header length missing.");
                     }
-                    var dataView = new DataView(binaryMessage);
-                    var headerLength = dataView.getInt16(0);
+                    let dataView = new DataView(binaryMessage);
+                    let headerLength = dataView.getInt16(0);
                     if (binaryMessage.byteLength < headerLength + 2) {
                         throw new Error("Invalid binary message format. Header content missing.");
                     }
-                    var headersString = "";
-                    for (var i = 0; i < headerLength; i++) {
+                    let headersString = "";
+                    for (let i = 0; i < headerLength; i++) {
                         headersString += String.fromCharCode((dataView).getInt8(i + 2));
                     }
                     headers = _this.parseHeaders(headersString);
@@ -6436,25 +6436,25 @@ var WebsocketMessageFormatter = /** @class */ (function () {
             return deferral.promise();
         };
         this.fromConnectionMessage = function (message) {
-            var deferral = new Exports_1.Deferred();
+            let deferral = new Exports_1.Deferred();
             try {
                 if (message.messageType === Exports_1.MessageType.Text) {
-                    var payload = "" + _this.makeHeaders(message) + CRLF + (message.textBody ? message.textBody : "");
+                    let payload = "" + _this.makeHeaders(message) + CRLF + (message.textBody ? message.textBody : "");
                     deferral.resolve(new Exports_1.RawWebsocketMessage(Exports_1.MessageType.Text, payload, message.id));
                 }
                 else if (message.messageType === Exports_1.MessageType.Binary) {
-                    var headersString = _this.makeHeaders(message);
-                    var content = message.binaryBody;
-                    var headerInt8Array = new Int8Array(_this.stringToArrayBuffer(headersString));
-                    var payload = new ArrayBuffer(2 + headerInt8Array.byteLength + (content ? content.byteLength : 0));
-                    var dataView = new DataView(payload);
+                    let headersString = _this.makeHeaders(message);
+                    let content = message.binaryBody;
+                    let headerInt8Array = new Int8Array(_this.stringToArrayBuffer(headersString));
+                    let payload = new ArrayBuffer(2 + headerInt8Array.byteLength + (content ? content.byteLength : 0));
+                    let dataView = new DataView(payload);
                     dataView.setInt16(0, headerInt8Array.length);
-                    for (var i = 0; i < headerInt8Array.byteLength; i++) {
+                    for (let i = 0; i < headerInt8Array.byteLength; i++) {
                         dataView.setInt8(2 + i, headerInt8Array[i]);
                     }
                     if (content) {
-                        var bodyInt8Array = new Int8Array(content);
-                        for (var i = 0; i < bodyInt8Array.byteLength; i++) {
+                        let bodyInt8Array = new Int8Array(content);
+                        for (let i = 0; i < bodyInt8Array.byteLength; i++) {
                             dataView.setInt8(2 + headerInt8Array.byteLength + i, bodyInt8Array[i]);
                         }
                     }
@@ -6467,9 +6467,9 @@ var WebsocketMessageFormatter = /** @class */ (function () {
             return deferral.promise();
         };
         this.makeHeaders = function (message) {
-            var headersString = "";
+            let headersString = "";
             if (message.headers) {
-                for (var header in message.headers) {
+                for (let header in message.headers) {
                     if (header) {
                         headersString += header + ": " + message.headers[header] + CRLF;
                     }
@@ -6478,16 +6478,16 @@ var WebsocketMessageFormatter = /** @class */ (function () {
             return headersString;
         };
         this.parseHeaders = function (headersString) {
-            var headers = {};
+            let headers = {};
             if (headersString) {
-                var headerMatches = headersString.match(/[^\r\n]+/g);
+                let headerMatches = headersString.match(/[^\r\n]+/g);
                 if (headers) {
-                    for (var _i = 0, headerMatches_1 = headerMatches; _i < headerMatches_1.length; _i++) {
-                        var header = headerMatches_1[_i];
+                    for (let _i = 0, headerMatches_1 = headerMatches; _i < headerMatches_1.length; _i++) {
+                        let header = headerMatches_1[_i];
                         if (header) {
-                            var separatorIndex = header.indexOf(":");
-                            var headerName = separatorIndex > 0 ? header.substr(0, separatorIndex).trim().toLowerCase() : header;
-                            var headerValue = separatorIndex > 0 && header.length > (separatorIndex + 1) ?
+                            let separatorIndex = header.indexOf(":");
+                            let headerName = separatorIndex > 0 ? header.substr(0, separatorIndex).trim().toLowerCase() : header;
+                            let headerValue = separatorIndex > 0 && header.length > (separatorIndex + 1) ?
                                 header.substr(separatorIndex + 1).trim() :
                                 "";
                             headers[headerName] = headerValue;
@@ -6498,9 +6498,9 @@ var WebsocketMessageFormatter = /** @class */ (function () {
             return headers;
         };
         this.stringToArrayBuffer = function (str) {
-            var buffer = new ArrayBuffer(str.length);
-            var view = new DataView(buffer);
-            for (var i = 0; i < str.length; i++) {
+            let buffer = new ArrayBuffer(str.length);
+            let view = new DataView(buffer);
+            for (let i = 0; i < str.length; i++) {
                 view.setUint8(i, str.charCodeAt(i));
             }
             return buffer;
@@ -6521,7 +6521,7 @@ exports.WebsocketMessageFormatter = WebsocketMessageFormatter;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var QueryParameterNames = /** @class */ (function () {
+let QueryParameterNames = /** @class */ (function () {
     function QueryParameterNames() {
     }
     Object.defineProperty(QueryParameterNames, "TestHooksParamName", {
@@ -6588,30 +6588,30 @@ exports.QueryParameterNames = QueryParameterNames;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(6);
-var Exports_2 = __webpack_require__(0);
-var Exports_3 = __webpack_require__(1);
-var TestHooksParamName = "testhooks";
-var ConnectionIdHeader = "X-ConnectionId";
-var TranslationConnectionFactory = /** @class */ (function () {
+let Exports_1 = __webpack_require__(6);
+let Exports_2 = __webpack_require__(0);
+let Exports_3 = __webpack_require__(1);
+let TestHooksParamName = "testhooks";
+let ConnectionIdHeader = "X-ConnectionId";
+let TranslationConnectionFactory = /** @class */ (function () {
     function TranslationConnectionFactory() {
         this.create = function (config, authInfo, connectionId) {
-            var endpoint = config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_Endpoint, undefined);
+            let endpoint = config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_Endpoint, undefined);
             if (!endpoint) {
-                var region = config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_Region, undefined);
+                let region = config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_Region, undefined);
                 endpoint = "wss://" + region + ".s2s.speech.microsoft.com/speech/translation/cognitiveservices/v1";
             }
-            var queryParams = {
+            let queryParams = {
                 from: config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_RecoLanguage),
                 to: config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_TranslationToLanguages),
             };
-            var voiceName = "voice";
-            var featureName = "features";
+            let voiceName = "voice";
+            let featureName = "features";
             if (config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_TranslationVoice, undefined) !== undefined) {
                 queryParams[voiceName] = config.parameters.getProperty(Exports_2.PropertyId.SpeechServiceConnection_TranslationVoice);
                 queryParams[featureName] = "texttospeech";
             }
-            var headers = {};
+            let headers = {};
             headers[authInfo.headerName] = authInfo.token;
             headers[ConnectionIdHeader] = connectionId;
             return new Exports_1.WebsocketConnection(endpoint, queryParams, headers, new Exports_3.WebsocketMessageFormatter(), connectionId);
@@ -6632,13 +6632,13 @@ exports.TranslationConnectionFactory = TranslationConnectionFactory;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
-var Exports_2 = __webpack_require__(1);
-var EnumTranslation = /** @class */ (function () {
+let Exports_1 = __webpack_require__(0);
+let Exports_2 = __webpack_require__(1);
+let EnumTranslation = /** @class */ (function () {
     function EnumTranslation() {
     }
     EnumTranslation.implTranslateRecognitionResult = function (recognitionStatus) {
-        var reason = Exports_1.ResultReason.Canceled;
+        let reason = Exports_1.ResultReason.Canceled;
         switch (recognitionStatus) {
             case Exports_2.RecognitionStatus.Success:
                 reason = Exports_1.ResultReason.RecognizedSpeech;
@@ -6657,7 +6657,7 @@ var EnumTranslation = /** @class */ (function () {
         return reason;
     };
     EnumTranslation.implTranslateCancelResult = function (recognitionStatus) {
-        var reason = Exports_1.CancellationReason.EndOfStream;
+        let reason = Exports_1.CancellationReason.EndOfStream;
         switch (recognitionStatus) {
             case Exports_2.RecognitionStatus.Success:
             case Exports_2.RecognitionStatus.EndOfDictation:
@@ -6692,7 +6692,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @class SynthesisStatus
  * @private
  */
-var SynthesisStatus;
+let SynthesisStatus;
 (function (SynthesisStatus) {
     /**
      * The response contains valid audio data.
@@ -6710,7 +6710,7 @@ var SynthesisStatus;
      */
     SynthesisStatus[SynthesisStatus["Error"] = 2] = "Error";
 })(SynthesisStatus = exports.SynthesisStatus || (exports.SynthesisStatus = {}));
-var RecognitionStatus;
+let RecognitionStatus;
 (function (RecognitionStatus) {
     RecognitionStatus[RecognitionStatus["Success"] = 0] = "Success";
     RecognitionStatus[RecognitionStatus["NoMatch"] = 1] = "NoMatch";
@@ -6731,8 +6731,8 @@ var RecognitionStatus;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var TranslationSynthesisEnd = /** @class */ (function () {
+let Exports_1 = __webpack_require__(1);
+let TranslationSynthesisEnd = /** @class */ (function () {
     function TranslationSynthesisEnd(json) {
         this.privSynthesisEnd = JSON.parse(json);
         this.privSynthesisEnd.SynthesisStatus = Exports_1.SynthesisStatus[this.privSynthesisEnd.SynthesisStatus];
@@ -6769,8 +6769,8 @@ exports.TranslationSynthesisEnd = TranslationSynthesisEnd;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var TranslationStatus_1 = __webpack_require__(9);
-var TranslationHypothesis = /** @class */ (function () {
+let TranslationStatus_1 = __webpack_require__(9);
+let TranslationHypothesis = /** @class */ (function () {
     function TranslationHypothesis(json) {
         this.privTranslationHypothesis = JSON.parse(json);
         this.privTranslationHypothesis.Translation.TranslationStatus = TranslationStatus_1.TranslationStatus[this.privTranslationHypothesis.Translation.TranslationStatus];
@@ -6821,9 +6821,9 @@ exports.TranslationHypothesis = TranslationHypothesis;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var TranslationStatus_1 = __webpack_require__(9);
-var TranslationPhrase = /** @class */ (function () {
+let Exports_1 = __webpack_require__(1);
+let TranslationStatus_1 = __webpack_require__(9);
+let TranslationPhrase = /** @class */ (function () {
     function TranslationPhrase(json) {
         this.privTranslationPhrase = JSON.parse(json);
         this.privTranslationPhrase.RecognitionStatus = Exports_1.RecognitionStatus[this.privTranslationPhrase.RecognitionStatus];
@@ -6883,11 +6883,11 @@ exports.TranslationPhrase = TranslationPhrase;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -6897,21 +6897,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var Exports_2 = __webpack_require__(0);
-var Exports_3 = __webpack_require__(1);
+let Exports_1 = __webpack_require__(2);
+let Exports_2 = __webpack_require__(0);
+let Exports_3 = __webpack_require__(1);
 // tslint:disable-next-line:max-classes-per-file
-var TranslationServiceRecognizer = /** @class */ (function (_super) {
+let TranslationServiceRecognizer = /** @class */ (function (_super) {
     __extends(TranslationServiceRecognizer, _super);
     function TranslationServiceRecognizer(authentication, connectionFactory, audioSource, recognizerConfig, translationRecognizer) {
-        var _this = _super.call(this, authentication, connectionFactory, audioSource, recognizerConfig, translationRecognizer) || this;
+        let _this = _super.call(this, authentication, connectionFactory, audioSource, recognizerConfig, translationRecognizer) || this;
         _this.privTranslationRecognizer = translationRecognizer;
         return _this;
     }
     TranslationServiceRecognizer.prototype.processTypeSpecificMessages = function (connectionMessage, requestSession, connection, successCallback, errorCallBack) {
         switch (connectionMessage.path.toLowerCase()) {
             case "translation.hypothesis":
-                var result = this.fireEventForResult(Exports_3.TranslationHypothesis.fromJSON(connectionMessage.textBody), requestSession);
+                let result = this.fireEventForResult(Exports_3.TranslationHypothesis.fromJSON(connectionMessage.textBody), requestSession);
                 if (!!this.privTranslationRecognizer.recognizing) {
                     try {
                         this.privTranslationRecognizer.recognizing(this.privTranslationRecognizer, result);
@@ -6928,11 +6928,11 @@ var TranslationServiceRecognizer = /** @class */ (function (_super) {
                     // For continuous recognition telemetry has to be sent for every phrase as per spec.
                     this.sendTelemetryData(requestSession, requestSession.getTelemetry());
                 }
-                var translatedPhrase = Exports_3.TranslationPhrase.fromJSON(connectionMessage.textBody);
+                let translatedPhrase = Exports_3.TranslationPhrase.fromJSON(connectionMessage.textBody);
                 if (translatedPhrase.RecognitionStatus === Exports_3.RecognitionStatus.Success) {
                     requestSession.onServiceRecognized(requestSession.currentTurnAudioOffset + translatedPhrase.Offset + translatedPhrase.Duration);
                     // OK, the recognition was successful. How'd the translation do?
-                    var result_1 = this.fireEventForResult(translatedPhrase, requestSession);
+                    let result_1 = this.fireEventForResult(translatedPhrase, requestSession);
                     if (!!this.privTranslationRecognizer.recognized) {
                         try {
                             this.privTranslationRecognizer.recognized(this.privTranslationRecognizer, result_1);
@@ -6962,11 +6962,11 @@ var TranslationServiceRecognizer = /** @class */ (function (_super) {
                     break;
                 }
                 else {
-                    var reason = Exports_3.EnumTranslation.implTranslateRecognitionResult(translatedPhrase.RecognitionStatus);
-                    var result_2 = new Exports_2.TranslationRecognitionResult(undefined, requestSession.requestId, reason, translatedPhrase.Text, translatedPhrase.Duration, translatedPhrase.Offset, undefined, connectionMessage.textBody, undefined);
+                    let reason = Exports_3.EnumTranslation.implTranslateRecognitionResult(translatedPhrase.RecognitionStatus);
+                    let result_2 = new Exports_2.TranslationRecognitionResult(undefined, requestSession.requestId, reason, translatedPhrase.Text, translatedPhrase.Duration, translatedPhrase.Offset, undefined, connectionMessage.textBody, undefined);
                     if (reason === Exports_2.ResultReason.Canceled) {
-                        var cancelReason = Exports_3.EnumTranslation.implTranslateCancelResult(translatedPhrase.RecognitionStatus);
-                        var ev = new Exports_2.TranslationRecognitionCanceledEventArgs(requestSession.sessionId, cancelReason, null, cancelReason === Exports_2.CancellationReason.Error ? Exports_2.CancellationErrorCode.ServiceError : Exports_2.CancellationErrorCode.NoError, result_2);
+                        let cancelReason = Exports_3.EnumTranslation.implTranslateCancelResult(translatedPhrase.RecognitionStatus);
+                        let ev = new Exports_2.TranslationRecognitionCanceledEventArgs(requestSession.sessionId, cancelReason, null, cancelReason === Exports_2.CancellationReason.Error ? Exports_2.CancellationErrorCode.ServiceError : Exports_2.CancellationErrorCode.NoError, result_2);
                         if (!!this.privTranslationRecognizer.canceled) {
                             try {
                                 this.privTranslationRecognizer.canceled(this.privTranslationRecognizer, ev);
@@ -6980,7 +6980,7 @@ var TranslationServiceRecognizer = /** @class */ (function (_super) {
                     }
                     else {
                         if (!(requestSession.isSpeechEnded && reason === Exports_2.ResultReason.NoMatch && translatedPhrase.RecognitionStatus !== Exports_3.RecognitionStatus.InitialSilenceTimeout)) {
-                            var ev = new Exports_2.TranslationRecognitionEventArgs(result_2, 0 /*offset*/, requestSession.sessionId);
+                            let ev = new Exports_2.TranslationRecognitionEventArgs(result_2, 0 /*offset*/, requestSession.sessionId);
                             if (!!this.privTranslationRecognizer.recognized) {
                                 try {
                                     this.privTranslationRecognizer.recognized(this.privTranslationRecognizer, ev);
@@ -7015,12 +7015,12 @@ var TranslationServiceRecognizer = /** @class */ (function (_super) {
                 this.sendSynthesisAudio(connectionMessage.binaryBody, requestSession.sessionId);
                 break;
             case "translation.synthesis.end":
-                var synthEnd = Exports_3.TranslationSynthesisEnd.fromJSON(connectionMessage.textBody);
+                let synthEnd = Exports_3.TranslationSynthesisEnd.fromJSON(connectionMessage.textBody);
                 switch (synthEnd.SynthesisStatus) {
                     case Exports_3.SynthesisStatus.Error:
                         if (!!this.privTranslationRecognizer.synthesizing) {
-                            var result_3 = new Exports_2.TranslationSynthesisResult(Exports_2.ResultReason.Canceled, undefined);
-                            var retEvent = new Exports_2.TranslationSynthesisEventArgs(result_3, requestSession.sessionId);
+                            let result_3 = new Exports_2.TranslationSynthesisResult(Exports_2.ResultReason.Canceled, undefined);
+                            let retEvent = new Exports_2.TranslationSynthesisEventArgs(result_3, requestSession.sessionId);
                             try {
                                 this.privTranslationRecognizer.synthesizing(this.privTranslationRecognizer, retEvent);
                                 /* tslint:disable:no-empty */
@@ -7032,7 +7032,7 @@ var TranslationServiceRecognizer = /** @class */ (function (_super) {
                         }
                         if (!!this.privTranslationRecognizer.canceled) {
                             // And raise a canceled event to send the rich(er) error message back.
-                            var canceledResult = new Exports_2.TranslationRecognitionCanceledEventArgs(requestSession.sessionId, Exports_2.CancellationReason.Error, synthEnd.FailureReason, Exports_2.CancellationErrorCode.ServiceError, null);
+                            let canceledResult = new Exports_2.TranslationRecognitionCanceledEventArgs(requestSession.sessionId, Exports_2.CancellationReason.Error, synthEnd.FailureReason, Exports_2.CancellationErrorCode.ServiceError, null);
                             try {
                                 this.privTranslationRecognizer.canceled(this.privTranslationRecognizer, canceledResult);
                                 /* tslint:disable:no-empty */
@@ -7057,16 +7057,16 @@ var TranslationServiceRecognizer = /** @class */ (function (_super) {
     // Cancels recognition.
     TranslationServiceRecognizer.prototype.cancelRecognition = function (sessionId, requestId, cancellationReason, errorCode, error, cancelRecoCallback) {
         if (!!this.privTranslationRecognizer.canceled) {
-            var properties = new Exports_2.PropertyCollection();
+            let properties = new Exports_2.PropertyCollection();
             properties.setProperty(Exports_3.CancellationErrorCodePropertyName, Exports_2.CancellationErrorCode[errorCode]);
-            var cancelEvent = new Exports_2.TranslationRecognitionCanceledEventArgs(sessionId, cancellationReason, error, errorCode, undefined);
+            let cancelEvent = new Exports_2.TranslationRecognitionCanceledEventArgs(sessionId, cancellationReason, error, errorCode, undefined);
             try {
                 this.privTranslationRecognizer.canceled(this.privTranslationRecognizer, cancelEvent);
                 /* tslint:disable:no-empty */
             }
             catch (_a) { }
             if (!!cancelRecoCallback) {
-                var result = new Exports_2.TranslationRecognitionResult(undefined, // Translations
+                let result = new Exports_2.TranslationRecognitionResult(undefined, // Translations
                 requestId, Exports_2.ResultReason.Canceled, undefined, // Text
                 undefined, // Druation
                 undefined, // Offset
@@ -7081,15 +7081,15 @@ var TranslationServiceRecognizer = /** @class */ (function (_super) {
         }
     };
     TranslationServiceRecognizer.prototype.fireEventForResult = function (serviceResult, requestSession) {
-        var translations;
+        let translations;
         if (undefined !== serviceResult.Translation.Translations) {
             translations = new Exports_2.Translations();
-            for (var _i = 0, _a = serviceResult.Translation.Translations; _i < _a.length; _i++) {
-                var translation = _a[_i];
+            for (let _i = 0, _a = serviceResult.Translation.Translations; _i < _a.length; _i++) {
+                let translation = _a[_i];
                 translations.set(translation.Language, translation.Text);
             }
         }
-        var resultReason;
+        let resultReason;
         if (serviceResult instanceof Exports_3.TranslationPhrase) {
             if (serviceResult.Translation.TranslationStatus === Exports_1.TranslationStatus.Success) {
                 resultReason = Exports_2.ResultReason.TranslatedSpeech;
@@ -7101,15 +7101,15 @@ var TranslationServiceRecognizer = /** @class */ (function (_super) {
         else {
             resultReason = Exports_2.ResultReason.TranslatingSpeech;
         }
-        var offset = serviceResult.Offset + requestSession.currentTurnAudioOffset;
-        var result = new Exports_2.TranslationRecognitionResult(translations, requestSession.requestId, resultReason, serviceResult.Text, serviceResult.Duration, offset, serviceResult.Translation.FailureReason, JSON.stringify(serviceResult), undefined);
-        var ev = new Exports_2.TranslationRecognitionEventArgs(result, offset, requestSession.sessionId);
+        let offset = serviceResult.Offset + requestSession.currentTurnAudioOffset;
+        let result = new Exports_2.TranslationRecognitionResult(translations, requestSession.requestId, resultReason, serviceResult.Text, serviceResult.Duration, offset, serviceResult.Translation.FailureReason, JSON.stringify(serviceResult), undefined);
+        let ev = new Exports_2.TranslationRecognitionEventArgs(result, offset, requestSession.sessionId);
         return ev;
     };
     TranslationServiceRecognizer.prototype.sendSynthesisAudio = function (audio, sessionId) {
-        var reason = (undefined === audio) ? Exports_2.ResultReason.SynthesizingAudioCompleted : Exports_2.ResultReason.SynthesizingAudio;
-        var result = new Exports_2.TranslationSynthesisResult(reason, audio);
-        var retEvent = new Exports_2.TranslationSynthesisEventArgs(result, sessionId);
+        let reason = (undefined === audio) ? Exports_2.ResultReason.SynthesizingAudioCompleted : Exports_2.ResultReason.SynthesizingAudio;
+        let result = new Exports_2.TranslationSynthesisResult(reason, audio);
+        let retEvent = new Exports_2.TranslationSynthesisEventArgs(result, sessionId);
         if (!!this.privTranslationRecognizer.synthesizing) {
             try {
                 this.privTranslationRecognizer.synthesizing(this.privTranslationRecognizer, retEvent);
@@ -7136,7 +7136,7 @@ exports.TranslationServiceRecognizer = TranslationServiceRecognizer;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var SpeechDetected = /** @class */ (function () {
+let SpeechDetected = /** @class */ (function () {
     function SpeechDetected(json) {
         this.privSpeechStartDetected = JSON.parse(json);
     }
@@ -7165,7 +7165,7 @@ exports.SpeechDetected = SpeechDetected;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var SpeechHypothesis = /** @class */ (function () {
+let SpeechHypothesis = /** @class */ (function () {
     function SpeechHypothesis(json) {
         this.privSpeechHypothesis = JSON.parse(json);
     }
@@ -7207,11 +7207,11 @@ exports.SpeechHypothesis = SpeechHypothesis;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -7221,23 +7221,23 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
-var Exports_2 = __webpack_require__(1);
+let Exports_1 = __webpack_require__(0);
+let Exports_2 = __webpack_require__(1);
 // tslint:disable-next-line:max-classes-per-file
-var SpeechServiceRecognizer = /** @class */ (function (_super) {
+let SpeechServiceRecognizer = /** @class */ (function (_super) {
     __extends(SpeechServiceRecognizer, _super);
     function SpeechServiceRecognizer(authentication, connectionFactory, audioSource, recognizerConfig, speechRecognizer) {
-        var _this = _super.call(this, authentication, connectionFactory, audioSource, recognizerConfig, speechRecognizer) || this;
+        let _this = _super.call(this, authentication, connectionFactory, audioSource, recognizerConfig, speechRecognizer) || this;
         _this.privSpeechRecognizer = speechRecognizer;
         return _this;
     }
     SpeechServiceRecognizer.prototype.processTypeSpecificMessages = function (connectionMessage, requestSession, connection, successCallback, errorCallBack) {
-        var result;
+        let result;
         switch (connectionMessage.path.toLowerCase()) {
             case "speech.hypothesis":
-                var hypothesis = Exports_2.SpeechHypothesis.fromJSON(connectionMessage.textBody);
+                let hypothesis = Exports_2.SpeechHypothesis.fromJSON(connectionMessage.textBody);
                 result = new Exports_1.SpeechRecognitionResult(requestSession.requestId, Exports_1.ResultReason.RecognizingSpeech, hypothesis.Text, hypothesis.Duration, hypothesis.Offset + requestSession.currentTurnAudioOffset, undefined, connectionMessage.textBody, undefined);
-                var ev = new Exports_1.SpeechRecognitionEventArgs(result, hypothesis.Duration, requestSession.sessionId);
+                let ev = new Exports_1.SpeechRecognitionEventArgs(result, hypothesis.Duration, requestSession.sessionId);
                 if (!!this.privSpeechRecognizer.recognizing) {
                     try {
                         this.privSpeechRecognizer.recognizing(this.privSpeechRecognizer, ev);
@@ -7253,14 +7253,14 @@ var SpeechServiceRecognizer = /** @class */ (function (_super) {
                 // Always send telemetry because we want it to to up for recognize once which will listening to the service
                 // after recognition happens.
                 this.sendTelemetryData(requestSession, requestSession.getTelemetry());
-                var simple = Exports_2.SimpleSpeechPhrase.fromJSON(connectionMessage.textBody);
-                var resultReason = Exports_2.EnumTranslation.implTranslateRecognitionResult(simple.RecognitionStatus);
+                let simple = Exports_2.SimpleSpeechPhrase.fromJSON(connectionMessage.textBody);
+                let resultReason = Exports_2.EnumTranslation.implTranslateRecognitionResult(simple.RecognitionStatus);
                 requestSession.onServiceRecognized(requestSession.currentTurnAudioOffset + simple.Offset + simple.Duration);
                 if (Exports_1.ResultReason.Canceled === resultReason) {
-                    var cancelReason = Exports_2.EnumTranslation.implTranslateCancelResult(simple.RecognitionStatus);
+                    let cancelReason = Exports_2.EnumTranslation.implTranslateCancelResult(simple.RecognitionStatus);
                     result = new Exports_1.SpeechRecognitionResult(requestSession.requestId, resultReason, undefined, undefined, undefined, undefined, connectionMessage.textBody, undefined);
                     if (!!this.privSpeechRecognizer.canceled) {
-                        var cancelEvent = new Exports_1.SpeechRecognitionCanceledEventArgs(cancelReason, undefined, cancelReason === Exports_1.CancellationReason.Error ? Exports_1.CancellationErrorCode.ServiceError : Exports_1.CancellationErrorCode.NoError, undefined, requestSession.sessionId);
+                        let cancelEvent = new Exports_1.SpeechRecognitionCanceledEventArgs(cancelReason, undefined, cancelReason === Exports_1.CancellationReason.Error ? Exports_1.CancellationErrorCode.ServiceError : Exports_1.CancellationErrorCode.NoError, undefined, requestSession.sessionId);
                         try {
                             this.privSpeechRecognizer.canceled(this.privSpeechRecognizer, cancelEvent);
                             /* tslint:disable:no-empty */
@@ -7274,10 +7274,10 @@ var SpeechServiceRecognizer = /** @class */ (function (_super) {
                             result = new Exports_1.SpeechRecognitionResult(requestSession.requestId, resultReason, simple.DisplayText, simple.Duration, simple.Offset + requestSession.currentTurnAudioOffset, undefined, connectionMessage.textBody, undefined);
                         }
                         else {
-                            var detailed = Exports_2.DetailedSpeechPhrase.fromJSON(connectionMessage.textBody);
+                            let detailed = Exports_2.DetailedSpeechPhrase.fromJSON(connectionMessage.textBody);
                             result = new Exports_1.SpeechRecognitionResult(requestSession.requestId, resultReason, detailed.RecognitionStatus === Exports_2.RecognitionStatus.Success ? detailed.NBest[0].Display : undefined, detailed.Duration, detailed.Offset + requestSession.currentTurnAudioOffset, undefined, connectionMessage.textBody, undefined);
                         }
-                        var event_1 = new Exports_1.SpeechRecognitionEventArgs(result, result.offset, requestSession.sessionId);
+                        let event_1 = new Exports_1.SpeechRecognitionEventArgs(result, result.offset, requestSession.sessionId);
                         if (!!this.privSpeechRecognizer.recognized) {
                             try {
                                 this.privSpeechRecognizer.recognized(this.privSpeechRecognizer, event_1);
@@ -7313,10 +7313,10 @@ var SpeechServiceRecognizer = /** @class */ (function (_super) {
     };
     // Cancels recognition.
     SpeechServiceRecognizer.prototype.cancelRecognition = function (sessionId, requestId, cancellationReason, errorCode, error, cancelRecoCallback) {
-        var properties = new Exports_1.PropertyCollection();
+        let properties = new Exports_1.PropertyCollection();
         properties.setProperty(Exports_2.CancellationErrorCodePropertyName, Exports_1.CancellationErrorCode[errorCode]);
         if (!!this.privSpeechRecognizer.canceled) {
-            var cancelEvent = new Exports_1.SpeechRecognitionCanceledEventArgs(cancellationReason, error, errorCode, undefined, sessionId);
+            let cancelEvent = new Exports_1.SpeechRecognitionCanceledEventArgs(cancellationReason, error, errorCode, undefined, sessionId);
             try {
                 this.privSpeechRecognizer.canceled(this.privSpeechRecognizer, cancelEvent);
                 /* tslint:disable:no-empty */
@@ -7324,7 +7324,7 @@ var SpeechServiceRecognizer = /** @class */ (function (_super) {
             catch (_a) { }
         }
         if (!!cancelRecoCallback) {
-            var result = new Exports_1.SpeechRecognitionResult(requestId, Exports_1.ResultReason.Canceled, undefined, // Text
+            let result = new Exports_1.SpeechRecognitionResult(requestId, Exports_1.ResultReason.Canceled, undefined, // Text
             undefined, // Druation
             undefined, // Offset
             error, undefined, // Json
@@ -7351,8 +7351,8 @@ exports.SpeechServiceRecognizer = SpeechServiceRecognizer;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var DetailedSpeechPhrase = /** @class */ (function () {
+let Exports_1 = __webpack_require__(1);
+let DetailedSpeechPhrase = /** @class */ (function () {
     function DetailedSpeechPhrase(json) {
         this.privDetailedSpeechPhrase = JSON.parse(json);
         this.privDetailedSpeechPhrase.RecognitionStatus = Exports_1.RecognitionStatus[this.privDetailedSpeechPhrase.RecognitionStatus];
@@ -7403,8 +7403,8 @@ exports.DetailedSpeechPhrase = DetailedSpeechPhrase;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var SimpleSpeechPhrase = /** @class */ (function () {
+let Exports_1 = __webpack_require__(1);
+let SimpleSpeechPhrase = /** @class */ (function () {
     function SimpleSpeechPhrase(json) {
         this.privSimpleSpeechPhrase = JSON.parse(json);
         this.privSimpleSpeechPhrase.RecognitionStatus = Exports_1.RecognitionStatus[this.privSimpleSpeechPhrase.RecognitionStatus];
@@ -7459,7 +7459,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @class AddedLmIntent
  */
 // tslint:disable-next-line:max-classes-per-file
-var AddedLmIntent = /** @class */ (function () {
+let AddedLmIntent = /** @class */ (function () {
     /**
      * Creates and initializes an instance of this class.
      * @constructor
@@ -7484,11 +7484,11 @@ exports.AddedLmIntent = AddedLmIntent;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -7498,13 +7498,13 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
-var Exports_2 = __webpack_require__(1);
+let Exports_1 = __webpack_require__(0);
+let Exports_2 = __webpack_require__(1);
 // tslint:disable-next-line:max-classes-per-file
-var IntentServiceRecognizer = /** @class */ (function (_super) {
+let IntentServiceRecognizer = /** @class */ (function (_super) {
     __extends(IntentServiceRecognizer, _super);
     function IntentServiceRecognizer(authentication, connectionFactory, audioSource, recognizerConfig, recognizer, intentDataSent) {
-        var _this = _super.call(this, authentication, connectionFactory, audioSource, recognizerConfig, recognizer) || this;
+        let _this = _super.call(this, authentication, connectionFactory, audioSource, recognizerConfig, recognizer) || this;
         _this.privIntentRecognizer = recognizer;
         _this.privIntentDataSent = intentDataSent;
         return _this;
@@ -7514,12 +7514,12 @@ var IntentServiceRecognizer = /** @class */ (function (_super) {
         this.privUmbrellaIntent = umbrellaIntent;
     };
     IntentServiceRecognizer.prototype.processTypeSpecificMessages = function (connectionMessage, requestSession, connection, successCallback, errorCallBack) {
-        var _this = this;
-        var result;
-        var ev;
+        let _this = this;
+        let result;
+        let ev;
         switch (connectionMessage.path.toLowerCase()) {
             case "speech.hypothesis":
-                var speechHypothesis = Exports_2.SpeechHypothesis.fromJSON(connectionMessage.textBody);
+                let speechHypothesis = Exports_2.SpeechHypothesis.fromJSON(connectionMessage.textBody);
                 result = new Exports_1.IntentRecognitionResult(undefined, requestSession.requestId, Exports_1.ResultReason.RecognizingIntent, speechHypothesis.Text, speechHypothesis.Duration, speechHypothesis.Offset + requestSession.currentTurnAudioOffset, undefined, connectionMessage.textBody, undefined);
                 ev = new Exports_1.IntentRecognitionEventArgs(result, speechHypothesis.Offset + requestSession.currentTurnAudioOffset, requestSession.sessionId);
                 if (!!this.privIntentRecognizer.recognizing) {
@@ -7534,10 +7534,10 @@ var IntentServiceRecognizer = /** @class */ (function (_super) {
                 }
                 break;
             case "speech.phrase":
-                var simple = Exports_2.SimpleSpeechPhrase.fromJSON(connectionMessage.textBody);
+                let simple = Exports_2.SimpleSpeechPhrase.fromJSON(connectionMessage.textBody);
                 result = new Exports_1.IntentRecognitionResult(undefined, requestSession.requestId, Exports_2.EnumTranslation.implTranslateRecognitionResult(simple.RecognitionStatus), simple.DisplayText, simple.Duration, simple.Offset + requestSession.currentTurnAudioOffset, undefined, connectionMessage.textBody, undefined);
                 ev = new Exports_1.IntentRecognitionEventArgs(result, result.offset + requestSession.currentTurnAudioOffset, requestSession.sessionId);
-                var sendEvent = function () {
+                let sendEvent = function () {
                     if (_this.privRecognizerConfig.isContinuousRecognition) {
                         // For continuous recognition telemetry has to be sent for every phrase as per spec.
                         _this.sendTelemetryData(requestSession, requestSession.getTelemetry());
@@ -7597,22 +7597,22 @@ var IntentServiceRecognizer = /** @class */ (function (_super) {
                     // Odd... Not sure this can happen
                     ev = new Exports_1.IntentRecognitionEventArgs(new Exports_1.IntentRecognitionResult(), 0 /*TODO*/, requestSession.sessionId);
                 }
-                var intentResponse = Exports_2.IntentResponse.fromJSON(connectionMessage.textBody);
+                let intentResponse = Exports_2.IntentResponse.fromJSON(connectionMessage.textBody);
                 // If LUIS didn't return anything, send the existing event, else
                 // modify it to show the match.
                 // See if the intent found is in the list of intents asked for.
-                var addedIntent = this.privAddedLmIntents[intentResponse.topScoringIntent.intent];
+                let addedIntent = this.privAddedLmIntents[intentResponse.topScoringIntent.intent];
                 if (this.privUmbrellaIntent !== undefined) {
                     addedIntent = this.privUmbrellaIntent;
                 }
                 if (null !== intentResponse && addedIntent !== undefined) {
-                    var intentId = addedIntent.intentName === undefined ? intentResponse.topScoringIntent.intent : addedIntent.intentName;
-                    var reason = ev.result.reason;
+                    let intentId = addedIntent.intentName === undefined ? intentResponse.topScoringIntent.intent : addedIntent.intentName;
+                    let reason = ev.result.reason;
                     if (undefined !== intentId) {
                         reason = Exports_1.ResultReason.RecognizedIntent;
                     }
                     // make sure, properties is set.
-                    var properties = (undefined !== ev.result.properties) ?
+                    let properties = (undefined !== ev.result.properties) ?
                         ev.result.properties : new Exports_1.PropertyCollection();
                     properties.setProperty(Exports_1.PropertyId.LanguageUnderstandingServiceResponse_JsonResult, connectionMessage.textBody);
                     ev = new Exports_1.IntentRecognitionEventArgs(new Exports_1.IntentRecognitionResult(intentId, ev.result.resultId, reason, ev.result.text, ev.result.duration, ev.result.offset + requestSession.currentTurnAudioOffset, ev.result.errorDetails, ev.result.json, properties), ev.offset + requestSession.currentTurnAudioOffset, ev.sessionId);
@@ -7651,16 +7651,16 @@ var IntentServiceRecognizer = /** @class */ (function (_super) {
     // Cancels recognition.
     IntentServiceRecognizer.prototype.cancelRecognition = function (sessionId, requestId, cancellationReason, errorCode, error, cancelRecoCallback) {
         if (!!this.privIntentRecognizer.canceled) {
-            var properties = new Exports_1.PropertyCollection();
+            let properties = new Exports_1.PropertyCollection();
             properties.setProperty(Exports_2.CancellationErrorCodePropertyName, Exports_1.CancellationErrorCode[errorCode]);
-            var cancelEvent = new Exports_1.IntentRecognitionCanceledEventArgs(cancellationReason, error, errorCode, undefined, undefined, sessionId);
+            let cancelEvent = new Exports_1.IntentRecognitionCanceledEventArgs(cancellationReason, error, errorCode, undefined, undefined, sessionId);
             try {
                 this.privIntentRecognizer.canceled(this.privIntentRecognizer, cancelEvent);
                 /* tslint:disable:no-empty */
             }
             catch (_a) { }
             if (!!cancelRecoCallback) {
-                var result = new Exports_1.IntentRecognitionResult(undefined, // Intent Id
+                let result = new Exports_1.IntentRecognitionResult(undefined, // Intent Id
                 requestId, Exports_1.ResultReason.Canceled, undefined, // Text
                 undefined, // Druation
                 undefined, // Offset
@@ -7690,7 +7690,7 @@ exports.IntentServiceRecognizer = IntentServiceRecognizer;
 // Licensed under the MIT license.
 // response
 Object.defineProperty(exports, "__esModule", { value: true });
-var IntentResponse = /** @class */ (function () {
+let IntentResponse = /** @class */ (function () {
     function IntentResponse(json) {
         this.privIntentResponse = JSON.parse(json);
     }
@@ -7733,12 +7733,12 @@ exports.IntentResponse = IntentResponse;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var RecognitionEvents_1 = __webpack_require__(11);
-var ServiceTelemetryListener_Internal_1 = __webpack_require__(82);
-var RequestSession = /** @class */ (function () {
+let Exports_1 = __webpack_require__(2);
+let RecognitionEvents_1 = __webpack_require__(11);
+let ServiceTelemetryListener_Internal_1 = __webpack_require__(82);
+let RequestSession = /** @class */ (function () {
     function RequestSession(audioSourceId, contextJson) {
-        var _this = this;
+        let _this = this;
         this.privIsDisposed = false;
         this.privDetachables = new Array();
         this.privIsAudioNodeDetached = false;
@@ -7795,8 +7795,8 @@ var RequestSession = /** @class */ (function () {
             if (!_this.privIsDisposed) {
                 // we should have completed by now. If we did not its an unknown error.
                 _this.privIsDisposed = true;
-                for (var _i = 0, _a = _this.privDetachables; _i < _a.length; _i++) {
-                    var detachable = _a[_i];
+                for (let _i = 0, _a = _this.privDetachables; _i < _a.length; _i++) {
+                    let detachable = _a[_i];
                     detachable.detach();
                 }
                 _this.privServiceTelemetryListener.dispose();
@@ -7923,12 +7923,12 @@ exports.RequestSession = RequestSession;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(2);
-var RecognitionEvents_1 = __webpack_require__(11);
+let Exports_1 = __webpack_require__(2);
+let RecognitionEvents_1 = __webpack_require__(11);
 // tslint:disable-next-line:max-classes-per-file
-var ServiceTelemetryListener = /** @class */ (function () {
+let ServiceTelemetryListener = /** @class */ (function () {
     function ServiceTelemetryListener(requestId, audioSourceId, audioNodeId) {
-        var _this = this;
+        let _this = this;
         this.privIsDisposed = false;
         this.privListeningTriggerMetric = null;
         this.privMicMetric = null;
@@ -8016,7 +8016,7 @@ var ServiceTelemetryListener = /** @class */ (function () {
             }
         };
         this.getTelemetry = function () {
-            var metrics = new Array();
+            let metrics = new Array();
             if (_this.privListeningTriggerMetric) {
                 metrics.push(_this.privListeningTriggerMetric);
             }
@@ -8026,11 +8026,11 @@ var ServiceTelemetryListener = /** @class */ (function () {
             if (_this.privConnectionEstablishMetric) {
                 metrics.push(_this.privConnectionEstablishMetric);
             }
-            var telemetry = {
+            let telemetry = {
                 Metrics: metrics,
                 ReceivedMessages: _this.privReceivedMessages,
             };
-            var json = JSON.stringify(telemetry);
+            let json = JSON.stringify(telemetry);
             // We dont want to send the same telemetry again. So clean those out.
             _this.privReceivedMessages = {};
             _this.privListeningTriggerMetric = null;
@@ -8093,11 +8093,11 @@ exports.ServiceTelemetryListener = ServiceTelemetryListener;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -8107,14 +8107,14 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var Contracts_1 = __webpack_require__(4);
-var Exports_2 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(1);
+let Contracts_1 = __webpack_require__(4);
+let Exports_2 = __webpack_require__(0);
 /**
  * Speech translation configuration.
  * @class SpeechTranslationConfig
  */
-var SpeechTranslationConfig = /** @class */ (function (_super) {
+let SpeechTranslationConfig = /** @class */ (function (_super) {
     __extends(SpeechTranslationConfig, _super);
     /**
      * Creates an instance of recognizer config.
@@ -8134,7 +8134,7 @@ var SpeechTranslationConfig = /** @class */ (function (_super) {
     SpeechTranslationConfig.fromSubscription = function (subscriptionKey, region) {
         Contracts_1.Contracts.throwIfNullOrWhitespace(subscriptionKey, "subscriptionKey");
         Contracts_1.Contracts.throwIfNullOrWhitespace(region, "region");
-        var ret = new SpeechTranslationConfigImpl();
+        let ret = new SpeechTranslationConfigImpl();
         ret.properties.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Key, subscriptionKey);
         ret.properties.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Region, region);
         return ret;
@@ -8155,7 +8155,7 @@ var SpeechTranslationConfig = /** @class */ (function (_super) {
     SpeechTranslationConfig.fromAuthorizationToken = function (authorizationToken, region) {
         Contracts_1.Contracts.throwIfNullOrWhitespace(authorizationToken, "authorizationToken");
         Contracts_1.Contracts.throwIfNullOrWhitespace(region, "region");
-        var ret = new SpeechTranslationConfigImpl();
+        let ret = new SpeechTranslationConfigImpl();
         ret.properties.setProperty(Exports_2.PropertyId.SpeechServiceAuthorization_Token, authorizationToken);
         ret.properties.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Region, region);
         return ret;
@@ -8178,7 +8178,7 @@ var SpeechTranslationConfig = /** @class */ (function (_super) {
     SpeechTranslationConfig.fromEndpoint = function (endpoint, subscriptionKey) {
         Contracts_1.Contracts.throwIfNull(endpoint, "endpoint");
         Contracts_1.Contracts.throwIfNullOrWhitespace(subscriptionKey, "subscriptionKey");
-        var ret = new SpeechTranslationConfigImpl();
+        let ret = new SpeechTranslationConfigImpl();
         ret.properties.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Endpoint, endpoint.href);
         ret.properties.setProperty(Exports_2.PropertyId.SpeechServiceConnection_Key, subscriptionKey);
         return ret;
@@ -8191,10 +8191,10 @@ exports.SpeechTranslationConfig = SpeechTranslationConfig;
  * @class SpeechTranslationConfigImpl
  */
 // tslint:disable-next-line:max-classes-per-file
-var SpeechTranslationConfigImpl = /** @class */ (function (_super) {
+let SpeechTranslationConfigImpl = /** @class */ (function (_super) {
     __extends(SpeechTranslationConfigImpl, _super);
     function SpeechTranslationConfigImpl() {
-        var _this = _super.call(this) || this;
+        let _this = _super.call(this) || this;
         _this.privSpeechProperties = new Exports_2.PropertyCollection();
         _this.outputFormat = Exports_2.OutputFormat.Simple;
         return _this;
@@ -8296,7 +8296,7 @@ var SpeechTranslationConfigImpl = /** @class */ (function (_super) {
      */
     SpeechTranslationConfigImpl.prototype.addTargetLanguage = function (value) {
         Contracts_1.Contracts.throwIfNullOrWhitespace(value, "value");
-        var languages = this.targetLanguages;
+        let languages = this.targetLanguages;
         languages.push(value);
         this.privSpeechProperties.setProperty(Exports_2.PropertyId.SpeechServiceConnection_TranslationToLanguages, languages.join(","));
     };
@@ -8418,12 +8418,12 @@ exports.SpeechTranslationConfigImpl = SpeechTranslationConfigImpl;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Represents collection of properties and their values.
  * @class PropertyCollection
  */
-var PropertyCollection = /** @class */ (function () {
+let PropertyCollection = /** @class */ (function () {
     function PropertyCollection() {
         this.privKeys = [];
         this.privValues = [];
@@ -8441,14 +8441,14 @@ var PropertyCollection = /** @class */ (function () {
      * @returns {string} value of the parameter.
      */
     PropertyCollection.prototype.getProperty = function (key, def) {
-        var keyToUse;
+        let keyToUse;
         if (typeof key === "string") {
             keyToUse = key;
         }
         else {
             keyToUse = Exports_1.PropertyId[key];
         }
-        for (var n = 0; n < this.privKeys.length; n++) {
+        for (let n = 0; n < this.privKeys.length; n++) {
             if (this.privKeys[n] === keyToUse) {
                 return this.privValues[n];
             }
@@ -8464,14 +8464,14 @@ var PropertyCollection = /** @class */ (function () {
      * @param {string} value - The value of the parameter.
      */
     PropertyCollection.prototype.setProperty = function (key, value) {
-        var keyToUse;
+        let keyToUse;
         if (typeof key === "string") {
             keyToUse = key;
         }
         else {
             keyToUse = Exports_1.PropertyId[key];
         }
-        for (var n = 0; n < this.privKeys.length; n++) {
+        for (let n = 0; n < this.privKeys.length; n++) {
             if (this.privKeys[n] === keyToUse) {
                 this.privValues[n] = value;
                 return;
@@ -8488,8 +8488,8 @@ var PropertyCollection = /** @class */ (function () {
      * @returns {PropertyCollection} A copy of the collection.
      */
     PropertyCollection.prototype.clone = function () {
-        var clonedMap = new PropertyCollection();
-        for (var n = 0; n < this.privKeys.length; n++) {
+        let clonedMap = new PropertyCollection();
+        for (let n = 0; n < this.privKeys.length; n++) {
             clonedMap.privKeys.push(this.privKeys[n]);
             clonedMap.privValues.push(this.privValues[n]);
         }
@@ -8514,7 +8514,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Defines speech property ids.
  * @class PropertyId
  */
-var PropertyId;
+let PropertyId;
 (function (PropertyId) {
     /**
      * The Cognitive Services Speech Service subscription Key. If you are using an intent recognizer, you need to specify
@@ -8664,15 +8664,15 @@ var PropertyId;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var Exports_2 = __webpack_require__(2);
-var Contracts_1 = __webpack_require__(4);
-var Exports_3 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(1);
+let Exports_2 = __webpack_require__(2);
+let Contracts_1 = __webpack_require__(4);
+let Exports_3 = __webpack_require__(0);
 /**
  * Defines the base class Recognizer which mainly contains common event handlers.
  * @class Recognizer
  */
-var Recognizer = /** @class */ (function () {
+let Recognizer = /** @class */ (function () {
     /**
      * Creates and initializes an instance of a Recognizer
      * @constructor
@@ -8741,23 +8741,23 @@ var Recognizer = /** @class */ (function () {
     };
     // Setup the recognizer
     Recognizer.prototype.implRecognizerSetup = function (recognitionMode, speechProperties, audioConfig, speechConnectionFactory) {
-        var osPlatform = (typeof window !== "undefined") ? "Browser" : "Node";
-        var osName = "unknown";
-        var osVersion = "unknown";
+        let osPlatform = (typeof window !== "undefined") ? "Browser" : "Node";
+        let osName = "unknown";
+        let osVersion = "unknown";
         if (typeof navigator !== "undefined") {
             osPlatform = osPlatform + "/" + navigator.platform;
             osName = navigator.userAgent;
             osVersion = navigator.appVersion;
         }
-        var recognizerConfig = this.createRecognizerConfig(new Exports_1.PlatformConfig(new Exports_1.Context(new Exports_1.OS(osPlatform, osName, osVersion))), recognitionMode); // SDK.SpeechResultFormat.Simple (Options - Simple/Detailed)
-        var subscriptionKey = speechProperties.getProperty(Exports_3.PropertyId.SpeechServiceConnection_Key, undefined);
-        var authentication = subscriptionKey ?
+        let recognizerConfig = this.createRecognizerConfig(new Exports_1.PlatformConfig(new Exports_1.Context(new Exports_1.OS(osPlatform, osName, osVersion))), recognitionMode); // SDK.SpeechResultFormat.Simple (Options - Simple/Detailed)
+        let subscriptionKey = speechProperties.getProperty(Exports_3.PropertyId.SpeechServiceConnection_Key, undefined);
+        let authentication = subscriptionKey ?
             new Exports_1.CognitiveSubscriptionKeyAuthentication(subscriptionKey) :
             new Exports_1.CognitiveTokenAuthentication(function (authFetchEventId) {
-                var authorizationToken = speechProperties.getProperty(Exports_3.PropertyId.SpeechServiceAuthorization_Token, undefined);
+                let authorizationToken = speechProperties.getProperty(Exports_3.PropertyId.SpeechServiceAuthorization_Token, undefined);
                 return Exports_2.PromiseHelper.fromResult(authorizationToken);
             }, function (authFetchEventId) {
-                var authorizationToken = speechProperties.getProperty(Exports_3.PropertyId.SpeechServiceAuthorization_Token, undefined);
+                let authorizationToken = speechProperties.getProperty(Exports_3.PropertyId.SpeechServiceAuthorization_Token, undefined);
                 return Exports_2.PromiseHelper.fromResult(authorizationToken);
             });
         return this.createServiceRecognizer(authentication, speechConnectionFactory, audioConfig, recognizerConfig);
@@ -8787,11 +8787,11 @@ exports.Recognizer = Recognizer;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -8801,15 +8801,15 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var SpeechConnectionFactory_1 = __webpack_require__(19);
-var Contracts_1 = __webpack_require__(4);
-var Exports_2 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(1);
+let SpeechConnectionFactory_1 = __webpack_require__(19);
+let Contracts_1 = __webpack_require__(4);
+let Exports_2 = __webpack_require__(0);
 /**
  * Performs speech recognition from microphone, file, or other audio input streams, and gets transcribed text as result.
  * @class SpeechRecognizer
  */
-var SpeechRecognizer = /** @class */ (function (_super) {
+let SpeechRecognizer = /** @class */ (function (_super) {
     __extends(SpeechRecognizer, _super);
     /**
      * SpeechRecognizer constructor.
@@ -8818,9 +8818,9 @@ var SpeechRecognizer = /** @class */ (function (_super) {
      * @param {AudioConfig} audioConfig - An optional audio configuration associated with the recognizer
      */
     function SpeechRecognizer(speechConfig, audioConfig) {
-        var _this = _super.call(this, audioConfig) || this;
+        let _this = _super.call(this, audioConfig) || this;
         _this.privDisposedSpeechRecognizer = false;
-        var speechConfigImpl = speechConfig;
+        let speechConfigImpl = speechConfig;
         Contracts_1.Contracts.throwIfNull(speechConfigImpl, "speechConfig");
         _this.privProperties = speechConfigImpl.properties.clone();
         Contracts_1.Contracts.throwIfNullOrWhitespace(speechConfigImpl.properties.getProperty(Exports_2.PropertyId.SpeechServiceConnection_RecoLanguage), Exports_2.PropertyId[Exports_2.PropertyId.SpeechServiceConnection_RecoLanguage]);
@@ -8928,7 +8928,7 @@ var SpeechRecognizer = /** @class */ (function (_super) {
      * @param err - Callback invoked in case of an error.
      */
     SpeechRecognizer.prototype.recognizeOnceAsync = function (cb, err) {
-        var _this = this;
+        let _this = this;
         try {
             Contracts_1.Contracts.throwIfDisposed(this.privDisposedSpeechRecognizer);
             this.implCloseExistingRecognizer();
@@ -8948,7 +8948,7 @@ var SpeechRecognizer = /** @class */ (function (_super) {
         catch (error) {
             if (!!err) {
                 if (error instanceof Error) {
-                    var typedError = error;
+                    let typedError = error;
                     err(typedError.name + ": " + typedError.message);
                 }
                 else {
@@ -8988,7 +8988,7 @@ var SpeechRecognizer = /** @class */ (function (_super) {
         catch (error) {
             if (!!err) {
                 if (error instanceof Error) {
-                    var typedError = error;
+                    let typedError = error;
                     err(typedError.name + ": " + typedError.message);
                 }
                 else {
@@ -9023,7 +9023,7 @@ var SpeechRecognizer = /** @class */ (function (_super) {
         catch (error) {
             if (!!err) {
                 if (error instanceof Error) {
-                    var typedError = error;
+                    let typedError = error;
                     err(typedError.name + ": " + typedError.message);
                 }
                 else {
@@ -9098,7 +9098,7 @@ var SpeechRecognizer = /** @class */ (function (_super) {
         return new Exports_1.RecognizerConfig(speechConfig, recognitionMode, this.properties);
     };
     SpeechRecognizer.prototype.createServiceRecognizer = function (authentication, connectionFactory, audioConfig, recognizerConfig) {
-        var configImpl = audioConfig;
+        let configImpl = audioConfig;
         return new Exports_1.SpeechServiceRecognizer(authentication, connectionFactory, configImpl, recognizerConfig, this);
     };
     SpeechRecognizer.prototype.implCloseExistingRecognizer = function () {
@@ -9122,11 +9122,11 @@ exports.SpeechRecognizer = SpeechRecognizer;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -9136,14 +9136,14 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var Contracts_1 = __webpack_require__(4);
-var Exports_2 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(1);
+let Contracts_1 = __webpack_require__(4);
+let Exports_2 = __webpack_require__(0);
 /**
  * Intent recognizer.
  * @class
  */
-var IntentRecognizer = /** @class */ (function (_super) {
+let IntentRecognizer = /** @class */ (function (_super) {
     __extends(IntentRecognizer, _super);
     /**
      * Initializes an instance of the IntentRecognizer.
@@ -9152,9 +9152,9 @@ var IntentRecognizer = /** @class */ (function (_super) {
      * @param {AudioConfig} audioConfig - An optional audio input config associated with the recognizer
      */
     function IntentRecognizer(speechConfig, audioConfig) {
-        var _this = this;
+        let _this = this;
         Contracts_1.Contracts.throwIfNullOrUndefined(speechConfig, "speechConfig");
-        var configImpl = speechConfig;
+        let configImpl = speechConfig;
         Contracts_1.Contracts.throwIfNullOrUndefined(configImpl, "speechConfig");
         _this = _super.call(this, audioConfig) || this;
         _this.privIntentDataSent = false;
@@ -9233,17 +9233,17 @@ var IntentRecognizer = /** @class */ (function (_super) {
      * @param err - Callback invoked in case of an error.
      */
     IntentRecognizer.prototype.recognizeOnceAsync = function (cb, err) {
-        var _this = this;
+        let _this = this;
         try {
             Contracts_1.Contracts.throwIfDisposed(this.privDisposedIntentRecognizer);
             this.implCloseExistingRecognizer();
-            var contextJson = void 0;
+            let contextJson = void 0;
             if (Object.keys(this.privAddedLmIntents).length !== 0 || undefined !== this.privUmbrellaIntent) {
                 contextJson = this.buildSpeechContext();
                 this.privIntentDataSent = true;
             }
             this.privReco = this.implRecognizerSetup(Exports_1.RecognitionMode.Interactive, this.properties, this.audioConfig, new Exports_1.IntentConnectionFactory());
-            var intentReco = this.privReco;
+            let intentReco = this.privReco;
             intentReco.setIntents(this.privAddedLmIntents, this.privUmbrellaIntent);
             this.implRecognizerStart(this.privReco, function (e) {
                 _this.implCloseExistingRecognizer();
@@ -9260,7 +9260,7 @@ var IntentRecognizer = /** @class */ (function (_super) {
         catch (error) {
             if (!!err) {
                 if (error instanceof Error) {
-                    var typedError = error;
+                    let typedError = error;
                     err(typedError.name + ": " + typedError.message);
                 }
                 else {
@@ -9282,13 +9282,13 @@ var IntentRecognizer = /** @class */ (function (_super) {
         try {
             Contracts_1.Contracts.throwIfDisposed(this.privDisposedIntentRecognizer);
             this.implCloseExistingRecognizer();
-            var contextJson = void 0;
+            let contextJson = void 0;
             if (Object.keys(this.privAddedLmIntents).length !== 0) {
                 contextJson = this.buildSpeechContext();
                 this.privIntentDataSent = true;
             }
             this.privReco = this.implRecognizerSetup(Exports_1.RecognitionMode.Conversation, this.properties, this.audioConfig, new Exports_1.IntentConnectionFactory());
-            var intentReco = this.privReco;
+            let intentReco = this.privReco;
             intentReco.setIntents(this.privAddedLmIntents, this.privUmbrellaIntent);
             this.implRecognizerStart(this.privReco, undefined, undefined, contextJson);
             // report result to promise.
@@ -9307,7 +9307,7 @@ var IntentRecognizer = /** @class */ (function (_super) {
         catch (error) {
             if (!!err) {
                 if (error instanceof Error) {
-                    var typedError = error;
+                    let typedError = error;
                     err(typedError.name + ": " + typedError.message);
                 }
                 else {
@@ -9342,7 +9342,7 @@ var IntentRecognizer = /** @class */ (function (_super) {
         catch (error) {
             if (!!err) {
                 if (error instanceof Error) {
-                    var typedError = error;
+                    let typedError = error;
                     err(typedError.name + ": " + typedError.message);
                 }
                 else {
@@ -9413,7 +9413,7 @@ var IntentRecognizer = /** @class */ (function (_super) {
         Contracts_1.Contracts.throwIfDisposed(this.privDisposedIntentRecognizer);
         Contracts_1.Contracts.throwIfNullOrWhitespace(intentId, "intentId");
         Contracts_1.Contracts.throwIfNull(model, "model");
-        var modelImpl = model;
+        let modelImpl = model;
         Contracts_1.Contracts.throwIfNullOrWhitespace(modelImpl.appId, "model.appId");
         this.privAddedLmIntents[intentId] = new Exports_1.AddedLmIntent(modelImpl, intentName);
     };
@@ -9429,7 +9429,7 @@ var IntentRecognizer = /** @class */ (function (_super) {
      */
     IntentRecognizer.prototype.addAllIntents = function (model, intentId) {
         Contracts_1.Contracts.throwIfNull(model, "model");
-        var modelImpl = model;
+        let modelImpl = model;
         Contracts_1.Contracts.throwIfNullOrWhitespace(modelImpl.appId, "model.appId");
         this.privUmbrellaIntent = new Exports_1.AddedLmIntent(modelImpl, intentId);
     };
@@ -9447,7 +9447,7 @@ var IntentRecognizer = /** @class */ (function (_super) {
         return new Exports_1.RecognizerConfig(speecgConfig, recognitionMode, this.properties);
     };
     IntentRecognizer.prototype.createServiceRecognizer = function (authentication, connectionFactory, audioConfig, recognizerConfig) {
-        var audioImpl = audioConfig;
+        let audioImpl = audioConfig;
         return new Exports_1.IntentServiceRecognizer(authentication, connectionFactory, audioImpl, recognizerConfig, this, this.privIntentDataSent);
     };
     IntentRecognizer.prototype.dispose = function (disposing) {
@@ -9467,19 +9467,19 @@ var IntentRecognizer = /** @class */ (function (_super) {
         }
     };
     IntentRecognizer.prototype.buildSpeechContext = function () {
-        var appId;
-        var region;
-        var subscriptionKey;
-        var refGrammers = [];
+        let appId;
+        let region;
+        let subscriptionKey;
+        let refGrammers = [];
         if (undefined !== this.privUmbrellaIntent) {
             appId = this.privUmbrellaIntent.modelImpl.appId;
             region = this.privUmbrellaIntent.modelImpl.region;
             subscriptionKey = this.privUmbrellaIntent.modelImpl.subscriptionKey;
         }
         // Build the reference grammer array.
-        for (var _i = 0, _a = Object.keys(this.privAddedLmIntents); _i < _a.length; _i++) {
-            var intentId = _a[_i];
-            var addedLmIntent = this.privAddedLmIntents[intentId];
+        for (let _i = 0, _a = Object.keys(this.privAddedLmIntents); _i < _a.length; _i++) {
+            let intentId = _a[_i];
+            let addedLmIntent = this.privAddedLmIntents[intentId];
             // validate all the same model, region, and key...
             if (appId === undefined) {
                 appId = addedLmIntent.modelImpl.appId;
@@ -9505,7 +9505,7 @@ var IntentRecognizer = /** @class */ (function (_super) {
                     throw new Error("Intents must all use the same subscription key");
                 }
             }
-            var grammer = "luis/" + appId + "-PRODUCTION#" + intentId;
+            let grammer = "luis/" + appId + "-PRODUCTION#" + intentId;
             refGrammers.push(grammer);
         }
         return JSON.stringify({
@@ -9533,11 +9533,11 @@ exports.IntentRecognizer = IntentRecognizer;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -9547,14 +9547,14 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var Contracts_1 = __webpack_require__(4);
-var Exports_2 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(1);
+let Contracts_1 = __webpack_require__(4);
+let Exports_2 = __webpack_require__(0);
 /**
  * Translation recognizer
  * @class TranslationRecognizer
  */
-var TranslationRecognizer = /** @class */ (function (_super) {
+let TranslationRecognizer = /** @class */ (function (_super) {
     __extends(TranslationRecognizer, _super);
     /**
      * Initializes an instance of the TranslationRecognizer.
@@ -9563,8 +9563,8 @@ var TranslationRecognizer = /** @class */ (function (_super) {
      * @param {AudioConfig} audioConfig - An optional audio config associated with the recognizer
      */
     function TranslationRecognizer(speechConfig, audioConfig) {
-        var _this = this;
-        var configImpl = speechConfig;
+        let _this = this;
+        let configImpl = speechConfig;
         Contracts_1.Contracts.throwIfNull(configImpl, "speechConfig");
         _this = _super.call(this, audioConfig) || this;
         _this.privDisposedTranslationRecognizer = false;
@@ -9673,7 +9673,7 @@ var TranslationRecognizer = /** @class */ (function (_super) {
      * @param err - Callback invoked in case of an error.
      */
     TranslationRecognizer.prototype.recognizeOnceAsync = function (cb, err) {
-        var _this = this;
+        let _this = this;
         try {
             Contracts_1.Contracts.throwIfDisposed(this.privDisposedTranslationRecognizer);
             this.implCloseExistingRecognizer();
@@ -9693,7 +9693,7 @@ var TranslationRecognizer = /** @class */ (function (_super) {
         catch (error) {
             if (!!err) {
                 if (error instanceof Error) {
-                    var typedError = error;
+                    let typedError = error;
                     err(typedError.name + ": " + typedError.message);
                 }
                 else {
@@ -9733,7 +9733,7 @@ var TranslationRecognizer = /** @class */ (function (_super) {
         catch (error) {
             if (!!err) {
                 if (error instanceof Error) {
-                    var typedError = error;
+                    let typedError = error;
                     err(typedError.name + ": " + typedError.message);
                 }
                 else {
@@ -9768,7 +9768,7 @@ var TranslationRecognizer = /** @class */ (function (_super) {
         catch (error) {
             if (!!err) {
                 if (error instanceof Error) {
-                    var typedError = error;
+                    let typedError = error;
                     err(typedError.name + ": " + typedError.message);
                 }
                 else {
@@ -9801,7 +9801,7 @@ var TranslationRecognizer = /** @class */ (function (_super) {
         return new Exports_1.RecognizerConfig(speechConfig, Exports_1.RecognitionMode.Conversation, this.properties);
     };
     TranslationRecognizer.prototype.createServiceRecognizer = function (authentication, connectionFactory, audioConfig, recognizerConfig) {
-        var configImpl = audioConfig;
+        let configImpl = audioConfig;
         return new Exports_1.TranslationServiceRecognizer(authentication, connectionFactory, configImpl, recognizerConfig, this);
     };
     TranslationRecognizer.prototype.implCloseExistingRecognizer = function () {
@@ -9826,12 +9826,12 @@ exports.TranslationRecognizer = TranslationRecognizer;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Represents collection of parameters and their values.
  * @class Translation
  */
-var Translations = /** @class */ (function () {
+let Translations = /** @class */ (function () {
     function Translations() {
         // Use an PropertyCollection internally, just wrapping it to hide the | enum syntax it has.
         this.privMap = new Exports_1.PropertyCollection();
@@ -9880,7 +9880,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Defines the possible reasons a recognition result might not be recognized.
  * @class NoMatchReason
  */
-var NoMatchReason;
+let NoMatchReason;
 (function (NoMatchReason) {
     /**
      * Indicates that speech was detected, but not recognized.
@@ -9912,13 +9912,13 @@ var NoMatchReason;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var Exports_2 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(1);
+let Exports_2 = __webpack_require__(0);
 /**
  * Contains detailed information for NoMatch recognition results.
  * @class NoMatchDetails
  */
-var NoMatchDetails = /** @class */ (function () {
+let NoMatchDetails = /** @class */ (function () {
     /**
      * Creates and initializes an instance of this class.
      * @constructor
@@ -9937,8 +9937,8 @@ var NoMatchDetails = /** @class */ (function () {
      * @returns {NoMatchDetails} The no match details object being created.
      */
     NoMatchDetails.fromResult = function (result) {
-        var simpleSpeech = Exports_1.SimpleSpeechPhrase.fromJSON(result.json);
-        var reason = Exports_2.NoMatchReason.NotRecognized;
+        let simpleSpeech = Exports_1.SimpleSpeechPhrase.fromJSON(result.json);
+        let reason = Exports_2.NoMatchReason.NotRecognized;
         switch (simpleSpeech.RecognitionStatus) {
             case Exports_1.RecognitionStatus.BabbleTimeout:
                 reason = Exports_2.NoMatchReason.InitialBabbleTimeout;
@@ -9985,7 +9985,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Define payload of speech recognition canceled result events.
  * @class TranslationRecognitionCanceledEventArgs
  */
-var TranslationRecognitionCanceledEventArgs = /** @class */ (function () {
+let TranslationRecognitionCanceledEventArgs = /** @class */ (function () {
     /**
      * Creates and initializes an instance of this class.
      * @constructor
@@ -10083,11 +10083,11 @@ exports.TranslationRecognitionCanceledEventArgs = TranslationRecognitionCanceled
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
@@ -10097,12 +10097,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(0);
 /**
  * Define payload of intent recognition canceled result events.
  * @class IntentRecognitionCanceledEventArgs
  */
-var IntentRecognitionCanceledEventArgs = /** @class */ (function (_super) {
+let IntentRecognitionCanceledEventArgs = /** @class */ (function (_super) {
     __extends(IntentRecognitionCanceledEventArgs, _super);
     /**
      * Creates and initializes an instance of this class.
@@ -10112,7 +10112,7 @@ var IntentRecognitionCanceledEventArgs = /** @class */ (function (_super) {
      * @param {IntentRecognitionResult} sessionId - The session id.
      */
     function IntentRecognitionCanceledEventArgs(reason, errorDetails, errorCode, result, offset, sessionId) {
-        var _this = _super.call(this, result, offset, sessionId) || this;
+        let _this = _super.call(this, result, offset, sessionId) || this;
         _this.privReason = reason;
         _this.privErrorDetails = errorDetails;
         _this.privErrorCode = errorCode;
@@ -10173,13 +10173,13 @@ exports.IntentRecognitionCanceledEventArgs = IntentRecognitionCanceledEventArgs;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Exports_1 = __webpack_require__(1);
-var Exports_2 = __webpack_require__(0);
+let Exports_1 = __webpack_require__(1);
+let Exports_2 = __webpack_require__(0);
 /**
  * Contains detailed information about why a result was canceled.
  * @class CancellationDetails
  */
-var CancellationDetails = /** @class */ (function () {
+let CancellationDetails = /** @class */ (function () {
     /**
      * Creates and initializes an instance of this class.
      * @constructor
@@ -10200,10 +10200,10 @@ var CancellationDetails = /** @class */ (function () {
      * @returns {CancellationDetails} The cancellation details object being created.
      */
     CancellationDetails.fromResult = function (result) {
-        var reason = Exports_2.CancellationReason.Error;
-        var errorCode = Exports_2.CancellationErrorCode.NoError;
+        let reason = Exports_2.CancellationReason.Error;
+        let errorCode = Exports_2.CancellationErrorCode.NoError;
         if (!!result.json) {
-            var simpleSpeech = Exports_1.SimpleSpeechPhrase.fromJSON(result.json);
+            let simpleSpeech = Exports_1.SimpleSpeechPhrase.fromJSON(result.json);
             reason = Exports_1.EnumTranslation.implTranslateCancelResult(simpleSpeech.RecognitionStatus);
         }
         if (!!result.properties) {
@@ -10270,7 +10270,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  *  Defines error code in case that CancellationReason is Error.
  *  Added in version 1.1.0.
  */
-var CancellationErrorCode;
+let CancellationErrorCode;
 (function (CancellationErrorCode) {
     /**
      * Indicates that no error occurred during speech recognition.

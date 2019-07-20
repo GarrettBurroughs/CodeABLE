@@ -13,7 +13,7 @@ let checkpointNames = [];
 editor.insert(`let x = 5;
 let y = 2;
 
-// ~ checkpoint: "add5"
+// ~ checkpoint: "add"
 for (let i = 0; i < 10; i++) {
     y += 1;
 }
@@ -26,8 +26,7 @@ function calculateMeaning(n1, n2) {
 }
 
 whatIsLife = calculateMeaning(x, y);
-console.log("The meaning of life is " + whatIsLife);
-`);
+console.log("The meaning of life is " + whatIsLife);`);
 
 function giveFeedback(text, exact) {
     feedbackDisplay(text);

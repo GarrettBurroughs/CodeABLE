@@ -56,26 +56,30 @@ body {
 
 .run-program {
     position: absolute;
+    cursor: pointer;
     top: 0;
     right: 0;
     margin: 10px 20px;
     padding: 10px 20px;
-    background-color: #45454575;
+    background-color: #454545;
     color: green;
     border-radius: 10px;
+    transition: background-color 0.25s;
+    &:hover {
+        background-color: #242424;
+    }
 }
 
 #output {
     white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
     word-wrap: break-word;
     background-color: black;
     color: white;
     padding: 20px;
     font-size: 18px;
     height: calc(100vh - 70px);
+    
+    b { color: #777; }
 }
 
 #feedbackBar {
