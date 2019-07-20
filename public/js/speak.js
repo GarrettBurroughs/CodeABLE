@@ -1,6 +1,5 @@
 // Requires request for HTTP requests
 const request = require('request');
-console.log(request);
 // Requires fs to write synthesized speech to a file
 const fs = require('fs');
 // Requires readline-sync to read command line inputs

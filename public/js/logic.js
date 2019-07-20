@@ -10,6 +10,7 @@ let aceDoc = session.getDocument();
 
 let checkpointNames = [];
 
+// Pre-loaded editor text
 editor.insert(`let x = 5;
 let y = 2;
 
@@ -79,8 +80,6 @@ function giveFeedback(text, exact) {
     }
 
     textToSpeech(text);
-
-    console.log(text);
     return text;
 }
 
@@ -88,7 +87,7 @@ let prevError = '';
 
 function checkError(error) {
     prevError = error;
-    return error;
+    return error.message;
 }
 
 //adds checkpoints in a loaded file into the system
@@ -117,12 +116,12 @@ function loadCheckpoints() {
 
 function runCommand(command) {
     if (command.includes('run')) {
-        runit();
+        runProgram();
     } else if (command.includes('go to')) {
         commandGoTo(command);
     } else if (command.includes('read')) {
         commandRead(command);
-    } else if (command.includes('new') || command.includes('make')) {
+    } else if (/make|new|create|write/.test(command)) {
         commandMake(command);
     } else if (command.includes('save')) {
         commandSaveFile(command);
@@ -134,12 +133,10 @@ function runCommand(command) {
 }
 
 function listCommands() {
-    giveFeedback(
-        'Currently supported commands are: Make new checkpoint <name>, Go to line <x>, Go to end of line <x>, Go to checkpoint <name>, read this line, read line <x>, read line exact'
-    );
+    giveFeedback('Help coming soon!');
 }
 
-//saves a file, given the name
+// Saves a file, given the name
 function commandSaveFile(command) {
     if (command.includes('as')) {
         fileName = command.substring(command.indexOf('as') + 3, command.length);
@@ -152,7 +149,7 @@ function commandSaveFile(command) {
     }
 }
 
-//figures out where to go, given the string command
+// Figures out where to go, given the string command
 function commandGoTo(command) {
     if (command.includes('line')) {
         let lineNum = getLineFromCommand(command);
@@ -171,8 +168,7 @@ function commandGoTo(command) {
     }
 }
 
-//goes to specific line
-//loc 0 = start, loc 1 = end
+// Goes to specific line (loc 0 = start, loc 1 = end)
 function goToLine(lineNum, loc) {
     if (loc == 0) {
         editor.gotoLine(lineNum);
@@ -181,7 +177,6 @@ function goToLine(lineNum, loc) {
     //to the left once (to go to end of prev line)
     else if (loc == 1) {
         let lastLine = editor.session.getLength();
-
         editor.gotoLine(lineNum + 1);
         editor.navigateLeft(1);
     }
@@ -189,26 +184,21 @@ function goToLine(lineNum, loc) {
 
 function getLineFromCommand(command) {
     let index = 0;
-
     if (command.length > command.indexOf('line') + 4) {
         index = command.indexOf('line') + 5;
     }
-
     let lineNum = parseInt(command.substring(index, command.length));
-
     let lastLine = editor.session.getLength();
-
     if (lineNum > lastLine) {
         giveFeedback(
             'Line ' +
             lineNum.toString() +
-            ' does not exist. Last line is ' +
+            ' does not exist, last line is ' +
             lastLine.toString(),
             false
         );
         return -1;
     }
-
     return lineNum;
 }
 
@@ -248,12 +238,61 @@ function goToObject(command) {
     }
 }
 
+const toCamel = (s) => {
+    return s.replace(/([-_][a-z])/ig, ($1) => {
+        return $1.toUpperCase()
+            .replace('-', '');
+    });
+};
+
+function commandMake(command) {
+    if (command.includes('checkpoint')) {
+        let index = command.indexOf('checkpoint');
+        if (command.length > index + 10) {
+            let line = editor.getCursorPosition().row + 1;
+            makeCheckpoint('checkpoint', command.substring(index + 11), line);
+        }
+    }
+    else if (command.includes('loop')) {
+        let line = command.substring(command.indexOf('loop') + 5).split(' ');
+        let counter, start, end;
+        if (line.includes('length')) {
+            let index = line.indexOf('length');
+            line.splice(line[index], 2);
+            line.push(line[line.length - 1]);
+        }
+        if (line.includes('with')) {
+            counter = line[line.indexOf('with') + 1];
+        }
+        if (line.includes('from')) {
+            start = line[line.indexOf('from') + 1];
+        }
+        if (line.includes('to')) {
+            end = line[line.indexOf('to') + 1];
+        }
+        makeForLoop(counter, start, end)
+    }
+    else if (command.includes('function')) {
+        command = command.replace(/(parameter|parameters)/g, '');
+        let line = command.substring(command.indexOf('function') + 9).split(' ');
+        let name, parameters;
+        if (line[0] == 'named' || line[0] == 'called') {
+            line.shift();
+        }
+        if (line.includes('with')) {
+            parameters = line.splice(line.indexOf('with') + 1);
+            line.pop();
+        }
+        name = toCamel(line.join("-"));
+        makeFunction(name, parameters.filter(Boolean));
+    }
+}
+
 function commandRead(command) {
     if (command.includes('this line') || command.includes('current line')) {
         let row = editor.getCursorPosition().row;
         let col = getLineLength(row + 1) - 1;
         let Range = ace.require('ace/range').Range;
-        console.log(read(row, row));
         if (command.includes('exact')) giveFeedback(read(row, row), true);
         else giveFeedback(read(row, row), false);
     } else if (command.includes('line')) {
@@ -261,7 +300,6 @@ function commandRead(command) {
         goToLine(row + 1);
         let col = getLineLength(row + 1) - 1;
         let Range = ace.require('ace/range').Range;
-
         if (command.includes('exact')) giveFeedback(read(row, row), true);
         else giveFeedback(read(row, row), false);
     } else if (command.includes('this block')) {
@@ -272,48 +310,7 @@ function commandRead(command) {
                 end = start + i;
             }
         }
-        // let start = editor.getCursorPosition().row;
-        // let indent = 0;
-        // for(let i = 0; i < start.length; i++){
-        //     if(start.charAt(i) != "\t")
-        //     {
-        //         indent = i;
-        //     }
-        // }
-
-        // let found = false;
-        // let count = 0;
-        // let line = 0;
-        // let end = 0;
-        // let other_indent = 0;
-        // while(!found) {
-        //     let curr_line = aceDoc.getLine(start + line);
-        //     for(let i = 0; i < curr_line.length; i++){
-        //         if(start.charAt(i) != "\t")
-        //         {
-        //             other_indent = i;
-        //         }
-        //     }
-        //     if(other_indent == indent)
-        //     {
-        //         end = start + line;
-        //         break;
-        //     }
-        //     line++;
-        //   }
-        //}
         giveFeedback(read(start, end));
-    }
-}
-
-function commandMake(command) {
-    if (command.includes('checkpoint')) {
-        let index = command.indexOf('checkpoint');
-        if (command.length > index + 10) {
-            let line = editor.getCursorPosition().row + 1;
-
-            makeCheckpoint('checkpoint', command.substring(index + 11), line);
-        }
     }
 }
 
@@ -334,13 +331,32 @@ function read(from_row, to_row) {
     return result.replace('\t', '').trim();
 }
 
+function makeForLoop(count = 'i', start = 0, end = parseInt(start) + 10) {
+    let tabs = editor.getCursorPositionScreen().column / 4;
+    let blockEnd = `{\n${'\t'.repeat(tabs + 1)}\n${'\t'.repeat(tabs)}}`;
+    let loop = `for (let ${count} = ${start}; ${count} < ${end}; i++) ${blockEnd}`;
+    session.insert(editor.getCursorPosition(), loop);
+    goToLine(editor.getCursorPosition().row, 1);
+    giveFeedback("Loop created on line " + editor.getCursorPosition().row);
+}
+
+function makeFunction(name, parameters = []) {
+    let tabs = editor.getCursorPositionScreen().column / 4;
+    let blockEnd = `{\n${'\t'.repeat(tabs + 1)}\n${'\t'.repeat(tabs)}}`;
+    let func = `function ${name}(${parameters.join(', ')}) ${blockEnd}`;
+    session.insert(editor.getCursorPosition(), func);
+    goToLine(editor.getCursorPosition().row, 1);
+}
+
+function makeVariable(name, type = 'let') {
+    
+}
+
 function makeCheckpoint(type, name, line) {
     goToLine(line, 1);
-    let cursorPosition = editor.getCursorPosition();
     let symbol = ' ~ ';
     let comment = '//' + symbol + type + ': "' + name + '"';
-
-    session.insert(cursorPosition, comment);
+    session.insert(editor.getCursorPosition(), comment);
     checkpointNames.splice(0, 0, name);
 }
 
@@ -357,6 +373,7 @@ function goToCheckpoint(type, name) {
             return;
         }
     }
+
     giveFeedback(
         "Checkpoint '" + name + "' of type '" + type + "' does not exist",
         false

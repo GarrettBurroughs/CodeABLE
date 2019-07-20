@@ -18,6 +18,9 @@ Go to end of line <number>
 Make new checkpoint <name>
 Go to checkpoint <name>
 
-Save file (as <name>)
+Create function <name> (with <parameters>)
+Create for loop (with <counter:i> from <start:0>) to <end>
+
+Save file (as <name, default: 'script'>)
 Read exact error
 ```
