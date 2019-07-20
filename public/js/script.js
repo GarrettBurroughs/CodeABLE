@@ -89,7 +89,9 @@ function commandEntered(e) {
 function programSuccess(output) {
     $("#output").css("color", "white");
     $("#feedbackBar").css("color", "white");
-    giveFeedback(output);
+    if (output != undefined) {
+        giveFeedback(output);
+    }
     giveFeedback("Program ran successfully.");
 }
 
