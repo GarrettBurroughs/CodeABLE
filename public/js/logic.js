@@ -205,7 +205,8 @@ function commandGoTo(cmd) {
     }
 }
 
-function commandLog(text) {
+function commandLog(cmd) {
+    cmd = cmd.substring(cmd.indexOf('log') + 3);
     let log = `console.log()`;
     session.insert(editor.getCursorPosition(), log);
 }
@@ -230,8 +231,7 @@ function commandMake(cmd) {
             if (line[0] == 'named' || line[0] == 'called') line.shift();
             makeCheckpoint('checkpoint', toCamel(line.join("-")), loc);
         }
-    }
-    else if (cmd.includes('loop')) {
+    } else if (cmd.includes('loop')) {
         let line = cmd.substring(cmd.indexOf('loop') + 5).split(' ');
         let counter, start, end;
         if (line.includes('length')) {
@@ -249,8 +249,7 @@ function commandMake(cmd) {
             end = line[line.indexOf('to') + 1];
         }
         makeForLoop(counter, start, end)
-    }
-    else if (cmd.includes('function')) {
+    } else if (cmd.includes('function')) {
         cmd = cmd.replace(/(parameter|parameters)/g, '');
         let line = cmd.substring(cmd.indexOf('function') + 9).split(' ');
         let parameters = [];
@@ -260,12 +259,11 @@ function commandMake(cmd) {
             line.pop();
         }
         makeFunction(toCamel(line.join("-")), parameters.filter(Boolean));
-    }
-    else if (/(constant|variable)/.test(cmd)) {
+    } else if (/(constant|variable)/.test(cmd)) {
         let type, name, value;
         if (cmd.includes('constant')) type = 'const';
         cmd = cmd.replace(/(as|with|constant)/g, '');
-//        cmd = cmd.substring(cmd.search(/(variable|constant)/) + 9).split(' ');
+        //        cmd = cmd.substring(cmd.search(/(variable|constant)/) + 9).split(' ');
         if (cmd[0] == 'named' || cmd[0] == 'called') cmd.shift();
         if (cmd.includes('value')) {
             cmd = cmd.join(' ');
