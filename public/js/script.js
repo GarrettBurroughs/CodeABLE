@@ -19,7 +19,7 @@ function runProgram() {
 
 // Keyboard shortcuts
 let keyLogger = {};
-onkeydown = onkeyup = function(e){
+onkeydown = onkeyup = function (e) {
     e = e || event;
     let cmd = window.navigator.platform.match("Mac") ? keyLogger[91] : keyLogger[17];
     keyLogger[e.keyCode] = e.type == 'keydown';
@@ -34,10 +34,11 @@ onkeydown = onkeyup = function(e){
         }
     }
     // Click CMD/CTRL + "Enter" to run program
-    if (cmd && keyLogger[82]) {
+    if (cmd && keyLogger[13]) {
+        // ERROR WITH KEYDOWN AND ENTER – TODO
         runProgram();
     }
-    // Click CMD/CTRL + "Enter" to run program
+    // Click CMD/CTRL + "S" to download script as file
     if (cmd && keyLogger[83]) {
         e.preventDefault();
         downloadFile();
@@ -63,6 +64,10 @@ function feedbackDisplay(feedback) {
 }
 
 // Neaten user's given voice command and replace common detection mistakes
+let corrections = [
+    
+]
+
 function cleanCommand(command) {
     command = command.trim().toLowerCase();
     // Remove any period at end of command from auto-voice
@@ -74,8 +79,10 @@ function cleanCommand(command) {
         .replace(/\\?/g, '')
         .replace(/zero/g, '0')
         .replace(/(for|4) (luke|loop)/g, 'for loop')
-        .replace(/jay/g, 'j')
-        .replace(/(parameter|parameters) (at|and|an)/g, 'parameters n');
+        .replace(/with (jay|jerry)/g, 'with j')
+        .replace(/check (wood|board|point)/g, 'checkpoint')
+        .replace(/(parameter|parameters) (at|and|an)/g, 'parameters n')
+        .replace(/(live|life)/g, 'line');
     return command;
 }
 
@@ -116,13 +123,16 @@ function commandEntered(e) {
 function programSuccess(output) {
     $("#output").css("color", "white");
     $("#feedbackBar").css("color", "white");
-    giveFeedback("Program ran successfully.");
+    // If feedback exists in the console, speak it
     if (output.length > 0) {
-        giveFeedback("Console output: ")
-        for (let line of output) {
-            $("#output").append("</p>" + line + "</p>");
+        let feedback = output[0];
+        for (let i = 0; i < output.length; i++) {
+            $("#output").append("</p>" + output[i] + "</p>");
+            if (i != 0) feedback += `, ${output[i]}`;
         }
-        giveFeedback(output);
+        giveFeedback('CONSOLE – ' + feedback);
+    } else {
+        giveFeedback('Program ran successfully.');
     }
 }
 

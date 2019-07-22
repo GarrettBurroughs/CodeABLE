@@ -65,8 +65,13 @@ body {
     color: green;
     border-radius: 10px;
     transition: background-color 0.25s;
+
     &:hover {
         background-color: #242424;
+    }
+
+    &:focus {
+        outline: 0;
     }
 }
 
@@ -78,8 +83,11 @@ body {
     padding: 20px;
     font-size: 18px;
     height: calc(100vh - 70px);
-    
-    b { color: #777; }
+    overflow: scroll;
+
+    b {
+        color: #777;
+    }
 }
 
 #feedbackBar {
