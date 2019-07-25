@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>AccessIDE</title>
+    <title>CodeABLE</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/css/fontawesome/css/all.min.css" />
     <!-- Custom LESS -->
     <link rel="stylesheet/less" type="text/css" href="style.less" />
 </head>
@@ -15,7 +15,7 @@
 <body>
     <div class="container-fluid nopadding">
         <nav class="navbar d-flex justify-content-start">
-            <span class="navbar-brand">AccessIDE</span>
+            <span class="navbar-brand">CodeABLE</span>
             <form class="form-inline">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -25,11 +25,11 @@
                 </div>
             </form>
         </nav>
-        <div class="row nopadding">
-            <div class="col-md-7 nopadding">
+        <div class="row no-gutters">
+            <div id="editor-container" class="col">
                 <div id="editor"></div>
             </div>
-            <div class="col-md-5 nopadding">
+            <div id="console-container" class="col">
                 <button class="run-program" onclick="runProgram()">
                     <i class="fas fa-play"></i>
                 </button>
@@ -41,20 +41,19 @@
 </body>
 
 <footer>
-    <!-- CDN Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/ace.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <!-- Local Libraries -->
-    <script src="./lib/FileSaver.js"></script>
-    <script src="./lib/microsoft.cognitiveservices.speech.sdk.bundle-min.js"></script>
+    <script src="lib/js/less.min.js"></script>
+    <script src="lib/js/jquery-3.4.1.min.js"></script>
+    <script src="lib/js/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/ace-src-min-noconflict/ace.js"></script>
+    <script src="lib/js/filesaver.js"></script>
+    <script src="lib/js/split.min.js"></script>
+    <script src="lib/js/microsoft.cognitiveservices.speech.sdk.bundle-min.js"></script>
     <!-- Custom Files -->
-    <script src="./js/logic.js"></script>
-    <script src="./js/speech.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/speech.js"></script>
+    <script src="js/script.js"></script>
 </footer>
 
 </html>

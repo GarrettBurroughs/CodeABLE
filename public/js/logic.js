@@ -81,7 +81,7 @@ function giveFeedback(text, exact) {
             }
         }
     }
-    textToSpeech(text);
+    //    textToSpeech(text);
     return text;
 }
 
@@ -132,7 +132,7 @@ let commands = {
         }
     },
     make: {
-        regex: /make|new|create|write/g,
+        regex: /(make|new|create|write)/g,
         execute: cmd => {
             commandMake(cmd);
         }
@@ -141,6 +141,12 @@ let commands = {
         regex: /save/g,
         execute: cmd => {
             commandSaveFile(cmd);
+        }
+    },
+    log: {
+        regex: /log/g,
+        execute: cmd => {
+            commandLog(cmd);
         }
     },
     error: {
@@ -167,8 +173,11 @@ function runCommand(cmd) {
     for (let key in commands) {
         if (commands[key].regex.test(cmd)) {
             commands[key].execute(cmd);
+            return;
         }
     }
+    if (cmd.length < 1) return;
+    giveFeedback("Command not recognized")
 }
 
 function listCommands() {
@@ -190,12 +199,10 @@ function commandSaveFile(cmd) {
 function commandGoTo(cmd) {
     if (cmd.includes('line')) {
         let lineNum = getLineFromCommand(cmd);
-
         if (lineNum >= 0) {
-            if (cmd.includes('end')) {
-                goToLine(lineNum, 1);
-            } else goToLine(lineNum, 0);
+            cmd.includes('end') ? goToLine(lineNum, 1) : goToLine(lineNum, 0);
         }
+        giveFeedback("Now at line " + currLine());
     } else if (
         cmd.includes('next') ||
         cmd.includes('loop') ||
@@ -206,9 +213,16 @@ function commandGoTo(cmd) {
 }
 
 function commandLog(cmd) {
-    cmd = cmd.substring(cmd.indexOf('log') + 3);
-    let log = `console.log()`;
+    cmd = cmd.substring(cmd.indexOf('log') + 4);
+    if (/string/g.test(cmd)) {
+        cmd = '"' + cmd.substring(cmd.search(/string/g) + 7) + '"';
+    }
+    if (/(variable|constant)/g.test(cmd)) {
+        cmd = toCamel(cmd.substring(cmd.search(/(variable|constant)/g) + 9));
+    }
+    let log = `console.log(${cmd});\n`;
     session.insert(editor.getCursorPosition(), log);
+    giveFeedback("Logged on line " + currLine());
 }
 
 function commandList(cmd) {
@@ -226,10 +240,10 @@ function commandMake(cmd) {
     if (cmd.includes('checkpoint')) {
         let index = cmd.indexOf('checkpoint');
         if (cmd.length > index + 10) {
-            let loc = editor.getCursorPosition().row + 1;
+            let loc = currLine();
             let line = cmd.substring(index + 11).split(' ');
             if (line[0] == 'named' || line[0] == 'called') line.shift();
-            makeCheckpoint('checkpoint', toCamel(line.join("-")), loc);
+            makeCheckpoint('checkpoint', toCamel(line.join(' ')), loc);
         }
     } else if (cmd.includes('loop')) {
         let line = cmd.substring(cmd.indexOf('loop') + 5).split(' ');
@@ -258,20 +272,22 @@ function commandMake(cmd) {
             parameters = line.splice(line.indexOf('with') + 1);
             line.pop();
         }
-        makeFunction(toCamel(line.join("-")), parameters.filter(Boolean));
+        makeFunction(toCamel(line.join(' ')), parameters.filter(Boolean));
     } else if (/(constant|variable)/.test(cmd)) {
         let type, name, value;
-        if (cmd.includes('constant')) type = 'const';
-        cmd = cmd.replace(/(as|with|constant)/g, '');
-        //        cmd = cmd.substring(cmd.search(/(variable|constant)/) + 9).split(' ');
-        if (cmd[0] == 'named' || cmd[0] == 'called') cmd.shift();
+        if (cmd.includes('constant')) {
+            type = 'const';
+            cmd = cmd.replace('variable', '');
+        }
+        cmd = cmd.replace(/(as|with|named|called)/g, '');
+        cmd = cmd.substring(cmd.search(/(variable|constant)/) + 9).split(' ');
         if (cmd.includes('value')) {
             cmd = cmd.join(' ');
             let index = cmd.indexOf('value');
             value = cmd.substring(index + 6);
             cmd = cmd.substring(0, index).split(' ');
         }
-        name = toCamel(cmd.filter(Boolean).join('-'));
+        name = toCamel(cmd.filter(Boolean).join(' '));
         makeVariable(type, name, value);
     }
 }
@@ -352,7 +368,7 @@ function goToObject(cmd) {
         }
     } else if (cmd.includes('checkpoint')) {
         let index = cmd.indexOf('checkpoint');
-        cmd = toCamel(cmd.substring(index + 11).split(' ').join('-'));
+        cmd = toCamel(cmd.substring(index + 11));
         console.log(cmd);
         loadCheckpoints();
         for (let name of checkpointNames) {
@@ -364,10 +380,14 @@ function goToObject(cmd) {
 }
 
 const toCamel = (s) => {
-    return s.replace(/([-_]([a-z]|[0-9]))/ig, ($1) => {
-        return $1.toUpperCase().replace('-', '');
+    return s.replace(/([ ]([a-z]|[0-9]))/ig, ($1) => {
+        return $1.toUpperCase().replace(' ', '');
     });
-};
+}
+
+const currLine = () => {
+    return (editor.getCursorPosition().row + 1);
+}
 
 function read(from_row, to_row) {
     let lines = aceDoc.getLines(from_row, to_row);
@@ -392,7 +412,7 @@ function makeForLoop(count = 'i', start = 0, end = parseInt(start) + 10) {
     let loop = `for (let ${count} = ${start}; ${count} < ${end}; i++) ${blockEnd}`;
     session.insert(editor.getCursorPosition(), loop);
     goToLine(editor.getCursorPosition().row, 1);
-    giveFeedback("Loop created on line " + editor.getCursorPosition().row);
+    giveFeedback("Loop created on line " + currLine());
 }
 
 function makeFunction(name, parameters = []) {
@@ -401,12 +421,14 @@ function makeFunction(name, parameters = []) {
     let func = `function ${name}(${parameters.join(', ')}) ${blockEnd}`;
     session.insert(editor.getCursorPosition(), func);
     goToLine(editor.getCursorPosition().row, 1);
+    giveFeedback("Function created on line " + currLine());
 }
 
-function makeVariable(type = 'let', name, value) {
-    let variable = `${type} ${name} ${(value) ?`= ${value}` : ''};`;
+function makeVariable(type = 'let', name = 'x', value) {
+    let variable = `${type} ${name} ${(value) ?`= ${value}` : ''};\n`;
     session.insert(editor.getCursorPosition(), variable);
-    goToLine(editor.getCursorPosition().row + 1, 1);
+    goToLine(currLine(), 1);
+    giveFeedback("Variable created on line " + currLine());
 }
 
 function makeCheckpoint(type, name, line) {
@@ -415,6 +437,7 @@ function makeCheckpoint(type, name, line) {
     let comment = '//' + symbol + type + ': "' + name + '"';
     session.insert(editor.getCursorPosition(), comment);
     checkpointNames.splice(0, 0, name);
+    giveFeedback("Checkpoint created on line " + currLine());
 }
 
 function goToCheckpoint(type, name) {

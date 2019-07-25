@@ -9,7 +9,7 @@ function runProgram() {
         console.log = (value) => {
             output.push(value);
         };
-        eval(editor.getValue());
+        eval(editor.getValue()); // Eval is dangerous – replace!
         console.log = console.oldLog;
         programSuccess(output);
     } catch (e) {
@@ -64,9 +64,17 @@ function feedbackDisplay(feedback) {
 }
 
 // Neaten user's given voice command and replace common detection mistakes
-let corrections = [
-    
-]
+let corrections = new Map([
+    [/:00/g, ''],
+    [/\\?/g, ''],
+    [/zero/g, '0'],
+    [/\*\*\*/g, 's'],
+    [/(for|4|full) (luke|loop)/g, 'for loop'],
+    [/with (jay|jerry)/g, 'with j'],
+    [/check (wood|board|point)/g, 'checkpoint'],
+    [/(parameter|parameters) (at|and|an)/g, 'parameters n'],
+    [/(live|life)/g, 'line'],
+]);
 
 function cleanCommand(command) {
     command = command.trim().toLowerCase();
@@ -74,15 +82,10 @@ function cleanCommand(command) {
     if (command.indexOf('.') == command.length - 1) {
         command = command.substring(0, command.length - 1);
     }
-    command = command
-        .replace(/:00/g, '')
-        .replace(/\\?/g, '')
-        .replace(/zero/g, '0')
-        .replace(/(for|4) (luke|loop)/g, 'for loop')
-        .replace(/with (jay|jerry)/g, 'with j')
-        .replace(/check (wood|board|point)/g, 'checkpoint')
-        .replace(/(parameter|parameters) (at|and|an)/g, 'parameters n')
-        .replace(/(live|life)/g, 'line');
+    // Apply find and replace to correct common detections mistakes
+    for (let [find, replace] in corrections) {
+        command = command.replace(find, replace);
+    }
     return command;
 }
 
@@ -92,10 +95,11 @@ function commandDisplay(command) {
     console.log(command);
     for (let i = 0; i < command.length; i++) {
         runCommand(command[i]);
+        runCommand('');
     }
     editor.focus();
-    $("#scriptBox").val(command.join(' and '));
     $("#scriptBox")
+        .val(command.join(' and '))
         .css("color", "#2e9dc6")
         .delay(150)
         .queue(function (next) {
@@ -142,3 +146,21 @@ function programFail(error) {
     $("#output").append("</p>" + checkError(error) + "</p>");
     giveFeedback(checkError(error));
 }
+
+let splitobj = Split(["#editor-container", "#console-container"], {
+    elementStyle: function (dimension, size, gutterSize) {
+        $(window).trigger('resize'); // Optional
+        return {
+            'flex-basis': 'calc(' + size + '% - ' + gutterSize + 'px)'
+        }
+    },
+    gutterStyle: function (dimension, gutterSize) {
+        return {
+            'flex-basis': gutterSize + 'px'
+        }
+    },
+    sizes: [70, 30],
+    minSize: 50,
+    gutterSize: 6,
+    cursor: 'col-resize'
+});
