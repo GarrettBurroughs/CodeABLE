@@ -2,7 +2,7 @@ var editor = ace.edit('editor');
 
 editor.setTheme('ace/theme/twilight');
 editor.session.setMode('ace/mode/javascript');
-editor.setFontSize("16px");
+editor.setFontSize("18px");
 editor.getSession().setUseWrapMode(true);
 
 let session = editor.getSession();
@@ -14,7 +14,6 @@ let checkpointNames = [];
 editor.insert(`let x = 5;
 let y = 2;
 
-// ~ checkpoint: "add"
 for (let i = 0; i < 10; i++) {
     y += 1;
 }
@@ -210,8 +209,7 @@ function commandSaveFile(cmd) {
 function commandRun(cmd) {
     if (cmd.includes('program')) {
         runProgram();
-    }
-    else {
+    } else {
         let name, params;
         cmd = cmd.replace(/(parameter|parameters|run|the|function)/g, '').trim();
         if (cmd.includes('with')) {
@@ -232,12 +230,10 @@ function commandGoTo(cmd) {
         let lineNum = getLineFromCommand(cmd);
         if (lineNum >= 0) cmd.includes('end') ? goToLine(lineNum, true) : goToLine(lineNum);
         giveFeedback("Now at line " + currLine());
-    }
-    else if (/end/g.test(cmd)) {
+    } else if (/end/g.test(cmd)) {
         goToLine(editor.session.getLength(), true);
         giveFeedback("Now at last line " + currLine());
-    }
-    else if (/(next|loop|checkpoint)/g.test(cmd)) {
+    } else if (/(next|loop|checkpoint)/g.test(cmd)) {
         goToObject(cmd);
     }
 }
@@ -384,15 +380,7 @@ function getLineLength(lineNum) {
 }
 
 function goToObject(cmd) {
-    if (cmd.includes('loop')) {
-        if (cmd.includes('for')) {
-            let line = editor.findNext('for ').startRow;
-            let col = editor.findNext('for ').startColumn;
-            //TODO
-        } else if (cmd.includes('while')) {
-            //TODO
-        }
-    } else if (cmd.includes('checkpoint')) {
+    if (cmd.includes('checkpoint')) {
         let index = cmd.indexOf('checkpoint');
         cmd = toCamel(cmd.substring(index + 11));
         console.log(cmd);
@@ -402,7 +390,15 @@ function goToObject(cmd) {
                 goToCheckpoint('checkpoint', name);
             }
         }
-    }
+    } else if (cmd.includes('loop')) {
+        if (cmd.includes('for')) {
+            let line = editor.findNext('for ').startRow;
+            let col = editor.findNext('for ').startColumn;
+            //TODO
+        } else if (cmd.includes('while')) {
+            //TODO
+        }
+    } 
 }
 
 function read(from_row, to_row) {

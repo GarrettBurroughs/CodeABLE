@@ -18,13 +18,18 @@ function runProgram() {
 }
 
 let predefined = [
-    ['create a function called celebrate failure with parameter s', 50],
-    ['create a for loop from 0 to 10', 50],
-    ['log the string I have failed', 50],
-    ['go to end of code and create a new line', 50],
-    ['run function celebrate failure with string i forgot to save my code', 50],
-    ['run program', 50]
+    ['go to line 8', 4000],
+    ['read current line', 3000],
+    ['go to line 3', 4000],
+    ['go to end of code', 3000],
+    ['create function celebrate failure', 4000],
+    ['log string I have failed', 5000],
+    ['go to end of code', 3000],
+    ['create a for loop from 1 to 10', 5000],
+    ['run celebrate failure', 4000]
 ]
+
+
 
 // Keyboard shortcuts
 let keyLogger = {};
@@ -112,7 +117,6 @@ function cleanCommand(cmd) {
     }
     // Apply find and replace to correct common detections mistakes
     for (let [find, replace] of corrections) {
-        console.log(find, replace);
         cmd = cmd.replace(find, replace);
     }
     return cmd;
@@ -141,6 +145,14 @@ function commandDisplay(cmd) {
             next();
         })
 }
+
+$('#scriptBox').focus(() => {
+    $('#micIcon').addClass('fa-microphone');
+});
+
+$('#scriptBox').focusout(() => {
+    $('#micIcon').removeClass('fa-microphone');
+});
 
 function commandEntered(e) {
     if (e.keyCode == 13) {
@@ -175,6 +187,7 @@ function programFail(error) {
     giveFeedback(checkError(error));
 }
 
+// Draggable code/console divider
 let splitobj = Split(["#editor-container", "#console-container"], {
     elementStyle: function (dimension, size, gutterSize) {
         $(window).trigger('resize'); // Optional
