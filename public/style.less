@@ -1,3 +1,5 @@
+@highlight: #f9ee98;
+
 html,
 body {
     width: 100%;
@@ -16,7 +18,7 @@ body {
     background-color: #2a2a2a;
 
     .navbar-brand {
-        color: #2e9dc6;
+        color: @highlight;
         font-size: 32px;
         font-weight: 800;
     }
@@ -27,6 +29,16 @@ body {
         .input-group-text {
             background-color: #272727;
             border-color: #ccc;
+            width: 50px;
+
+            i {
+                margin: auto;
+            }
+
+            .fa-microphone {
+                font-size: 18px;
+                color: @highlight;
+            }
         }
 
         #scriptBox {
@@ -38,13 +50,13 @@ body {
 
             &:focus {
                 outline: 0;
-                border-color: #2e9dc6;
+                border-color: @highlight;
             }
         }
 
         button {
             background-color: #131313;
-            color: #2e9dc6;
+            color: @highlight;
         }
     }
 }
@@ -123,7 +135,7 @@ body {
     background-color: #2a2a2a;
     background-repeat: no-repeat;
     background-position: 50%;
-    
+
     &:hover {
         cursor: col-resize;
     }
@@ -138,5 +150,25 @@ body {
     .gutter-vertical {
         cursor: row-resize;
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+    }
+}
+
+@media (max-width: 468px) {
+    .navbar {
+        height: 130px;
+        align-content: center;
+        
+        .navbar-brand {
+            margin: auto;
+            padding: 0 0 5px 0;
+        }
+        
+        .form-inline {
+            width: 100%
+        }
+        
+        .input-group {
+            margin: 0;
+        }
     }
 }

@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     subscriptionKey = 'f0f2c87da4814ab2a62a15fc6a9f9b15';
     serviceRegion = 'eastus2';
 
-    // if we got an authorization token, use the token. Otherwise use the provided subscription key
-
+    // If we got an authorization token, use the token. Otherwise use the provided subscription key
     speechConfig = SpeechSDK.SpeechConfig.fromSubscription(
         subscriptionKey,
         serviceRegion

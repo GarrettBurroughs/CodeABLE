@@ -2,7 +2,7 @@ var editor = ace.edit('editor');
 
 editor.setTheme('ace/theme/twilight');
 editor.session.setMode('ace/mode/javascript');
-editor.setFontSize("16px");
+editor.setFontSize("18px");
 editor.getSession().setUseWrapMode(true);
 
 let session = editor.getSession();
@@ -14,7 +14,6 @@ let checkpointNames = [];
 editor.insert(`let x = 5;
 let y = 2;
 
-// ~ checkpoint: "add"
 for (let i = 0; i < 10; i++) {
     y += 1;
 }
@@ -28,6 +27,16 @@ function calculateMeaning(n1, n2) {
 
 whatIsLife = calculateMeaning(x, y);
 console.log("The meaning of life is " + whatIsLife);`);
+
+const toCamel = (s) => {
+    return s.replace(/([ ]([a-z]|[0-9]))/ig, ($1) => {
+        return $1.toUpperCase().replace(' ', '');
+    });
+}
+
+const currLine = () => {
+    return (editor.getCursorPosition().row + 1);
+}
 
 function textToSpeech(text) {
     let msg = new SpeechSynthesisUtterance(text);
@@ -81,7 +90,7 @@ function giveFeedback(text, exact) {
             }
         }
     }
-    //    textToSpeech(text);
+    textToSpeech(text);
     return text;
 }
 
@@ -115,8 +124,8 @@ function loadCheckpoints() {
 let commands = {
     run: {
         regex: /(run|execute)/g,
-        execute: () => {
-            runProgram();
+        execute: cmd => {
+            commandRun(cmd);
         }
     },
     goTo: {
@@ -169,6 +178,7 @@ let commands = {
     }
 }
 
+// Run the user's command by identifying keywords
 function runCommand(cmd) {
     for (let key in commands) {
         if (commands[key].regex.test(cmd)) {
@@ -195,19 +205,35 @@ function commandSaveFile(cmd) {
     }
 }
 
+// 
+function commandRun(cmd) {
+    if (cmd.includes('program')) {
+        runProgram();
+    } else {
+        let name, params;
+        cmd = cmd.replace(/(parameter|parameters|run|the|function)/g, '').trim();
+        if (cmd.includes('with')) {
+            params = cmd.substring(cmd.indexOf('with') + 5).trim();
+            cmd = cmd.substring(0, cmd.indexOf('with')).trim();
+            if (params.includes('string')) {
+                params = '"' + params.substring(params.indexOf('string') + 7) + '"';
+            }
+        }
+        let func = toCamel(cmd) + '(' + ((params == undefined) ? '' : params) + ');';
+        session.insert(editor.getCursorPosition(), func);
+    }
+}
+
 // Figures out where to go, given the string command
 function commandGoTo(cmd) {
     if (cmd.includes('line')) {
         let lineNum = getLineFromCommand(cmd);
-        if (lineNum >= 0) {
-            cmd.includes('end') ? goToLine(lineNum, 1) : goToLine(lineNum, 0);
-        }
+        if (lineNum >= 0) cmd.includes('end') ? goToLine(lineNum, true) : goToLine(lineNum);
         giveFeedback("Now at line " + currLine());
-    } else if (
-        cmd.includes('next') ||
-        cmd.includes('loop') ||
-        cmd.includes('checkpoint')
-    ) {
+    } else if (/end/g.test(cmd)) {
+        goToLine(editor.session.getLength(), true);
+        giveFeedback("Now at last line " + currLine());
+    } else if (/(next|loop|checkpoint)/g.test(cmd)) {
         goToObject(cmd);
     }
 }
@@ -273,7 +299,7 @@ function commandMake(cmd) {
             line.pop();
         }
         makeFunction(toCamel(line.join(' ')), parameters.filter(Boolean));
-    } else if (/(constant|variable)/.test(cmd)) {
+    } else if (/(constant|variable)/g.test(cmd)) {
         let type, name, value;
         if (cmd.includes('constant')) {
             type = 'const';
@@ -289,6 +315,9 @@ function commandMake(cmd) {
         }
         name = toCamel(cmd.filter(Boolean).join(' '));
         makeVariable(type, name, value);
+    } else if (/new line/g.test(cmd)) {
+        session.insert(editor.getCursorPosition(), '\n');
+        giveFeedback("New line created");
     }
 }
 
@@ -319,16 +348,9 @@ function commandRead(cmd) {
 }
 
 // Goes to specific line (loc 0 = start, loc 1 = end)
-function goToLine(lineNum, loc) {
-    if (loc == 0) {
-        editor.gotoLine(lineNum);
-    }
-    // Goes line below and then left once (for end of prev line)
-    else if (loc == 1) {
-        let lastLine = editor.session.getLength();
-        editor.gotoLine(lineNum + 1);
-        editor.navigateLeft(1);
-    }
+function goToLine(lineNum, end = false) {
+    editor.gotoLine(lineNum);
+    if (end) editor.navigateLineEnd();
 }
 
 function getLineFromCommand(cmd) {
@@ -358,15 +380,7 @@ function getLineLength(lineNum) {
 }
 
 function goToObject(cmd) {
-    if (cmd.includes('loop')) {
-        if (cmd.includes('for')) {
-            let line = editor.findNext('for ').startRow;
-            let col = editor.findNext('for ').startColumn;
-            //TODO
-        } else if (cmd.includes('while')) {
-            //TODO
-        }
-    } else if (cmd.includes('checkpoint')) {
+    if (cmd.includes('checkpoint')) {
         let index = cmd.indexOf('checkpoint');
         cmd = toCamel(cmd.substring(index + 11));
         console.log(cmd);
@@ -376,17 +390,15 @@ function goToObject(cmd) {
                 goToCheckpoint('checkpoint', name);
             }
         }
-    }
-}
-
-const toCamel = (s) => {
-    return s.replace(/([ ]([a-z]|[0-9]))/ig, ($1) => {
-        return $1.toUpperCase().replace(' ', '');
-    });
-}
-
-const currLine = () => {
-    return (editor.getCursorPosition().row + 1);
+    } else if (cmd.includes('loop')) {
+        if (cmd.includes('for')) {
+            let line = editor.findNext('for ').startRow;
+            let col = editor.findNext('for ').startColumn;
+            //TODO
+        } else if (cmd.includes('while')) {
+            //TODO
+        }
+    } 
 }
 
 function read(from_row, to_row) {
@@ -409,32 +421,32 @@ function read(from_row, to_row) {
 function makeForLoop(count = 'i', start = 0, end = parseInt(start) + 10) {
     let tabs = editor.getCursorPositionScreen().column / 4;
     let blockEnd = `{\n${'\t'.repeat(tabs + 1)}\n${'\t'.repeat(tabs)}}`;
-    let loop = `for (let ${count} = ${start}; ${count} < ${end}; i++) ${blockEnd}`;
+    let loop = `for (let ${count} = ${start}; ${count} < ${end}; ${count}++) ${blockEnd}`;
     session.insert(editor.getCursorPosition(), loop);
-    goToLine(editor.getCursorPosition().row, 1);
+    goToLine(editor.getCursorPosition().row, true);
     giveFeedback("Loop created on line " + currLine());
 }
 
 function makeFunction(name, parameters = []) {
     let tabs = editor.getCursorPositionScreen().column / 4;
-    let blockEnd = `{\n${'\t'.repeat(tabs + 1)}\n${'\t'.repeat(tabs)}}`;
+    let blockEnd = `{\n${'\t'.repeat(tabs + 1)}\n${'\t'.repeat(tabs)}}\n`;
     let func = `function ${name}(${parameters.join(', ')}) ${blockEnd}`;
     session.insert(editor.getCursorPosition(), func);
-    goToLine(editor.getCursorPosition().row, 1);
+    goToLine(editor.getCursorPosition().row - 1, true);
     giveFeedback("Function created on line " + currLine());
 }
 
 function makeVariable(type = 'let', name = 'x', value) {
     let variable = `${type} ${name} ${(value) ?`= ${value}` : ''};\n`;
     session.insert(editor.getCursorPosition(), variable);
-    goToLine(currLine(), 1);
+    goToLine(currLine(), true);
     giveFeedback("Variable created on line " + currLine());
 }
 
 function makeCheckpoint(type, name, line) {
-    goToLine(line, 1);
     let symbol = ' ~ ';
     let comment = '//' + symbol + type + ': "' + name + '"';
+    goToLine(line, true);
     session.insert(editor.getCursorPosition(), comment);
     checkpointNames.splice(0, 0, name);
     giveFeedback("Checkpoint created on line " + currLine());
@@ -447,7 +459,7 @@ function goToCheckpoint(type, name) {
     let comment = '//' + symbol + type + ': "' + name + '"';
     for (let i = 0; i < allLines.length; i++) {
         if (allLines[i].includes(comment)) {
-            goToLine(i + 2, 0);
+            goToLine(i + 2);
             giveFeedback(`Now at ${type} ${name}`);
             return;
         }

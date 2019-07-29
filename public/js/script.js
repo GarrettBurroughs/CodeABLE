@@ -17,6 +17,20 @@ function runProgram() {
     }
 }
 
+let predefined = [
+    ['go to line 8', 4000],
+    ['read current line', 3000],
+    ['go to line 3', 4000],
+    ['go to end of code', 3000],
+    ['create function celebrate failure', 4000],
+    ['log string I have failed', 5000],
+    ['go to end of code', 3000],
+    ['create a for loop from 1 to 10', 5000],
+    ['run celebrate failure', 4000]
+]
+
+
+
 // Keyboard shortcuts
 let keyLogger = {};
 onkeydown = onkeyup = function (e) {
@@ -24,13 +38,20 @@ onkeydown = onkeyup = function (e) {
     let cmd = window.navigator.platform.match("Mac") ? keyLogger[91] : keyLogger[17];
     keyLogger[e.keyCode] = e.type == 'keydown';
     // Click ESC to switch between command bar and input
-    if (keyLogger[27]) {
+    if (keyLogger[27] || keyLogger[18]) {
         if (!$('.form-control').is(':focus')) {
             $('.form-control').focus();
-            startVoice();
+            if (keyLogger[18]) {
+                let next = predefined.shift();
+                setTimeout(() => {
+                    commandDisplay(next[0]);
+                }, next[1]);
+            } else {
+                startVoice();
+            }
         } else {
             editor.focus();
-            endVoice();
+            if (keyLogger[18]) endVoice();
         }
     }
     // Click CMD/CTRL + "Enter" to run program
@@ -66,40 +87,51 @@ function feedbackDisplay(feedback) {
 // Neaten user's given voice command and replace common detection mistakes
 let corrections = new Map([
     [/:00/g, ''],
-    [/\\?/g, ''],
-    [/zero/g, '0'],
+    [/\?/g, ''],
     [/\*\*\*/g, 's'],
     [/(for|4|full) (luke|loop)/g, 'for loop'],
     [/with (jay|jerry)/g, 'with j'],
     [/check (wood|board|point)/g, 'checkpoint'],
-    [/(parameter|parameters) (at|and|an)/g, 'parameters n'],
+    [/(parameter|parameters) (at|and|an|end)/g, 'parameter n'],
+    [/log (in|at|and|an|end)/g, 'log n'],
+    [/variable (end|an|and)/g, 'variable n'],
     [/(live|life)/g, 'line'],
+    [/,/g, ''],
+    [/(zero)/g, '0'],
+    [/(one)/g, '1'],
+    [/(two)/g, '2'],
+    [/(three)/g, '3'],
+    [/(four)/g, '4'],
+    [/(five)/g, '5'],
+    [/(six)/g, '6'],
+    [/(seven)/g, '7'],
+    [/(eight)/g, '8'],
+    [/(nine)/g, '9']
 ]);
 
-function cleanCommand(command) {
-    command = command.trim().toLowerCase();
+function cleanCommand(cmd) {
+    cmd = cmd.trim().toLowerCase();
     // Remove any period at end of command from auto-voice
-    if (command.indexOf('.') == command.length - 1) {
-        command = command.substring(0, command.length - 1);
+    if (cmd.indexOf('.') == cmd.length - 1) {
+        cmd = cmd.substring(0, cmd.length - 1);
     }
     // Apply find and replace to correct common detections mistakes
-    for (let [find, replace] in corrections) {
-        command = command.replace(find, replace);
+    for (let [find, replace] of corrections) {
+        cmd = cmd.replace(find, replace);
     }
-    return command;
+    return cmd;
 }
 
-function commandDisplay(command) {
+function commandDisplay(cmd) {
     // Create array of commands by splitting with 'and' keyword
-    command = cleanCommand(command).split(' and ');
-    console.log(command);
-    for (let i = 0; i < command.length; i++) {
-        runCommand(command[i]);
+    cmd = cleanCommand(cmd).split(' and ');
+    for (let i = 0; i < cmd.length; i++) {
+        runCommand(cmd[i]);
         runCommand('');
     }
     editor.focus();
     $("#scriptBox")
-        .val(command.join(' and '))
+        .val(cmd.join(' and '))
         .css("color", "#2e9dc6")
         .delay(150)
         .queue(function (next) {
@@ -113,6 +145,14 @@ function commandDisplay(command) {
             next();
         })
 }
+
+$('#scriptBox').focus(() => {
+    $('#micIcon').addClass('fa-microphone');
+});
+
+$('#scriptBox').focusout(() => {
+    $('#micIcon').removeClass('fa-microphone');
+});
 
 function commandEntered(e) {
     if (e.keyCode == 13) {
@@ -147,6 +187,7 @@ function programFail(error) {
     giveFeedback(checkError(error));
 }
 
+// Draggable code/console divider
 let splitobj = Split(["#editor-container", "#console-container"], {
     elementStyle: function (dimension, size, gutterSize) {
         $(window).trigger('resize'); // Optional
